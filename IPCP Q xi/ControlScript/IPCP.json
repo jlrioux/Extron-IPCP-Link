@@ -1,0 +1,63 @@
+{
+    "system": {
+        "name": "IPCP",
+        "code_folder_path": "src",
+        "code_entry_file": "main.py",
+        "layout_folder_path": "layout",
+        "sound_folder_path": "sound",
+        "rfile_folder_path": "rfile",
+        "irfile_folder_path": "ir",
+        "system_id": "7403",
+        "author": {
+            "name": "Your Name",
+            "email": "user@yourdomain.com"
+        },
+        "version": "0.0.1",
+        "primary_device_alias": "processor0"
+    },
+    "devices": [
+        {
+        "name": "IPCP Pro 255Q xi",
+        "part_number": "60-1914-01",
+            "alias": "processor0",
+            "network": {
+                "host_network_type": "LAN",
+                "interfaces": [
+                    {
+                        "address": "10.89.107.115",
+                        "type": "LAN"
+                    },
+                    {
+                        "address": "172.16.1.10",
+                        "type": "AVLAN"
+                    }
+                ]
+            }
+        },{
+      "name": "Bonus Room Tablet",
+      "part_number": "79-559-01",
+      "alias": "panel0",
+      "extron_control_web_id": "e1412569-3bad-4813-a589-6ee2a10ae4a1",
+      "ui": {
+          "layout_file": "Bonus Room.gdl",
+          "enable_click_sound": true,
+          "press_feedback": "state",
+          "thumb_change_report_interval": 0.1,
+          "thumb_to_fill_sync_time": 0.5
+      }
+    },{
+      "name": "Bonus Room Phone",
+      "part_number": "79-600-01",
+      "alias": "panel1",
+      "extron_control_web_id": "Bonus-Room-Phone",
+      "ui": {
+        "layout_file": "Bonus Room - Phone.gdl",
+        "enable_click_sound": true,
+        "press_feedback": "state",
+        "thumb_change_report_interval": 0.1,
+        "thumb_to_fill_sync_time": 0.5
+      }
+    }
+    ],
+    "schemaVersion": "1.0.0"
+}
