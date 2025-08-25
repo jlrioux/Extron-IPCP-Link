@@ -8,8 +8,8 @@ from extronlib import event
 from extronlib.device import UIDevice
 from extronlib.ui import Slider,Button,Label
 
-ui = UIDevice('PanelAlias')
-ui.ShowPage('Server')
+ui = UIDevice('ConnectFourPanel')
+ui.ShowPage('Main')
 
 red_slider_ids = list(range(1,8))
 yellow_slider_ids = list(range(11,18))

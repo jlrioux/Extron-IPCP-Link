@@ -13,7 +13,7 @@ Notes:
 
 
 
-_debug = True
+_debug = False
 
 
 
@@ -88,7 +88,7 @@ class RemoteServer():    #class code
                     self.__remote_server_buffer = self.__remote_server_buffer[pos+len(self.__delim):]
                     if temp == 'ping()':return
                     if self.__remote_server_logged_in and len(temp) > 0:
-                        self.__wrapperbasics.process_message(temp)
+                        self.__wrapperbasics.process_message(temp,client.IPAddress)
                     elif self.__remote_server_password in temp:
                         self.__remote_server_logged_in = True
                         print('RemoteServer HandheReceiveFromServer: Logged In')
@@ -97,6 +97,8 @@ class RemoteServer():    #class code
             def HandleClientConnect(interface, state):
                 self.__remote_client_count = len(self.__remote_server.Clients)
                 print('RemoteServer ClientConnect: Client Count : {}'.format(self.__remote_client_count))
+                #remove server offline page
+                self.__wrapperbasics.set_server_status(interface.IPAddress,'Online')
 
             @event(self.__remote_server, 'Disconnected')
             def HandleClientDisconnect(interface, state):
@@ -104,6 +106,8 @@ class RemoteServer():    #class code
                 print('RemoteServer ClientDisconnect: Client Count : {}'.format(self.__remote_client_count))
                 self.__remote_server_logged_in = False
                 self.__remote_server_buffer = ''
+                #server offline page
+                self.__wrapperbasics.set_server_status(interface.IPAddress,'Offline')
 
     def DisableRemoteServer(self):
         if self.__remote_server:
@@ -256,9 +260,10 @@ class WrapperBasics():
         if WrapperBasics.objects_queue_busy:return
         WrapperBasics.objects_queue_busy = True
         while not WrapperBasics.create_objects_queue.empty():
-            instance,alias,data = WrapperBasics.create_objects_queue.get()
+            instance,alias,data,server_ip = WrapperBasics.create_objects_queue.get()
             if _debug:print(f'creating object:{alias}:{data}')
             dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
+            dev._server_ip = server_ip
             if dev.initialized:
                 WrapperBasics.register(data['device type'],alias,dev)
             else:
@@ -266,10 +271,10 @@ class WrapperBasics():
         WrapperBasics.objects_queue_busy = False
 
 
-    def process_message(self,data):
+    def process_message(self,data,ipaddress):
         @Wait(0)
         def w():
-            self.receive_message(data)
+            self.receive_message(data,ipaddress)
 
 
 
@@ -288,6 +293,7 @@ class WrapperBasics():
         WrapperBasics.__remote_servers[interface] = self.remote_server
 
 
+
     '''
     message: str
         format: alias~~data
@@ -299,7 +305,7 @@ class WrapperBasics():
                 queries should be used when expecting a response
                 commands should be used when not expecting a response
     '''
-    def receive_message(self,message):
+    def receive_message(self,message,server_ip):
         if len(message) == 0:return
         try:
             alias,message = message.split('~~')
@@ -331,7 +337,7 @@ class WrapperBasics():
             if data['type'] == 'init':
                 #print(f'init device:{alias}')
                 #create the device and register it
-                WrapperBasics.create_objects_queue.put([self,alias,data])
+                WrapperBasics.create_objects_queue.put([self,alias,data,server_ip])
                 WrapperBasics.check_create_objects_queue()
                 return
             else:
@@ -342,6 +348,7 @@ class WrapperBasics():
                     data = {'type':'init request','message':{}}
                     self.send_message(alias,data)
                     return
+
         if not type:
             ProgramLog(f'Alias not associated with a type:{alias}',Severity='warning')
 
@@ -354,6 +361,18 @@ class WrapperBasics():
                     if alias in server.alias_list:
                         if _debug:print('sending message:{}'.format(message))
                         server.Send(message)
+
+    def set_server_status(self,ip,status):
+        #get list of panels for this host ip
+        panels = []
+        for alias in WrapperBasics.wrapped_objects['UIDevice']:
+            dev = WrapperBasics.wrapped_objects['UIDevice'][alias]
+            if dev._server_ip == ip:
+                panels.append(dev)
+        if status == 'Online':
+            for panel in panels:panel.HidePopup('Control Server is Offline')
+        elif status == 'Offline':
+            for panel in panels:panel.ShowPopup('Control Server is Offline')
 
 
 

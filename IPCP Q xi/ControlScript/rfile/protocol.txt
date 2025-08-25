@@ -94,7 +94,6 @@ NOTES FOR UI
 """
 In all touch panels, there should be two modal popups besides the project's pages.
 1. Control Server is Offline
-2. Synchronizing Project
 The UI should return to the project's pages when syncronization is done.
 While the control server is offline, popup 1 will be reinforced every 5 seconds
 While the the ipcp is synchronizing with the control, popup 2 will be reinforced every 5 seconds
