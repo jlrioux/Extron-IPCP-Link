@@ -1,6 +1,6 @@
 {
     "system": {
-        "name": "IPCP",
+        "name": "BonusRoom",
         "code_folder_path": "src",
         "code_entry_file": "main.py",
         "layout_folder_path": "layout",
@@ -37,7 +37,7 @@
       "name": "Bonus Room Tablet",
       "part_number": "79-559-01",
       "alias": "panel0",
-      "extron_control_web_id": "e1412569-3bad-4813-a589-6ee2a10ae4a1",
+      "extron_control_web_id": "Bonus-Room-Tablet",
       "ui": {
           "layout_file": "Bonus Room.gdl",
           "enable_click_sound": true,

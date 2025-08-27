@@ -1,0 +1,88 @@
+2025-08-26 08:40:46 INFO root Start primary API version 1.8.21
+2025-08-26 08:40:46 INFO root loading script: main
+2025-08-26 08:40:47 INFO root successfully loaded script: main
+2025-08-26 08:49:54 ERROR root Receive failed, from client
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:55 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:49:55 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:51:49 ERROR root Receive failed, from client
+2025-08-26 08:51:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:51:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:51:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:51:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:51:51 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:51:51 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:53:18 ERROR root Receive failed, from client
+2025-08-26 08:53:18 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:18 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:18 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:18 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:20 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:53:20 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:53:49 ERROR root Receive failed, from client
+2025-08-26 08:53:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:53:51 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:53:51 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:54:55 ERROR root Receive failed, from client
+2025-08-26 08:54:55 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:54:55 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:54:55 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:54:55 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:54:56 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:54:56 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:56:06 ERROR root Receive failed, from client
+2025-08-26 08:56:06 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:56:06 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:56:06 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:56:06 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:56:07 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:56:07 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 08:57:50 ERROR root Receive failed, from client
+2025-08-26 08:57:50 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:57:50 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:57:50 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:57:50 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:09:25 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 09:09:25 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 09:10:26 ERROR root Receive failed, from client
+2025-08-26 09:10:26 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:10:26 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:10:26 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:10:26 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:15:47 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 09:15:47 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 09:18:17 ERROR root EXCEPTION:__InterfaceWrapper:Update:Projector:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\tools.py", line 1464, in __replacement_update
+    method(None, qualifier)
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\opto_vp_UHD60_v1_0_1_0.py", line 193, in UpdatePower
+    res = self.__UpdateHelper('Power', PowerCmdString, value, qualifier)
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\opto_vp_UHD60_v1_0_1_0.py", line 261, in __UpdateHelper
+    res = self.SendAndWait(commandstring, self.DefaultResponseTimeout, deliTag=b'\r')
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\tools.py", line 1494, in SendAndWait
+    ret = self.__interface.SendAndWait(commandstring,timeout,**args)
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\extronlib\interface\EthernetClientInterface.py", line 669, in SendAndWait
+    return self.__ECI.SendAndWait(data,timeout,deliTag,deliRex,deliLen)
+  File "c:\Users\manyr\OneDrive\Desktop\RD\DEV\git repo\Extron-IPCP-Link\ServerLib\source\extronlib\interface\EthernetClientInterface.py", line 459, in SendAndWait
+    print('ethernetclientinterface sendandwait got data:{}'.format(buffer_in.decode()))
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xaf in position 6: invalid start byte
+
+2025-08-26 09:18:49 ERROR root Receive failed, from client
+2025-08-26 09:18:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:18:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:18:49 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:18:49 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:18:51 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 09:18:51 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
+2025-08-26 09:20:37 ERROR root Receive failed, from client
+2025-08-26 09:20:37 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:20:37 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:20:37 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:20:37 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 09:20:38 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 09:20:38 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline

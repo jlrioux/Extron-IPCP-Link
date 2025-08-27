@@ -4,7 +4,7 @@ from threading import Thread,Lock
 from datetime import datetime
 from extronlib.system import Timer
 import base64
-_debug = False
+_debug = True
 import traceback
 
 
@@ -289,14 +289,15 @@ class _LocalEthernetClientInterface():
         self.Disconnected = None
         self.ReceiveData = None
 
-        self.__socket = None #type:socket.socket|paramiko.SSHClient
-        self.__client = None #type:Client
-        self.__connected = False
-        self.__rec_thread = None
-        self.__rec_thread_stop = True
-        self.__send_and_wait_active = Lock()
+        self._socket = None #type:socket.socket|paramiko.SSHClient
+        self._client = None #type:Client
+        self._connected = False
+        self._rec_thread = None
+        self._rec_thread_stop = True
+        self._send_and_wait_active = Lock()
+        self._send_and_wait_rx = b''
 
-        self.__startkeepalive_timer = None #type:Timer
+        self._startkeepalive_timer = None #type:Timer
 
         self.Hostname = Hostname
         self.IPPort = IPPort
@@ -306,16 +307,16 @@ class _LocalEthernetClientInterface():
 
         if self.Protocol == 'UDP':
             try:
-                self.__socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+                self._socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
                 if self.ServicePort > 0:
-                    self.__socket.bind(("",self.ServicePort))
+                    self._socket.bind(("",self.ServicePort))
                 else:
-                    self.__socket.bind((""))
-                self.__connected = True
-                self.__client = Client(self.Hostname)
-                self.__client.server = self
-                self.__client.IPAddress = self.Hostname
-                self.__client.client = self.__socket
+                    self._socket.bind((""))
+                self._connected = True
+                self._client = Client(self.Hostname)
+                self._client.server = self
+                self._client.IPAddress = self.Hostname
+                self._client.client = self._socket
             except Exception as e:
                 print(f"UDP Socket error: {e}")
 
@@ -334,41 +335,40 @@ class _LocalEthernetClientInterface():
         """
         if self.Protocol == 'UDP':
             return('UDP:Connect Not Supported')
-        if self.__connected:
+        if self._connected:
             return
-        if self.__connected:
+        if self._connected:
             return('ConnectedAlready')
-        self.__client = Client(self.Hostname)
-        self.__client.server = self
-        self.__client.IPAddress = self.Hostname
+        self._client = Client(self.Hostname)
+        self._client.server = self
+        self._client.IPAddress = self.Hostname
         if self.Protocol == 'TCP':
             try:
-                self.__socket = socket.create_connection((self.Hostname,self.IPPort),timeout)
+                self._socket = socket.create_connection((self.Hostname,self.IPPort),timeout)
             except:
-                self.__client.client = None
+                self._client.client = None
                 return('Connection Timeout')
         elif self.Protocol == 'SSH':
-            self.__socket = paramiko.SSHClient()
-            self.__socket.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            self._socket = paramiko.SSHClient()
+            self._socket.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
-                self.__socket.connect(self.Hostname,port=self.IPPort,username=self.Credentials[0],password=self.Credentials[1])
+                self._socket.connect(self.Hostname,port=self.IPPort,username=self.Credentials[0],password=self.Credentials[1])
             except:
-                self.__client.client = None
+                self._client.client = None
                 return('Connection Timeout')
 
-        if self.__socket is not None:
-            self.__connected = True
-            self.__client.client = self.__socket
+        if self._socket is not None:
+            self._connected = True
+            self._client.client = self._socket
             if self.Protocol == 'TCP':
-                self.__rec_thread_stop = False
-                self.__rec_thread = Thread(target=self.__recv_func(self.__socket))
-                self.__rec_thread.start()
+                self._rec_thread_stop = False
+                self._rec_thread = Thread(target=self._recv_func(self._socket))
+                self._rec_thread.start()
             if self.Connected is not None:
-                self.Connected(self.__client,'Connected')
+                self.Connected(self._client,'Connected')
             return('Connected')
-        elif self.Disconnected is not None:
-            self.Disconnected(self.__client,'Disconnected')
-            return('Disconnected')
+        else:
+            return('Connection Failed')
 
     def Disconnect(self):
         """ Disconnect the socket
@@ -377,18 +377,14 @@ class _LocalEthernetClientInterface():
         """
         if self.Protocol == 'UDP':
             return('UDP:Disconnect Not Supported')
-        if not self.__connected:
-            return
-        self.__rec_thread_stop = True
-        self.__socket.shutdown()
-        self.__socket.close()
-        self.__connected = False
-        self.__socket = None
-        if self.__socket is None:
-            if self.Connected is not None:
-                self.Connected(self.__client,'Connected')
-        elif self.Disconnected is not None:
-            self.Disconnected(self.__client,'Disconnected')
+        self._rec_thread_stop = True
+        if self._socket:
+            self._socket.shutdown(socket.SHUT_RDWR)
+            self._socket.close()
+        self._connected = False
+        self._socket = None
+        if self.Disconnected is not None:
+            self.Disconnected(self._client,'Disconnected')
 
     def Send(self, data:'str'):
         """ Send string over ethernet port if it’s open
@@ -400,12 +396,17 @@ class _LocalEthernetClientInterface():
             - TypeError
             - IOError
         """
-        if not self.__connected:return
-        if not self.__socket:return
-        if self.Protocol == 'UDP':
-            self.__socket.sendto(data.encode('utf-8'),(self.Hostname,self.IPPort))
-        else:
-            self.__socket.send(data.encode('utf-8'))
+        if not self._connected:return
+        if not self._socket:return
+        if type(data) == str:
+            data = data.encode('utf-8')
+        try:
+            if self.Protocol == 'UDP':
+                self._socket.sendto(data,(self.Hostname,self.IPPort))
+            else:
+                self._socket.send(data)
+        except Exception as e:
+            if _debug:print('EthernetClientInterface.Send: Error :{}'.format(e))
 
     def SendAndWait(self, data:'str', timeout:'float', deliTag:'bytes'='', deliRex:'str'='',deliLen:'int'=''):
         """ Send data to the controlled device and wait (blocking) for response. It returns after timeout seconds expires or immediately if the optional condition is satisfied.
@@ -425,51 +426,46 @@ class _LocalEthernetClientInterface():
         Returns:
             - Response received data (may be empty) (bytes)
         """
-        #return('')
-        if not self.__socket:return('')
-        if not self.__connected:return('')
-        buffer = b''
-        if self.__send_and_wait_active.locked():
-            time.sleep(0.01)
-        self.__send_and_wait_active.acquire()
-        if self.Protocol == 'UDP':
-            self.__socket.sendto(data.encode('utf-8'),(self.Hostname,self.IPPort))
-        else:
-            self.__socket.send(data.encode('utf-8'))
-        buffer_in = b''
+        if not self._socket:return(b'')
+        if not self._connected:return(b'')
+        self._send_and_wait_rx = b''
+        if type(data) == str:
+            data = data.encode('utf-8')
+        self._send_and_wait_active.acquire()
+        try:
+            if self.Protocol == 'UDP':
+                self._socket.sendto(data,(self.Hostname,self.IPPort))
+            else:
+                self._socket.send(data)
+        except Exception as e:
+            if _debug:print('EthernetClientInterface.SendAndWait: Error :{}'.format(e))
         starttime = datetime.now()
-        while self.__send_and_wait_active.locked():
+        buffer = b''
+        while True:
             curtime = datetime.now()
             elapsed_time = curtime - starttime
             if elapsed_time.total_seconds() >= timeout:
-                buffer_in = b''
-                self.__send_and_wait_active.release()
-            time.sleep(0.01)
-            if self.Protocol == 'UDP':
-                data,addr = self.__socket.recvfrom(1024)
-                buffer_in += data
-            else:
-                buffer_in += self.__socket.recv(1024)
-            if not buffer_in:
-                self.__send_and_wait_active.release()
+                buffer = b''
+                break
             if deliTag: #delimiter is bytes at which to stop reading
                 delim = deliTag
-                buffer += buffer_in
-                if delim in buffer:
-                    index = buffer.index(delim)
-                    buffer = buffer[:index+len(delim)]
-                    self.__send_and_wait_active.release()
+                if delim in self._send_and_wait_rx:
+                    index = self._send_and_wait_rx.index(delim)
+                    buffer = self._send_and_wait_rx[:index+len(delim)]
+                    break
             elif deliLen: #delimiter is a legnth to receive
-                buffer += buffer_in
-                if len(buffer) >= deliLen:
-                    buffer = buffer[:deliLen]
-                    self.__send_and_wait_active.release()
+                if len(self._send_and_wait_rx) >= deliLen:
+                    buffer = self._send_and_wait_rx[:deliLen]
+                    break
             elif deliRex: #delimiter should be a regular expression
-                buffer += buffer_in
-                match = re.search(delim,buffer.decode())
+                match = re.search(delim,self._send_and_wait_rx)
                 if match is not None:
-                    buffer = buffer[:match.end()].encode('utf-8')
-                    self.__send_and_wait_active.release()
+                    buffer = self._send_and_wait_rx[:match.end()]
+                    break
+            else:
+                break
+            time.sleep(0.01)
+        self._send_and_wait_active.release()
         return(buffer)
 
     def StartKeepAlive(self, interval:'int', data:'bytes|str'):
@@ -479,45 +475,51 @@ class _LocalEthernetClientInterface():
             - interval (float) - Time in seconds between transmissions
             - data (bytes, string) - data bytes to send
         """
-        if self.__startkeepalive_timer:
-            self.__startkeepalive_timer.Stop()
+        if self._startkeepalive_timer:
+            self._startkeepalive_timer.Stop()
+        if type(data) == str:
+            data = data.encode('utf-8')
         def f(timer,count):
-            if not self.__connected:return
-            if self.__send_and_wait_active.locked():return
-            if self.Protocol == 'UDP':
-                self.__socket.sendto(data.encode('utf-8'),(self.Hostname,self.IPPort))
-            else:
-                self.__socket.send(data.encode('utf-8'))
-        self.__startkeepalive_timer = Timer(interval,f)
+            if not self._connected:return
+            if self._send_and_wait_active.locked():return
+            try:
+                if self.Protocol == 'UDP':
+                    self._socket.sendto(data,(self.Hostname,self.IPPort))
+                else:
+                    self._socket.send(data)
+            except Exception as e:
+                if _debug:print('EthernetClientInterface.StartKeepAlive: Error :{}'.format(e))
+        self._startkeepalive_timer = Timer(interval,f)
 
     def StopKeepAlive(self):
         """ Stop the currently running keep alive routine
         """
-        if self.__startkeepalive_timer:
-            self.__startkeepalive_timer.Stop()
+        if self._startkeepalive_timer:
+            self._startkeepalive_timer.Stop()
 
-    def __recv_func(self,client:'socket.socket'):
+    def _recv_func(self,client:'socket.socket'):
         def r():
             while True:
-                if not self.__connected:return
-                time.sleep(0.01)
-                if self.__send_and_wait_active.locked():continue
-                if self.__rec_thread_stop:break
+                if not self._connected:return
+                if self._rec_thread_stop:return
+                data = b''
+                self._socket.settimeout(0.01)
                 try:
                     if self.Protocol == 'UDP':
-                        data,addr = self.__socket.recvfrom(1024)
+                        data,addr = self._socket.recvfrom(1024)
                     else:
-                        data = self.__socket.recv(1024)
-                except:
-                    if self.Protocol != 'UDP':
-                        if self.Disconnected is not None:
-                            self.Disconnected(self.__client,'Disconnected')
-                        self.Disconnect()
-                        self.__connected = False
-                    data = b''
-
-                if self.ReceiveData is not None and len(data):
-                    self.ReceiveData(self.__client,data)
+                        data = self._socket.recv(1024)
+                except TimeoutError:
+                    pass
+                except Exception as e:
+                    if _debug:print('EthernetClientInterface._recv_func: Error :{}'.format(e))
+                    self.Disconnect()
+                if not self._send_and_wait_active.locked():
+                    if self.ReceiveData is not None and len(data):
+                        self.ReceiveData(self._client,data)
+                else:
+                    self._send_and_wait_rx += data
+                time.sleep(0.01)
         return r
 class Client():
     def __init__(self,hostname):
@@ -526,7 +528,18 @@ class Client():
         self.client = socket
         self.server = None
         def Send(self,data):
-            self.client.Send(data)
+            if type(data) == str:
+                data = data.encode('utf-8')
+            try:
+                self.client.Send(data)
+            except ConnectionResetError:
+                if self.Protocol != 'UDP':
+                    if self.Disconnected is not None:
+                        self.Disconnected(self._client,'Disconnected')
+                    self.Disconnect()
+                    self._connected = False
+            except:
+                pass
 
 
 
@@ -548,7 +561,7 @@ class EthernetClientInterface():
         - (optional) Credentials  (tuple) - Username and password for SSH connection.
     """
     _type='EthernetClientInterface'
-    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=True,ipcp_index=0):
+    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=False,ipcp_index=0):
         self.Connected = None
         self.Disconnected = None
         self.ReceiveData = None

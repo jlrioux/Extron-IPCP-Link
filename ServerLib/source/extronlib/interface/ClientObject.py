@@ -1,5 +1,5 @@
 from typing import Union
-
+import socket
 
 
 class ClientObject():
@@ -19,7 +19,7 @@ class ClientObject():
 
     def __init__(self):
         """ ClientObject class constructor. """
-        self.__server = None
+        self.__server = None #type:socket
         self._client_struct = {}
         self.Hostname = ''
         """Hostname DNS name of the connection. Can be the IP Address"""
@@ -37,7 +37,7 @@ class ClientObject():
 
     def Disconnect(self):
         """ Closes the connection gracefully on client. """
-        self.__server.Disconnect(self)
+        self.__server.close()
 
     def Send(self, data: 'bytes|str') -> None:
         """ Send string to the client.
@@ -51,7 +51,7 @@ class ClientObject():
 
         >>> client.Send(b'Hello.\n')
         """
-        self.__server._Send(self,data)
+        self.__server.send(data)
 
     def _set_client(self,server,data):
         self._client_struct = data

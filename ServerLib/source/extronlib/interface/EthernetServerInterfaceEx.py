@@ -407,7 +407,8 @@ class _LocalEthernetServerInterfaceEx():
         while True:
             conn,addr = self.__socket.accept()
             client = ClientObject()
-            client.__set_client(addr,conn,self)
+            data = {'IPAddress':addr[0],'Hostname':addr[0],'ServicePort':addr[1]}
+            client._set_client(conn,data)
             self.Clients.append(client)
             self.__recv_threads.append(Thread(target=self.__recv_func(conn)))
             self.__recv_threads[-1].start()
@@ -425,7 +426,7 @@ class _LocalEthernetServerInterfaceEx():
                         data = b''
                         address = ''
                     if self.ReceiveData is not None and len(data):
-                        self.ReceiveData(address,data)
+                        self.ReceiveData(client,data)
         return r
 
 
@@ -463,7 +464,7 @@ class EthernetServerInterfaceEx():
         - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a bytes string.
     """
 
-    def __init__(self, IPPort, Protocol='TCP', Interface='Any', MaxClients=None,thru_ipcp=True,ipcp_index=0):
+    def __init__(self, IPPort, Protocol='TCP', Interface='Any', MaxClients=None,thru_ipcp=False,ipcp_index=0):
         """ EthernetServerInterfaceEx class constructor.
 
         Arguments:
@@ -498,13 +499,15 @@ class EthernetServerInterfaceEx():
             self.StartListen = self.__ESIEX.StartListen
             self.StopListen = self.__ESIEX.StopListen
             self.SSLWrap = self.__ESIEX.SSLWrap
+            self.Send = self.__ESIEX.Send
         else:
-            self.__ESIEX = _IPCPEthernetServerInterfaceEx(IPPort,Protocol,Interface,MaxClients)
+            self.__ESIEX = _LocalEthernetServerInterfaceEx(IPPort,Protocol,Interface,MaxClients)
             self.Clients = self.__ESIEX.Clients
             self.Disconnect = self.__ESIEX.Disconnect
             self.StartListen = self.__ESIEX.StartListen
             self.StopListen = self.__ESIEX.StopListen
             self.SSLWrap = self.__ESIEX.SSLWrap
+            self.Send = self.__ESIEX.Send
         self.__subscribe_events()
 
 

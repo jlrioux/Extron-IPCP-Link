@@ -1,0 +1,10 @@
+2025-08-26 08:40:46 INFO root Start primary API version 1.8.21
+2025-08-26 08:40:46 INFO root loading script: main
+2025-08-26 08:40:47 INFO root successfully loaded script: main
+2025-08-26 08:49:54 ERROR root Receive failed, from client
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel0 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:54 ERROR root Invalid Parameter panel1 ShowPopup: popup=Control Server is Offline
+2025-08-26 08:49:55 ERROR root Invalid Parameter panel0 HidePopup: popup=Control Server is Offline
+2025-08-26 08:49:55 ERROR root Invalid Parameter panel1 HidePopup: popup=Control Server is Offline
