@@ -14,14 +14,15 @@ class ObjectWrapper(ObjectClass):
             self.args.append(arg)
         self.args = data['args']
         self.initialized = False
-        try:
-            ObjectClass.__init__(self,*data['args']) #type:ObjectClass
-        except Exception as e:
-            print('failed to create {} "{}" with args "{}" with exception: {}'.format(ObjectWrapper.type,self.alias,self.args,str(e)))
-            msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
-            err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
-            self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
-            return
+        if self.args:
+            try:
+                ObjectClass.__init__(self,*data['args']) #type:ObjectClass
+            except Exception as e:
+                print('failed to create {} "{}" with args "{}" with exception: {}'.format(ObjectWrapper.type,self.alias,self.args,str(e)))
+                msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
+                err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
+                self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+                return
 
 
         """

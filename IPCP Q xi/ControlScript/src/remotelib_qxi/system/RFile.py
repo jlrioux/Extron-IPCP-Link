@@ -1,11 +1,10 @@
 
-from extronlib.interface import PoEInterface as ObjectClass
-from extronlib.system import Timer
+from extronlib.system import RFile as ObjectClass
 import json
 import base64
 
 class ObjectWrapper(ObjectClass):
-    type = 'PoEInterface'
+    type = 'RFile'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
         self.alias = alias
@@ -14,13 +13,7 @@ class ObjectWrapper(ObjectClass):
             self.args.append(arg)
         self.args = data['args']
         self.initialized = False
-        self.host_alias = data['args'][0]
-        if self.host_alias not in self.WrapperBasics.wrapped_objects['aliases by type']:
-            self.host = None
-        else:
-            host_type = self.WrapperBasics.wrapped_objects['aliases by type'][self.host_alias]
-            self.host = self.WrapperBasics.wrapped_objects[host_type][self.host_alias]
-        data['args'][0] = self.host
+
         if self.args:
             try:
                 ObjectClass.__init__(self,*data['args']) #type:ObjectClass
@@ -35,7 +28,15 @@ class ObjectWrapper(ObjectClass):
         """
             WRAPPER CONFIGURATION
         """
-        event_attrs = ['Online','Offline','PowerStatusChanged']
+        event_attrs = []
+        self.overloaded_attrs = {'ChangeDir':'_ChangeDir',
+                                 'DeleteDir':'_DeleteDir',
+                                 'DeleteFile':'_DeleteFile',
+                                 'Exists':'_Exists',
+                                 'GetCurrentDir':'_GetCurrentDir',
+                                 'ListDir':'_ListDir',
+                                 'MakeDir':'_MakeDir',
+                                 'RenameFile':'_RenameFile'}
 
 
         """
@@ -52,9 +53,11 @@ class ObjectWrapper(ObjectClass):
     def create_event_handler(self,property):
         def e(interface,*args):
             if property == 'ReceiveData':
+                args = list(args)
                 if type(args[0]) is str:
                     args[0] = args[0].encode()
                 args[0] = base64.b64encode(args[0]).decode('utf-8')
+                args = tuple(args)
             update = {'property':property,'value':args,'qualifier':None}
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'update','message':update}))
         return e
@@ -68,6 +71,8 @@ class ObjectWrapper(ObjectClass):
         elif data['type'] == 'command':
             if hasattr(self,data['property']):
                 attr = getattr(self,data['property'])
+                if data['property'] in self.overloaded_attrs:
+                    attr = getattr(self,self.overloaded_attrs[data['property']])
                 if callable(attr):
                     try:
                         attr(*data['args'])
@@ -87,10 +92,12 @@ class ObjectWrapper(ObjectClass):
         elif data['type'] == 'query':
             if hasattr(self,data['property']):
                 attr = getattr(self,data['property'])
+                if data['property'] in self.overloaded_attrs:
+                    attr = getattr(self,self.overloaded_attrs[data['property']])
                 value = None
                 if callable(attr):
                     try:
-                        value = getattr(self,data['property'])(*data['args'])
+                        value = attr(*data['args'])
                         update = {'property':data['property'],'value':value,'qualifier':None}
                     except Exception as e:
 
@@ -99,7 +106,7 @@ class ObjectWrapper(ObjectClass):
                         err_msg = {'property':data['property'],'value':None,'qualifier':{'code':msg}}
                 else:
                     try:
-                        value = getattr(self,data['property'])
+                        value = attr
                         update = {'property':data['property'],'value':value,'qualifier':None}
                     except Exception as e:
                         msg='failed to get property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
@@ -110,3 +117,29 @@ class ObjectWrapper(ObjectClass):
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
+
+    def _ChangeDir(self,path):
+        ObjectClass.ChangeDir(path)
+    def _DeleteDir(self,path):
+        ObjectClass.DeleteDir(path)
+    def _DeleteFile(self,filename):
+        ObjectClass.DeleteFile(filename)
+    def _Exists(self,path):
+        return(ObjectClass.Exists(path))
+    def _GetCurrentDir(self):
+        return(ObjectClass.GetCurrentDir())
+    def _ListDir(self,path):
+        return(ObjectClass.ListDir(path))
+    def _MakeDir(self,path):
+        ObjectClass.MakeDir(path)
+    def _RenameFile(self,oldname,newname):
+        ObjectClass.RenameFile(oldname,newname)
+    def readlines(self):
+        lines = []
+        with ObjectClass(*self.args) as f:
+            for line in f:
+                if type(line) is str:
+                    line = line.encode('utf-8')
+                line = base64.b64encode(line).decode('utf-8')
+                lines.append(line)
+        return(lines)

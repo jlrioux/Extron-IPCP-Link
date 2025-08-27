@@ -160,6 +160,7 @@ from remotelib_qxi.software.DanteDomainManager import ObjectWrapper as DanteDoma
 from remotelib_qxi.software.SummitConnect import ObjectWrapper as SummitConnectWrapper
 
 from remotelib_qxi.system.System import ObjectWrapper as SystemWrapper
+from remotelib_qxi.system.RFile import ObjectWrapper as RFileWrapper
 
 from remotelib_qxi.ui.Button import ObjectWrapper as ButtonWrapper
 from remotelib_qxi.ui.Knob import ObjectWrapper as KnobWrapper
@@ -209,6 +210,7 @@ class WrapperBasics():
                 'DanteDomainManager':DanteDomainManagerWrapper,
                 'SummitConnect':SummitConnectWrapper,
                 'System':SystemWrapper,
+                'RFile':RFileWrapper,
                 'Button':ButtonWrapper,
                 'Knob':KnobWrapper,
                 'Label':LabelWrapper,
@@ -245,6 +247,7 @@ class WrapperBasics():
                     'DanteDomainManager':{},
                     'SummitConnect':{},
                     'System':{},
+                    'RFile':{},
                     'Button':{},
                     'Knob':{},
                     'Label':{},

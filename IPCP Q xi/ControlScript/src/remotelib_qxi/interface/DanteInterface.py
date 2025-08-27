@@ -20,14 +20,15 @@ class ObjectWrapper(ObjectClass):
             host_type = self.WrapperBasics.wrapped_objects['aliases by type'][self.host_alias]
             self.host = self.WrapperBasics.wrapped_objects[host_type][self.host_alias]
         data['args'][0] = self.host
-        try:
-            ObjectClass.__init__(self,*data['args']) #type:ObjectClass
-        except Exception as e:
-            print('failed to create {} "{}" with args "{}" with exception: {}'.format(ObjectWrapper.type,self.alias,self.args,str(e)))
-            msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
-            err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
-            self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
-            return
+        if self.args:
+            try:
+                ObjectClass.__init__(self,*data['args']) #type:ObjectClass
+            except Exception as e:
+                print('failed to create {} "{}" with args "{}" with exception: {}'.format(ObjectWrapper.type,self.alias,self.args,str(e)))
+                msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
+                err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
+                self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+                return
 
 
         """

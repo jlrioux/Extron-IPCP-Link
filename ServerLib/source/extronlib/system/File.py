@@ -30,6 +30,17 @@ class File():
     __dir = ''
     print('File: CWD: {}'.format(__cwd))
 
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.close()
+    def __iter__(self):
+        if not self.__handle:return
+
+        lines = self.__handle.readlines()
+        l = []
+        for line in lines:
+            yield(line)
     def __init__(self, Filename: str, mode: str='r', encoding: str='ascii', newline: str='') -> None:
         """ File class constructor.
 
@@ -49,11 +60,6 @@ class File():
             self.__handle = open(path,mode=mode,encoding=encoding,newline=newline)
         except Exception as e:
             print('File: Failed to open file "{}":{}'.format(Filename,e))
-    def __enter__(self):
-        return self
-
-    def __exit__(self, exc_type, exc_value, traceback):
-        self.close()
 
     def ChangeDir(path: str) -> None:
         """ Change the current working directory to path
