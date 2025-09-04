@@ -40,7 +40,7 @@ class Level(ExtronNode):
         self.UIHost = UIDevice
         self.ID = ID
         self._Name = ''
-        self._Visible = True
+        self._Visible = None
         self._Level = 0
         self._Max = 100
         self._Min = 0
@@ -51,14 +51,9 @@ class Level(ExtronNode):
         self._alias = f'{UIDevice.DeviceAlias}:{ID}'
         self._callback_properties = []
         self._properties_to_reformat = []
-        self._query_properties_init = {'Name':[],
-                                    'Level':[],
-                                    'Max':[],
-                                    'Min':[],
-                                    'Step':[],
-                                    'Visible':[]}
+        self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self)
+        super().__init__(self,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -69,7 +64,13 @@ class Level(ExtronNode):
     def _Parse_Update(self,msg_in):
         msg_type = msg_in['type']
         if _debug:print(f'got message type {msg_type} for alias {self._alias}')
-        if msg_type == 'init':return
+        if msg_type == 'init':
+            values = msg_in['value']
+            if values:
+                for key in values:
+                    if hasattr(self,'_{}'.format(key)):
+                        setattr(self,'_{}'.format(key),values[key])
+            return
         msg = msg_in['message']
         property = msg['property']
         value = msg['value']
@@ -141,6 +142,8 @@ class Level(ExtronNode):
             self._query_properties_init_list.remove('Visible')
             self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
+            if self._Visible == None:
+                return True
             return self._Visible
         return self._Query('Visible',[])
     @property
@@ -169,7 +172,8 @@ class Level(ExtronNode):
             self._Level -= self.Step
         else:
             self._Level = self.Min
-        self._Command('Dec',[])
+        #self._Command('Dec',[])
+        self._BatchCommand('Dec',[])
 
     def Inc(self) -> None:
         """ Nudge the level up a step """
@@ -177,7 +181,8 @@ class Level(ExtronNode):
             self._Level += self.Step
         else:
             self._Level = self._Max
-        self._Command('Inc',[])
+        #self._Command('Inc',[])
+        self._BatchCommand('Inc',[])
 
     def SetLevel(self, Level: int) -> None:
         """ Set the current level
@@ -188,6 +193,7 @@ class Level(ExtronNode):
         if self._Min <= Level <= self._Max:
             self._Level = Level
             self._Command('SetLevel',[Level])
+            #self._BatchCommand('SetLevel',[Level])
         else:
             self.__OnError('SetLevel: Value out of range')
 
@@ -213,5 +219,7 @@ class Level(ExtronNode):
         """
         if visible not in [True,False]:
             self.__OnError('SetVisible: invalid visible state')
-        self._Command('SetVisible',[visible])
+        if visible != self._Visible:
+            #self._Command('SetVisible',[visible])
+            self._BatchCommand('SetVisible',[visible])
         self._Visible = visible

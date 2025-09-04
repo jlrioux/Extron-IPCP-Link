@@ -35,17 +35,17 @@ class Label(ExtronNode):
         self.UIHost = UIDevice
         self.ID = ID
         self._Name = ''
-        self._Visible = True
+        self._Visible = None
+        self._Text = None
 
         self._args = [UIDevice.DeviceAlias,ID]
         self._ipcp_index = ipcp_index
         self._alias = f'{UIDevice.DeviceAlias}:{ID}'
         self._callback_properties = []
         self._properties_to_reformat = []
-        self._query_properties_init = {'Name':[],
-                                    'Visible':[]}
+        self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self)
+        super().__init__(self,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -56,7 +56,13 @@ class Label(ExtronNode):
     def _Parse_Update(self,msg_in):
         msg_type = msg_in['type']
         if _debug:print(f'got message type {msg_type} for alias {self._alias}')
-        if msg_type == 'init':return
+        if msg_type == 'init':
+            values = msg_in['value']
+            if values:
+                for key in values:
+                    if hasattr(self,'_{}'.format(key)):
+                        setattr(self,'_{}'.format(key),values[key])
+            return
         msg = msg_in['message']
         property = msg['property']
         value = msg['value']
@@ -111,6 +117,8 @@ class Label(ExtronNode):
             self._query_properties_init_list.remove('Visible')
             self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
+            if self._Visible == None:
+                return True
             return self._Visible
         return self._Query('Visible',[])
 
@@ -126,7 +134,10 @@ class Label(ExtronNode):
         Raises:
             - TypeError
         """
-        self._Command('SetText',[text])
+        if text != self._Text:
+            #self._Command('SetText',[text])
+            self._BatchCommand('SetText',[text])
+        self._Text = text
 
     def SetVisible(self, visible: bool) -> None:
         """ Change the visibility of an UI control object.
@@ -136,6 +147,8 @@ class Label(ExtronNode):
         """
         if visible not in [True,False]:
             self.__OnError('SetVisible: invalid visible state')
-        self._Command('SetVisible',[visible])
+        if visible != self._Visible:
+            #self._Command('SetVisible',[visible])
+            self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 

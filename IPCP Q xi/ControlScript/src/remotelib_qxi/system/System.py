@@ -32,6 +32,7 @@ class ObjectWrapper():
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
 
 
     def create_event_handler(self,property):

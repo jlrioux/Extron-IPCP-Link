@@ -3,6 +3,7 @@ _debug = False
 import traceback
 
 class AdapterDevice(ExtronNode):
+    def __str__(self):return(self.DeviceAlias)
     """
     This class provides a common interface to a TouchLink Control Adapter. The user can instantiate the class directly or create a subclass to add, remove, or alter behavior for different types of devices.
 

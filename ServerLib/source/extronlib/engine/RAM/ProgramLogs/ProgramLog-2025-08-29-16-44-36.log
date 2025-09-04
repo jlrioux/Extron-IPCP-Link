@@ -1,0 +1,7 @@
+2025-08-29 16:42:03 INFO root Start primary API version 1.8.21
+2025-08-29 16:42:03 INFO root loading script: main
+2025-08-29 16:42:04 INFO root successfully loaded script: main
+2025-08-29 16:43:28 WARNING root Bezel button info not found for: device 4-0
+2025-08-29 16:43:44 WARNING root Bezel button info not found for: device 5-0
+2025-08-29 16:43:51 ERROR root Debug Server restarted:Listening
+2025-08-29 16:44:21 ERROR root Debug Server restarted:Listening

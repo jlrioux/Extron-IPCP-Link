@@ -4,6 +4,7 @@ from extronlib.system import Timer
 import json,base64
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'DanteInterface'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
@@ -13,6 +14,8 @@ class ObjectWrapper(ObjectClass):
             self.args.append(arg)
         self.args = data['args']
         self.initialized = False
+        self.__is_connected = False
+
         self.host_alias = data['args'][0]
         if self.host_alias not in self.WrapperBasics.wrapped_objects['aliases by type']:
             self.host = None
@@ -30,7 +33,6 @@ class ObjectWrapper(ObjectClass):
                 self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
                 return
 
-
         """
             WRAPPER CONFIGURATION
         """
@@ -47,6 +49,7 @@ class ObjectWrapper(ObjectClass):
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
 
 
 
@@ -58,6 +61,10 @@ class ObjectWrapper(ObjectClass):
                     args[0] = args[0].encode()
                 args[0] = base64.b64encode(args[0]).decode('utf-8')
                 args = tuple(args)
+            if property == 'Connected':
+                self.__is_connected = True
+            elif property == 'Disconnected':
+                self.__is_connected = False
             update = {'property':property,'value':args,'qualifier':None}
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'update','message':update}))
         return e
@@ -68,6 +75,8 @@ class ObjectWrapper(ObjectClass):
         update = None
         if data['type'] == 'init':
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
+            if self.__is_connected:
+                self.Disconnect()
         elif data['type'] == 'command':
             if hasattr(self,data['property']):
                 attr = getattr(self,data['property'])

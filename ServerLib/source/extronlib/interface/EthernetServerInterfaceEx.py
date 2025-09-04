@@ -322,11 +322,14 @@ class _LocalEthernetServerInterfaceEx():
         if self.Protocol == 'TCP':
             if not self.__isbound:
                 return
+            self.__socket.send(data)
+            return
             for client in self.Clients:
                 try:
+                    print('sending packet')
                     client.Send(data)
-                except:
-                    pass
+                except Exception as e:
+                    print('error sending packet:{}'.format(e))
 
     def Disconnect(self, client:'ClientObject'):
         """ Closes the connection gracefully on specified client.
@@ -367,7 +370,11 @@ class _LocalEthernetServerInterfaceEx():
         """
         if not self.__isbound:
             return
-        self.__socket.listen()
+        try:
+            self.__socket.listen()
+        except Exception as e:
+            print('failed to listen on socket for port{}:{}'.format(self.IPPort,e))
+            return 'Not Listening'
         self.__islistening = True
         return 'Listening'
 
@@ -405,12 +412,16 @@ class _LocalEthernetServerInterfaceEx():
 
     def __accept_func(self):
         while True:
-            conn,addr = self.__socket.accept()
+            try:
+                conn,addr = self.__socket.accept()
+            except Exception as e:
+                print('Error accepting connection:{}'.format(e))
+                continue
             client = ClientObject()
             data = {'IPAddress':addr[0],'Hostname':addr[0],'ServicePort':addr[1]}
             client._set_client(conn,data)
             self.Clients.append(client)
-            self.__recv_threads.append(Thread(target=self.__recv_func(conn)))
+            self.__recv_threads.append(Thread(target=self.__recv_func(client)))
             self.__recv_threads[-1].start()
             if self.Connected is not None:
                 self.Connected(client,'Connected')
@@ -421,7 +432,7 @@ class _LocalEthernetServerInterfaceEx():
                 time.sleep(0.1)
                 if self.__islistening and len(self.Clients):
                     try:
-                        data,address = client.recvfrom(1024)
+                        data,address = client._recvfrom(1024)
                     except:
                         data = b''
                         address = ''
@@ -478,6 +489,11 @@ class EthernetServerInterfaceEx():
         self.Protocol = Protocol
         self.Interface = Interface
         self.MaxClients = MaxClients
+
+        self.Connected = None
+        self.Disconnected = None
+        self.ReceiveData = None
+
 
         self.__ESIEX = None
         if thru_ipcp:

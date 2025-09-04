@@ -1,0 +1,17 @@
+2025-09-03 08:07:25 INFO root Start primary API version 1.8.21
+2025-09-03 08:07:25 INFO root loading script: main
+2025-09-03 08:07:27 INFO root successfully loaded script: main
+2025-09-03 08:07:34 WARNING root Bezel button info not found for: device 4-0
+2025-09-03 08:07:40 INFO root Device 4-0 VTLP sync handling began
+2025-09-03 08:07:40 INFO root Device 4-0 VTLP sync handling ended
+2025-09-03 08:07:43 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:07:44 ERROR root Debug Server restarted:Listening
+2025-09-03 08:07:50 WARNING root Bezel button info not found for: device 5-0

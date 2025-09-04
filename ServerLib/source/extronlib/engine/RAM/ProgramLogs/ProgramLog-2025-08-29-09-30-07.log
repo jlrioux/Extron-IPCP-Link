@@ -1,0 +1,105 @@
+2025-08-29 09:28:31 INFO root Start primary API version 1.8.21
+2025-08-29 09:28:31 INFO root loading script: main
+2025-08-29 09:28:33 INFO root successfully loaded script: main
+2025-08-29 09:28:58 WARNING root Bezel button info not found for: device 4-0
+2025-08-29 09:29:15 WARNING root Bezel button info not found for: device 5-0
+2025-08-29 09:29:21 ERROR root Debug Server restarted:Listening
+2025-08-29 09:29:51 ERROR root Debug Server restarted:Listening
+2025-08-29 09:30:21 ERROR root Debug Server restarted:Listening
+2025-08-29 09:30:24 ERROR root SerialInterface SPD0:COM1 Unavailable Port: COM1
+2025-08-29 09:30:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2025-08-29 09:30:33 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2025-08-29 09:30:33 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: IRS2 , connections status Online
+2025-08-29 09:30:33 ERROR root Invalid Parameter in Label: Invalid ID=4
+2025-08-29 09:30:33 ERROR root Invalid Parameter in Label: Invalid ID=5
+2025-08-29 09:30:34 ERROR root Invalid Parameter in Label: Invalid ID=96
+2025-08-29 09:30:34 ERROR root Invalid Parameter in Label: Invalid ID=95
+2025-08-29 09:30:34 ERROR root Invalid Parameter in Label: Invalid ID=103
+2025-08-29 09:30:34 ERROR root Invalid Parameter in Label: Invalid ID=297
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1255
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1256
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1257
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1258
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1259
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1260
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1281
+2025-08-29 09:30:35 ERROR root Invalid Parameter in Label: Invalid ID=1282
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1283
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1284
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1285
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1286
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1287
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1288
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1289
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=1290
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=2301
+2025-08-29 09:30:36 ERROR root Invalid Parameter in Label: Invalid ID=2302
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2303
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2304
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2305
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2306
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2307
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2308
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2309
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2310
+2025-08-29 09:30:37 ERROR root Invalid Parameter in Label: Invalid ID=2311
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2312
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2313
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2314
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2315
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2316
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2317
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2318
+2025-08-29 09:30:38 ERROR root Invalid Parameter in Label: Invalid ID=2319
+2025-08-29 09:30:39 ERROR root Invalid Parameter in Label: Invalid ID=8603
+2025-08-29 09:30:39 ERROR root Invalid Parameter in Label: Invalid ID=8604
+2025-08-29 09:30:39 ERROR root Invalid Parameter in Label: Invalid ID=8605
+2025-08-29 09:30:39 ERROR root Invalid Parameter in Label: Invalid ID=8606
+2025-08-29 09:30:40 ERROR root Invalid Parameter in Label: Invalid ID=200
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=238
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=239
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=362
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=370
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=371
+2025-08-29 09:30:41 ERROR root Invalid Parameter in Label: Invalid ID=373
+2025-08-29 09:30:42 ERROR root Invalid Parameter in Label: Invalid ID=381
+2025-08-29 09:30:42 ERROR root Invalid Parameter in Label: Invalid ID=382
+2025-08-29 09:30:42 ERROR root Invalid Parameter in Label: Invalid ID=384
+2025-08-29 09:30:42 ERROR root Invalid Parameter in Label: Invalid ID=387
+2025-08-29 09:30:42 ERROR root Invalid Parameter in Label: Invalid ID=388
+2025-08-29 09:30:43 ERROR root Invalid Parameter in Label: Invalid ID=393
+2025-08-29 09:30:43 ERROR root Invalid Parameter in Label: Invalid ID=394
+2025-08-29 09:30:46 ERROR root Invalid Parameter in Label: Invalid ID=41445
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=41446
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=41447
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=41448
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=41449
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=41450
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=451
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=452
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=453
+2025-08-29 09:30:47 ERROR root Invalid Parameter in Label: Invalid ID=454
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=455
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=456
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=457
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=458
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=459
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=460
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=41451
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=41452
+2025-08-29 09:30:48 ERROR root Invalid Parameter in Label: Invalid ID=41453
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41454
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41455
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41456
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41457
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41458
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41459
+2025-08-29 09:30:49 ERROR root Invalid Parameter in Label: Invalid ID=41460
+2025-08-29 09:30:50 ERROR root Invalid Parameter in Label: Invalid ID=706
+2025-08-29 09:30:50 ERROR root Invalid Parameter in Label: Invalid ID=707
+2025-08-29 09:30:50 ERROR root Invalid Parameter in Label: Invalid ID=708
+2025-08-29 09:30:51 ERROR root Invalid Parameter in Label: Invalid ID=709
+2025-08-29 09:30:51 ERROR root Invalid Parameter in Label: Invalid ID=710
+2025-08-29 09:30:51 ERROR root Invalid Parameter in Label: Invalid ID=901
+2025-08-29 09:30:51 ERROR root Invalid Parameter in Label: Invalid ID=676
+2025-08-29 09:30:51 ERROR root Debug Server restarted:Listening

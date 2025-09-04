@@ -1,17 +1,12 @@
 from extronlib.engine.IpcpLink import ExtronNode
 _debug = False
 import traceback
-
-import socket,time,re,time,paramiko,base64
-from threading import Thread,Lock
-from datetime import datetime
-from extronlib.system import Timer
-
+import socket,base64,time
+from threading import Thread
+from extronlib.interface.ClientObject import ClientObject
 
 class _IPCPEthernetServerInterface(ExtronNode):
-    """ This class provides an interface to a server Ethernet socket. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
-
-    :Warning:: This class is no longer supported. For any new development, EthernetServerInterfaceEx should be used.
+    """ This class provides an interface to an Ethernet server that allows a user-defined amount of client connections. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
 
     ---
 
@@ -19,60 +14,59 @@ class _IPCPEthernetServerInterface(ExtronNode):
         - IPPort  (int) - IP port number of the listening service.
         - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
         - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-        - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
-
-    Note: ServicePort is only applicable to 'UDP' protocol type.
+        - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
 
     ---
 
     Parameters:
-        - Hostname - Returns (string) - Hostname DNS name of the connection. Can be the IP Address
-        - IPAddress - Returns (string) - the IP Address of the connected device
+        - Clients - Returns (list of ClientObject) - List of connected clients.
         - IPPort - Returns (int) - IP Port number of the listening service
-        - Interface - Returns (string) - name of interface on which the server is listening
-        - Protocol - Returns (string) - Value for either ’TCP’, ’UDP’ connection.
-        - ServicePort - Returns (int) - ServicePort port on which the client will listen for data
+        - Interface - Returns (string) - name of interface on which the server is listening ('Any', 'LAN' of 'AVLAN')
+        - MaxClients - Returns (int or None) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
+        - Protocol - Returns (string) - socket protocol ('TCP', 'UDP')
 
     ---
 
     Events:
-        - Connected - (Event) Triggers when socket connection is established.
-        - Disconnected - (Event) Triggers when the socket connection is broken
-        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the EthernetServerInterface instance triggering the event and the second one is a bytes string.
+        - Connected - (Event) Triggers when socket connection is established. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Connected').
+        - Disconnected - (Event) Triggers when the socket connection is broken. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Disconnected').
+        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a bytes string.
     """
 
-
     _type='EthernetServerInterface'
-    def __init__(self, IPPort, Protocol='TCP', Interface='Any', ServicePort=0,ipcp_index=0):
+    def __init__(self, IPPort, Protocol='TCP', Interface='Any', MaxClients=None,ipcp_index=0):
         """ EthernetServerInterface class constructor.
 
         Arguments:
             - IPPort  (int) - IP port number of the listening service.
             - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
-            - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-            - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
+            - (optional) Interface  (string) - Defines the network interface on which to listen
+            - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
         """
+        self.Connected = None
+        self.Disconnected = None
+        self.ReceiveData = None
+
         self.IPPort = IPPort
         self.Protocol = Protocol
         self.Interface = Interface
-        self.ServicePort = ServicePort
-        self.Connected = False
-        self.Disconnected = True
-        self.HostName = ''
-        self.IPAddress = ''
-        self.ReceiveData = None
+        self.MaxClients = MaxClients
+        self.Clients = []
 
 
-        self._args = [IPPort,Protocol,Interface,ServicePort]
+
+        self._args = [IPPort,Protocol,Interface,MaxClients]
         self._ipcp_index = ipcp_index
-        self._alias = f'ESI:{Interface}:{IPPort}'
+        self._alias = f'ESIEX:{Interface}:{IPPort}'
         self._callback_properties = {'Connected':None,
                                      'Disconnected':None,
                                      'ReceiveData':None}
+        self._alt_callback_properties = ['Connected',
+                                     'Disconnected',
+                                     'ReceiveData']
         self._properties_to_reformat = ['ReceiveData']
         self._query_properties_init = {}
-        self._query_properties_always = {'HostName':None,
-                                         'IPAddress':None}
+        self._query_properties_always = {}
         super().__init__(self)
         self._initialize_values()
     def _initialize_values(self):
@@ -82,7 +76,9 @@ class _IPCPEthernetServerInterface(ExtronNode):
             if property == 'ReceiveData':
                 if type(value) == list:
                     value = value[0]
-                value = base64.b64decode(value)
+                if type(value) == str:
+                    value = value.encode()
+                value = [base64.b64decode(value)]
             if _debug:print(f'{self._alias}: reformatted value of {property} to {value}')
         return value
     def _Parse_Update(self,msg_in):
@@ -94,14 +90,23 @@ class _IPCPEthernetServerInterface(ExtronNode):
         value = msg['value']
         if msg_type == 'update':
             if property in self._callback_properties:
-                prop = getattr(self,property)
-                if prop:
-                    try:
-                        if self._callback_properties[property] != None:setattr(self,self._callback_properties[property]['var'],value[self._callback_properties[property]['value index']])
-                        value = self.__format_parsed_update_value(property,value)
-                        prop(self,*value)
-                    except Exception as e:
-                        self.__OnError('Error calling {}.{} with exception: {}'.format(self._alias,property,traceback.format_exc()))
+                if property in self._alt_callback_properties:
+                    prop = getattr(self,'_{}'.format(property))
+                    if prop:
+                        try:
+                            value = self.__format_parsed_update_value(property,value)
+                            prop(value[0],msg['qualifier'])
+                        except Exception as e:
+                            self.__OnError('Error calling {}.{} with exception: {}'.format(self._alias,property,traceback.format_exc()))
+                else:
+                    prop = getattr(self,property)
+                    if prop:
+                        try:
+                            if self._callback_properties[property] != None:setattr(self,self._callback_properties[property]['var'],value[self._callback_properties[property]['value index']])
+                            value = self.__format_parsed_update_value(property,value)
+                            prop(self,*value)
+                        except Exception as e:
+                            self.__OnError('Error calling {}.{} with exception: {}'.format(self._alias,property,traceback.format_exc()))
         elif msg_type == 'query':
             try:
                 self._locks_values[msg_in['query id']] = self.__format_parsed_update_value(property,value)
@@ -129,27 +134,54 @@ class _IPCPEthernetServerInterface(ExtronNode):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
 
-    def Disconnect(self):
-        """ Closes the connection gracefully.
-        """
-        self._Command('Disconnect',[])
 
 
-    def Send(self, data):
-        """ Send string over ethernet port if it’s open
 
-        Arguments:
-            - data  (int) - string to send out
 
-        Raises:
-            - TypeError
-            - IOError
-        """
+    def _Send(self,client:'ClientObject',data):
         if type(data) == str:
             data = data.encode()
         data = base64.b64encode(data).decode('utf-8')
-        self._Command('Send',[data])
+        self._Command('Send',[client._client_struct,data])
+    def _Connected(self,state,client_data):
+        client = ClientObject()
+        client._set_client(self,client_data)
+        client_new = True
+        for c in self.Clients:
+            if c == client:
+                client_new = False
+        if client_new:
+            self.Clients.append(client)
+        if self.Connected:
+            self.Connected(client,state)
+    def _Disconnected(self,state,client_data):
+        client = ClientObject()
+        client._set_client(self,client_data)
+        for c in self.Clients:
+            if c == client:
+                self.Clients.remove(c)
+        if self.Disconnected:
+            self.Disconnected(client,state)
+    def _ReceiveData(self,data,client_data):
+        client = ClientObject()
+        client._set_client(self,client_data)
+        client_new = True
+        for c in self.Clients:
+            if c == client:
+                client_new = False
+        if client_new:
+            self.Clients.append(client)
+        if self.ReceiveData:
+            self.ReceiveData(client,data)
 
+
+    def Disconnect(self, client:'ClientObject'):
+        """ Closes the connection gracefully on specified client.
+
+        Arguments:
+            - client (ClientObject) - handle to client object
+        """
+        self._Command('Disconnect',[client._client_struct])
 
     def StartListen(self, timeout=0):
         """ Start the listener
@@ -162,8 +194,17 @@ class _IPCPEthernetServerInterface(ExtronNode):
 
         Raises:
             - IOError
+
+        Note: Return examples:
+            - Listening
+            - ListeningAlready
+            - PortUnavailable
+            - InterfaceUnavailable: LAN
+            - InterfaceUnavailable: LAN, AVLAN
+
+        Note: If 'Listening' not in result, the server will not be listening.
         """
-        self._Command('StartListen',[timeout])
+        return self._Query('StartListen',[timeout])
 
     def StopListen(self):
         """ Stop the listener
@@ -171,15 +212,44 @@ class _IPCPEthernetServerInterface(ExtronNode):
         self._Command('StopListen',[])
 
 
+    def SSLWrap(self,certificate:'str'=None,cert_reqs:'str'='CERT_REQUIRED',ssl_versiion:'str'='TLSv2',ca_certs:'str'=None):
+        '''
+        Wrap all connections to this server instance in an SSL context.
+
+        Note
+        This is almost a direct call to ssl.wrap_socket(). See python documentation for more details. The following changes are applied:
+
+            - Property server_side is set to True
+            - Property cert_reqs is a string
+            - Property ssl_version is a string
+            - Property do_handshake_on_connect is set to True
+            - Property suppress_ragged_eofs is set to True
+            - Property ciphers is fixed to the system default
+        Parameters:
+            - certificate (string) – alias to a specific keyfile/certificate pair
+            - cert_reqs (string) – specifies whether a certificate is required from the other side of the connection ('CERT_NONE', 'CERT_OPTIONAL', or 'CERT_REQUIRED'). If the value of this parameter is not 'CERT_NONE', then the ca_certs parameter must point to a file of CA certificates.
+            - ssl_version (string) – version from the supported SSL/TLS version table ('TLSv2'). Currently only TLS 1.2 is allowed.
+            - ca_certs (string) – alias to a file that contains a set of concatenated “certification authority” certificates, which are used to validate certificates passed from the other end of the connection.
+        Note
+            - Requires protocol 'TCP'.
+            - certificate and ca_certs specify aliases to machine certificate/key pairs and CA certificates uploaded to the processor in Toolbelt.
+        '''
+        self._Command('SSLWrap',[certificate,cert_reqs,ssl_versiion,ca_certs])
 
 
 
 
 
+
+
+
+'''
+    TODO : enforce if SSLWrap is used, host on remote ipcp, maybe thru ipcp should be default behavior?
+
+
+'''
 class _LocalEthernetServerInterface():
-    """ This class provides an interface to a server Ethernet socket. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
-
-    :Warning:: This class is no longer supported. For any new development, EthernetServerInterfaceEx should be used.
+    """ This class provides an interface to an Ethernet server that allows a user-defined amount of client connections. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
 
     ---
 
@@ -187,65 +257,95 @@ class _LocalEthernetServerInterface():
         - IPPort  (int) - IP port number of the listening service.
         - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
         - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-        - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
-
-    Note: ServicePort is only applicable to 'UDP' protocol type.
+        - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
 
     ---
 
     Parameters:
-        - Hostname - Returns (string) - Hostname DNS name of the connection. Can be the IP Address
-        - IPAddress - Returns (string) - the IP Address of the connected device
+        - Clients - Returns (list of ClientObject) - List of connected clients.
         - IPPort - Returns (int) - IP Port number of the listening service
-        - Interface - Returns (string) - name of interface on which the server is listening
-        - Protocol - Returns (string) - Value for either ’TCP’, ’UDP’ connection.
-        - ServicePort - Returns (int) - ServicePort port on which the client will listen for data
+        - Interface - Returns (string) - name of interface on which the server is listening ('Any', 'LAN' of 'AVLAN')
+        - MaxClients - Returns (int or None) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
+        - Protocol - Returns (string) - socket protocol ('TCP', 'UDP')
 
     ---
 
     Events:
-        - Connected - (Event) Triggers when socket connection is established.
-        - Disconnected - (Event) Triggers when the socket connection is broken
-        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the EthernetServerInterface instance triggering the event and the second one is a bytes string.
+        - Connected - (Event) Triggers when socket connection is established. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Connected').
+        - Disconnected - (Event) Triggers when the socket connection is broken. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Disconnected').
+        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a bytes string.
     """
 
-
-
-    def __init__(self, IPPort, Protocol='TCP', Interface='Any', ServicePort=0):
+    def __init__(self, IPPort, Protocol='TCP', Interface='Any', MaxClients=None):
         """ EthernetServerInterface class constructor.
 
         Arguments:
             - IPPort  (int) - IP port number of the listening service.
             - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
-            - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-            - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
+            - (optional) Interface  (string) - Defines the network interface on which to listen
+            - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
         """
+        self.Clients = []#type:list[ClientObject]
+        self.Connected = None
+        self.Disconnected = None
+        self.ReceiveData = None
+
+        self.__socket = None #type:socket.socket
+        self.__islistening = False
+        self.__isbound = False
+
+        self.__recv_threads = [] #type:list[Thread]
+        self.__accept_thread = None #type:Thread
+
         self.IPPort = IPPort
         self.Protocol = Protocol
         self.Interface = Interface
-        self.ServicePort = ServicePort
-        self.Connected = False
-        self.Disconnected = True
-        self.HostName = ''
-        self.IPAddress = ''
-        self.ReceiveData = None
+        self.MaxClients = MaxClients
 
-    def Disconnect(self):
-        """ Closes the connection gracefully.
-        """
-        pass
+        if self.MaxClients == None:
+            self.MaxClients = 100
 
-    def Send(self, data):
-        """ Send string over ethernet port if it’s open
+        if(self.Protocol == 'UDP'):
+            self.__socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+        elif(self.Protocol == 'TCP'):
+            self.__socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+        else:
+            print('EthernetServerInterface: Error: Invalid Protocol:',str(Protocol))
+        self.__socket.bind(('localhost',self.IPPort))
+        self.__isbound = True
+
+        if self.Protocol == 'TCP':
+            self.__accept_thread = Thread(target=self.__accept_func)
+            self.__accept_thread.start()
+
+    def Send(self,data:'str'):
+        if self.Protocol == 'TCP':
+            if not self.__isbound:
+                return
+            self.__socket.send(data)
+            return
+            for client in self.Clients:
+                try:
+                    print('sending packet')
+                    client.Send(data)
+                except Exception as e:
+                    print('error sending packet:{}'.format(e))
+
+    def Disconnect(self, client:'ClientObject'):
+        """ Closes the connection gracefully on specified client.
 
         Arguments:
-            - data  (int) - string to send out
-
-        Raises:
-            - TypeError
-            - IOError
+            - client (ClientObject) - handle to client object
         """
-        pass
+        if not self.__isbound:
+            return
+        #self.__islistening = False
+        if self.Protocol == 'TCP':
+            if self.Disconnected is not None:
+                if client in self.Clients:
+                    self.Clients.remove(client)
+                    client.Disconnect()
+                    self.Disconnected(client,'Disconnected')
 
     def StartListen(self, timeout=0):
         """ Start the listener
@@ -258,22 +358,97 @@ class _LocalEthernetServerInterface():
 
         Raises:
             - IOError
+
+        Note: Return examples:
+            - Listening
+            - ListeningAlready
+            - PortUnavailable
+            - InterfaceUnavailable: LAN
+            - InterfaceUnavailable: LAN, AVLAN
+
+        Note: If 'Listening' not in result, the server will not be listening.
         """
-        pass
+        if not self.__isbound:
+            return
+        try:
+            self.__socket.listen()
+        except Exception as e:
+            print('failed to listen on socket for port{}:{}'.format(self.IPPort,e))
+            return 'Not Listening'
+        self.__islistening = True
+        return 'Listening'
 
     def StopListen(self):
         """ Stop the listener
         """
+        if not self.__isbound:
+            return
+        self.__socket.close()
+        self.__islistening = False
+
+    def SSLWrap(self,certificate:'str'=None,cert_reqs:'str'='CERT_REQUIRED',ssl_versiion:'str'='TLSv2',ca_certs:'str'=None):
+        '''
+        Wrap all connections to this server instance in an SSL context.
+
+        Note
+        This is almost a direct call to ssl.wrap_socket(). See python documentation for more details. The following changes are applied:
+
+            - Property server_side is set to True
+            - Property cert_reqs is a string
+            - Property ssl_version is a string
+            - Property do_handshake_on_connect is set to True
+            - Property suppress_ragged_eofs is set to True
+            - Property ciphers is fixed to the system default
+        Parameters:
+            - certificate (string) – alias to a specific keyfile/certificate pair
+            - cert_reqs (string) – specifies whether a certificate is required from the other side of the connection ('CERT_NONE', 'CERT_OPTIONAL', or 'CERT_REQUIRED'). If the value of this parameter is not 'CERT_NONE', then the ca_certs parameter must point to a file of CA certificates.
+            - ssl_version (string) – version from the supported SSL/TLS version table ('TLSv2'). Currently only TLS 1.2 is allowed.
+            - ca_certs (string) – alias to a file that contains a set of concatenated “certification authority” certificates, which are used to validate certificates passed from the other end of the connection.
+        Note
+            - Requires protocol 'TCP'.
+            - certificate and ca_certs specify aliases to machine certificate/key pairs and CA certificates uploaded to the processor in Toolbelt.
+        '''
         pass
+
+    def __accept_func(self):
+        while True:
+            try:
+                conn,addr = self.__socket.accept()
+            except Exception as e:
+                print('Error accepting connection:{}'.format(e))
+                continue
+            client = ClientObject()
+            data = {'IPAddress':addr[0],'Hostname':addr[0],'ServicePort':addr[1]}
+            client._set_client(conn,data)
+            self.Clients.append(client)
+            self.__recv_threads.append(Thread(target=self.__recv_func(client)))
+            self.__recv_threads[-1].start()
+            if self.Connected is not None:
+                self.Connected(client,'Connected')
+
+    def __recv_func(self,client):
+        def r():
+            while True:
+                time.sleep(0.1)
+                if self.__islistening and len(self.Clients):
+                    try:
+                        data,address = client._recvfrom(1024)
+                    except:
+                        data = b''
+                        address = ''
+                    if self.ReceiveData is not None and len(data):
+                        self.ReceiveData(client,data)
+        return r
+
+
+
 
 
 
 
 
 class EthernetServerInterface():
-    """ This class provides an interface to a server Ethernet socket. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
-
-    :Warning:: This class is no longer supported. For any new development, EthernetServerInterfaceEx should be used.
+    """ This class provides an interface to an Ethernet server that allows a user-defined amount of client connections. After instantiation, the server is started by calling StartListen(). This class allows the user to send data over the Ethernet port in an asynchronous manner using Send() and ReceiveData after a client has connected.
 
     ---
 
@@ -281,66 +456,74 @@ class EthernetServerInterface():
         - IPPort  (int) - IP port number of the listening service.
         - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
         - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-        - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
-
-    Note: ServicePort is only applicable to 'UDP' protocol type.
+        - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
 
     ---
 
     Parameters:
-        - Hostname - Returns (string) - Hostname DNS name of the connection. Can be the IP Address
-        - IPAddress - Returns (string) - the IP Address of the connected device
+        - Clients - Returns (list of ClientObject) - List of connected clients.
         - IPPort - Returns (int) - IP Port number of the listening service
-        - Interface - Returns (string) - name of interface on which the server is listening
-        - Protocol - Returns (string) - Value for either ’TCP’, ’UDP’ connection.
-        - ServicePort - Returns (int) - ServicePort port on which the client will listen for data
+        - Interface - Returns (string) - name of interface on which the server is listening ('Any', 'LAN' of 'AVLAN')
+        - MaxClients - Returns (int or None) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
+        - Protocol - Returns (string) - socket protocol ('TCP', 'UDP')
 
     ---
 
     Events:
-        - Connected - (Event) Triggers when socket connection is established.
-        - Disconnected - (Event) Triggers when the socket connection is broken
-        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the EthernetServerInterface instance triggering the event and the second one is a bytes string.
+        - Connected - (Event) Triggers when socket connection is established. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Connected').
+        - Disconnected - (Event) Triggers when the socket connection is broken. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a string ('Disconnected').
+        - ReceiveData - (Event) Receive Data event handler used for asynchronous transactions. The callback takes two arguments. The first one is the ClientObject instance triggering the event and the second one is a bytes string.
     """
 
-
-
-    def __init__(self, IPPort, Protocol='TCP', Interface='Any', ServicePort=0,thru_ipcp=True,ipcp_index=0):
+    def __init__(self, IPPort, Protocol='TCP', Interface='Any', MaxClients=None,thru_ipcp=False,ipcp_index=0):
         """ EthernetServerInterface class constructor.
 
         Arguments:
             - IPPort  (int) - IP port number of the listening service.
             - (optional) Protocol  (string) - Value for either 'TCP' or 'UDP'
-            - (optional) Interface  (string) - Defines the network interface on which to listen ('Any', 'LAN' of 'AVLAN')
-            - (optional) ServicePort  (int) - sets the port from which the client will send data. Zero means any service port is valid.
+            - (optional) Interface  (string) - Defines the network interface on which to listen
+            - (optional) MaxClients  (int) - maximum number of client connections to allow (None == Unlimited, 0 == Invalid)
         """
+        self.Clients = []#type:list[ClientObject]
         self.IPPort = IPPort
         self.Protocol = Protocol
         self.Interface = Interface
-        self.ServicePort = ServicePort
-        self.Connected = False
-        self.Disconnected = True
-        #self.HostName = ''
-        #self.IPAddress = ''
+        self.MaxClients = MaxClients
+
+        self.Connected = None
+        self.Disconnected = None
         self.ReceiveData = None
 
-        self.__ESI = None
+
+        self.__ESIEX = None
         if thru_ipcp:
-            self.__ESI = _IPCPEthernetServerInterface(IPPort,Protocol,Interface,ServicePort,ipcp_index)
-            self._type = self.__ESI._type
+            self.__ESIEX = _IPCPEthernetServerInterface(IPPort,Protocol,Interface,MaxClients,ipcp_index)
+            self._type = self.__ESIEX._type
             self._ipcp_index = ipcp_index
-            self._alias = f'ESI:{Interface}:{IPPort}'
-            self._initialize_values = self.__ESI._initialize_values
-            self._UpdateResponse = self.__ESI._UpdateResponse
-            self._Query = self.__ESI._Query
-            self._Command = self.__ESI._Command
-            self._QueryResponse = self.__ESI._QueryResponse
-            self._InitResponse = self.__ESI._InitResponse
-            self._ErrorResponse = self.__ESI._ErrorResponse
-            self._Initialize = self.__ESI._Initialize
-            self._LinkStatusChanged = self.__ESI._LinkStatusChanged
+            self._alias = f'ESIEX:{Interface}:{IPPort}'
+            self._initialize_values = self.__ESIEX._initialize_values
+            self._UpdateResponse = self.__ESIEX._UpdateResponse
+            self._Query = self.__ESIEX._Query
+            self._Command = self.__ESIEX._Command
+            self._QueryResponse = self.__ESIEX._QueryResponse
+            self._InitResponse = self.__ESIEX._InitResponse
+            self._ErrorResponse = self.__ESIEX._ErrorResponse
+            self._Initialize = self.__ESIEX._Initialize
+            self._LinkStatusChanged = self.__ESIEX._LinkStatusChanged
+            self.Clients = self.__ESIEX.Clients
+            self.Disconnect = self.__ESIEX.Disconnect
+            self.StartListen = self.__ESIEX.StartListen
+            self.StopListen = self.__ESIEX.StopListen
+            self.SSLWrap = self.__ESIEX.SSLWrap
+            self.Send = self.__ESIEX.Send
         else:
-            self.__ESI = _LocalEthernetServerInterface(IPPort,Protocol,Interface,ServicePort)
+            self.__ESIEX = _LocalEthernetServerInterface(IPPort,Protocol,Interface,MaxClients)
+            self.Clients = self.__ESIEX.Clients
+            self.Disconnect = self.__ESIEX.Disconnect
+            self.StartListen = self.__ESIEX.StartListen
+            self.StopListen = self.__ESIEX.StopListen
+            self.SSLWrap = self.__ESIEX.SSLWrap
+            self.Send = self.__ESIEX.Send
         self.__subscribe_events()
 
 
@@ -348,68 +531,15 @@ class EthernetServerInterface():
         def c(interface,state):
             if self.Connected:
                 self.Connected(interface,state)
-        self.__ESI.Connected = c
+        self.__ESIEX.Connected = c
         def d(interface,state):
             if self.Disconnected:
                 self.Disconnected(interface,state)
-        self.__ESI.Disconnected = d
+        self.__ESIEX.Disconnected = d
         def r(interface,data):
             if self.ReceiveData:
                 self.ReceiveData(interface,data)
-        self.__ESI.ReceiveData = r
+        self.__ESIEX.ReceiveData = r
 
-
-    @property
-    def HostName(self):
-        return self.__ESI.HostName
-
-
-    @property
-    def IPAddress(self):
-        return self.__ESI.IPAddress
-
-
-
-
-    def Disconnect(self):
-        """ Closes the connection gracefully.
-        """
-        self.__ESI.Disconnect()
-
-
-    def Send(self, data):
-        """ Send string over ethernet port if it’s open
-
-        Arguments:
-            - data  (int) - string to send out
-
-        Raises:
-            - TypeError
-            - IOError
-        """
-        self.__ESI.Send(data)
-
-
-
-    def StartListen(self, timeout=0):
-        """ Start the listener
-
-        Arguments:
-            - (optional) timeout  (float) - how long to listen for connections (0=Forever)
-
-        Returns:
-            - 'Listening' or a reason for failure (e.g. 'PortUnavailable')
-
-        Raises:
-            - IOError
-        """
-        self.__ESI.StartListen(timeout)
-
-
-
-    def StopListen(self):
-        """ Stop the listener
-        """
-        self.__ESI.StopListen()
 
 

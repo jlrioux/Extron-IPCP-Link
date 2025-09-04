@@ -1,11 +1,9 @@
-import re,json,threading,time,socket,queue
-from datetime import datetime
-import pickle,base64
+import re,json,threading,time,queue
 
 _debug = False
-import traceback
+
 class ExtronNode():
-    def __init__(self,obj):
+    def __init__(self,obj,send_ipcp_create=True,needs_sync=True):
         self._locks = {} #type:dict[str,threading.Lock]
         self._locks_lock = threading.Lock()
         self._locks_values = {}
@@ -14,11 +12,14 @@ class ExtronNode():
         IpcpLink.RegisterNode(self)
         self.LinkStatusCallback = None
         self.LinkStatus = 'Disconnected'
-        self._Initialize()
+        if send_ipcp_create:
+            self._Initialize(needs_sync=needs_sync)
 
 
 
     def __aquire_lock(self,key=None):
+        while self._locks_lock.locked():
+            time.sleep(0.001)
         with self._locks_lock:
             self.__query_id += 1
             if key == None:
@@ -40,6 +41,9 @@ class ExtronNode():
     def _Command(self,property,args):
         msg = f"{self._alias}~~{json.dumps({'type':'command','device type':self._type,'property':property,'args':args})}"
         self.ipcp_link.Command(msg)
+    def _BatchCommand(self,property,args):
+        msg = f"{self._alias}~~{json.dumps({'type':'command','device type':self._type,'property':property,'args':args})}"
+        self.ipcp_link.BatchCommand(msg)
 
     def _Query(self,property,args):
         key = self.__aquire_lock()
@@ -74,15 +78,16 @@ class ExtronNode():
     def _InitResponse(self,msg):
         self._Parse_Update(msg)
         self.__release_lock('init')
-    def _Initialize(self):
+    def _Initialize(self,needs_sync=True):
         msg = f"{self._alias}~~{json.dumps({'type':'init','device type':self._type,'args':self._args})}"
         self.ipcp_link.Init(msg)
-        key = self.__aquire_lock('init')
-        while self._locks[key].locked():
-            time.sleep(0.001)
-        with self._locks_lock:
-            del self._locks['init']
-        self._initialize_values()
+        if needs_sync:
+            key = self.__aquire_lock('init')
+            while self._locks[key].locked():
+                time.sleep(0.001)
+            with self._locks_lock:
+                del self._locks['init']
+        #self._initialize_values()
 
     def _LinkStatusChanged(self,value):
         self.LinkStatus = value
@@ -127,7 +132,8 @@ class IpcpLink():
         self.port = {'LAN':11991,'AVLAN':11990}[port]
 
         from extronlib.interface import EthernetClientInterface
-        self.__client = EthernetClientInterface(self.ip_address,self.port,'TCP')
+        self.__client = EthernetClientInterface(self.ip_address,self.port,'TCP',thru_ipcp=False)
+        self.__client_udp = EthernetClientInterface(self.ip_address,self.port+2,'UDP',thru_ipcp=False)
         self.__client.ReceiveData = self.__HandleRecieveFromClient()
         self.__client.Connected = self.__OnConnected()
         self.__client.Disconnected = self.__OnDisconnected()
@@ -149,6 +155,8 @@ class IpcpLink():
             else:
                 self.__client.Send(self.__delim)
         self.connection_enforcement = Timer(5,f)
+
+        self.batch_commands = ''
 
         from extronlib.system import System,RFile
         self.System = System(self.index)
@@ -176,18 +184,23 @@ class IpcpLink():
                     try:
                         msg = json.loads(match[1])
                     except Exception as e:
-                        print('Error decoding message in response for alias {}:{}'.format(alias,str(e)))
+                        print('Error decoding message in response for alias {}:{}:{}'.format(alias,str(e)),match[1])
+                        continue
                     if msg and alias in self.nodes:
                         nodeevent = None
                         msg_type = msg['type']
                         if msg_type == 'query':
                             nodeevent = threading.Thread(target=self.nodes[alias]['node']._QueryResponse,args=(msg,))
+                            #self.nodes[alias]['node']._QueryResponse(msg)
                         if msg_type == 'update':
                             nodeevent = threading.Thread(target=self.nodes[alias]['node']._UpdateResponse,args=(msg,))
+                            #self.nodes[alias]['node']._UpdateResponse(msg)
                         if msg_type == 'init':
                             nodeevent = threading.Thread(target=self.nodes[alias]['node']._InitResponse,args=(msg,))
+                            #self.nodes[alias]['node']._InitResponse(msg)
                         if msg_type == 'error':
                             nodeevent = threading.Thread(target=self.nodes[alias]['node']._ErrorResponse,args=(msg,))
+                            #self.nodes[alias]['node']._ErrorResponse(msg)
                         if nodeevent:nodeevent.start()
         return e
 
@@ -225,15 +238,29 @@ class IpcpLink():
                 return
             messages = []
             while not self.__tx_queue.empty():
-                msg = self.__tx_queue.get()
-                self.__client.Send(msg)
-                if _debug:print('message sent:{}'.format(msg))
+                messages.append('{}{}'.format(self.__tx_queue.get(),self.__delim))
+                if len(messages) == 10:
+                    msg = ''.join(messages)
+                    self.__client.Send(msg)
+                    messages = []
+            msg = ''.join(messages)
+            self.__client.Send(msg)
         return f_ipcp_link_tx_timer
 
 
 
     def Command(self,msg):
         self.Send(msg)
+
+    def BatchCommand(self,msg):
+        #self.__tx_queue.put(msg)
+        #return
+        msg = f'{msg}{self.__delim}'
+        #self.__client_udp.Send(msg)
+        self.__client.Send(msg)
+        if _debug:print('message sent:{}'.format(msg))
+
+
 
 
     def Query(self,msg):

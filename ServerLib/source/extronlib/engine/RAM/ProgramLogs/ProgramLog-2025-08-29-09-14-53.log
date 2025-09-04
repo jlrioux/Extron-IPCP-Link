@@ -1,0 +1,21 @@
+2025-08-29 09:11:27 INFO root Start primary API version 1.8.21
+2025-08-29 09:11:28 INFO root loading script: main
+2025-08-29 09:11:29 INFO root successfully loaded script: main
+2025-08-29 09:13:45 WARNING root Bezel button info not found for: device 4-0
+2025-08-29 09:13:54 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 280, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 344, in receive_message
+    WrapperBasics.check_create_objects_queue()
+  File "/remotelib_qxi/__init__.py", line 268, in check_create_objects_queue
+    dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
+  File "/remotelib_qxi/device/UIDevice.py", line 26, in __init__
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 62, in check_where_used
+    if parts[1] in self.where_used_items:
+AttributeError: 'ObjectWrapper' object has no attribute 'where_used_items'
+2025-08-29 09:14:08 ERROR root Debug Server restarted:Listening
+2025-08-29 09:14:38 ERROR root Debug Server restarted:Listening
+2025-08-29 09:15:08 ERROR root Debug Server restarted:Listening
+2025-08-29 09:15:38 ERROR root Debug Server restarted:Listening

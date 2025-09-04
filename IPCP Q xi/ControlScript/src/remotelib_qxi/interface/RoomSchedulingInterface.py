@@ -10,6 +10,7 @@ import json,pickle
 
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'RoomSchedulingInterface'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p

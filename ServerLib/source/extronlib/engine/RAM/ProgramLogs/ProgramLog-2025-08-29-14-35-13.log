@@ -1,0 +1,51 @@
+2025-08-29 14:33:54 INFO root Start primary API version 1.8.21
+2025-08-29 14:33:54 INFO root loading script: main
+2025-08-29 14:33:55 INFO root successfully loaded script: main
+2025-08-29 14:34:04 WARNING root Bezel button info not found for: device 4-0
+2025-08-29 14:34:08 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:34:08 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:34:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:34:22 WARNING root Bezel button info not found for: device 5-0
+2025-08-29 14:34:27 ERROR root Debug Server restarted:Listening
+2025-08-29 14:34:57 ERROR root Debug Server restarted:Listening
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 14:35:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 14:35:27 ERROR root Debug Server restarted:Listening
+2025-08-29 14:35:30 ERROR root SerialInterface SPD0:COM1 Unavailable Port: COM1
+2025-08-29 14:35:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2025-08-29 14:35:40 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2025-08-29 14:35:40 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: IRS2 , connections status Online
+2025-08-29 14:35:40 ERROR root Invalid Parameter in Button: Invalid ID=1
+2025-08-29 14:35:41 WARNING root Alias not associated with a type:Panel0_5:4536
+2025-08-29 14:35:41 WARNING root Alias not associated with a type:Panel0_5:4537
+2025-08-29 14:35:41 WARNING root Alias not associated with a type:Panel0_5:948
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_1:4537
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_3:4537
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_2:4537
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_4:4537
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_5:4537
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_1:4536
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_2:4536
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_3:4536
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_4:4536
+2025-08-29 14:35:45 WARNING root Alias not associated with a type:Panel0_5:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_1:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_2:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_3:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_4:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_5:4536
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_1:4537
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_2:4537
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_3:4537
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_4:4537
+2025-08-29 14:35:51 WARNING root Alias not associated with a type:Panel0_5:4537
+2025-08-29 14:35:57 ERROR root Debug Server restarted:Listening

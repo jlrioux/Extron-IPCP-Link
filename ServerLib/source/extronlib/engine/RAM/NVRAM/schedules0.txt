@@ -1,0 +1,1 @@
+{"schedule info": {"startup": {"time": ["06:00:00"], "days": ["Monday", "Wednesday", "Friday"], "enabled": "Enabled"}, "shutdown": {"time": ["06:00:00"], "days": [], "enabled": "Enabled"}}}

@@ -4,7 +4,7 @@ from threading import Thread,Lock
 from datetime import datetime
 from extronlib.system import Timer
 import base64
-_debug = True
+_debug = False
 import traceback
 
 
@@ -290,7 +290,6 @@ class _LocalEthernetClientInterface():
         self.ReceiveData = None
 
         self._socket = None #type:socket.socket|paramiko.SSHClient
-        self._client = None #type:Client
         self._connected = False
         self._rec_thread = None
         self._rec_thread_stop = True
@@ -305,17 +304,19 @@ class _LocalEthernetClientInterface():
         self.ServicePort = ServicePort
         self.Credentials = Credentials
 
+
+        self._client = Client(self.Hostname)
+        self._client.server = self
+        self._client.IPAddress = self.Hostname
+
         if self.Protocol == 'UDP':
             try:
                 self._socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
                 if self.ServicePort > 0:
-                    self._socket.bind(("",self.ServicePort))
+                    self._socket.bind(('0.0.0.0',self.ServicePort))
                 else:
-                    self._socket.bind((""))
+                    self._socket.bind(('0.0.0.0',0))
                 self._connected = True
-                self._client = Client(self.Hostname)
-                self._client.server = self
-                self._client.IPAddress = self.Hostname
                 self._client.client = self._socket
             except Exception as e:
                 print(f"UDP Socket error: {e}")
@@ -339,9 +340,6 @@ class _LocalEthernetClientInterface():
             return
         if self._connected:
             return('ConnectedAlready')
-        self._client = Client(self.Hostname)
-        self._client.server = self
-        self._client.IPAddress = self.Hostname
         if self.Protocol == 'TCP':
             try:
                 self._socket = socket.create_connection((self.Hostname,self.IPPort),timeout)
@@ -381,6 +379,7 @@ class _LocalEthernetClientInterface():
         if self._socket:
             self._socket.shutdown(socket.SHUT_RDWR)
             self._socket.close()
+        if not self._connected:return
         self._connected = False
         self._socket = None
         if self.Disconnected is not None:
@@ -516,7 +515,7 @@ class _LocalEthernetClientInterface():
                     self.Disconnect()
                 if not self._send_and_wait_active.locked():
                     if self.ReceiveData is not None and len(data):
-                        self.ReceiveData(self._client,data)
+                        self.ReceiveData(self,data)
                 else:
                     self._send_and_wait_rx += data
                 time.sleep(0.01)
@@ -561,7 +560,7 @@ class EthernetClientInterface():
         - (optional) Credentials  (tuple) - Username and password for SSH connection.
     """
     _type='EthernetClientInterface'
-    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=False,ipcp_index=0):
+    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=True,ipcp_index=0):
         self.Connected = None
         self.Disconnected = None
         self.ReceiveData = None

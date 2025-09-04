@@ -1,0 +1,71 @@
+2025-09-03 08:08:21 INFO root Start primary API version 1.8.21
+2025-09-03 08:08:21 INFO root loading script: main
+2025-09-03 08:08:23 INFO root successfully loaded script: main
+2025-09-03 08:08:35 WARNING root Bezel button info not found for: device 4-0
+2025-09-03 08:08:44 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:08:51 INFO root Device 4-0 VTLP sync handling began
+2025-09-03 08:08:51 WARNING root Bezel button info not found for: device 5-0
+2025-09-03 08:08:51 INFO root Device 4-0 VTLP sync handling ended
+2025-09-03 08:08:58 ERROR root Debug Server restarted:Listening
+2025-09-03 08:09:00 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:09:15 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:09:28 ERROR root Debug Server restarted:Listening
+2025-09-03 08:09:31 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:09:46 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/device/UIDevice.py", line 70, in w
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 87, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:09:58 ERROR root Debug Server restarted:Listening
+2025-09-03 08:09:58 ERROR root SerialInterface SPD0:COM1 Unavailable Port: COM1
+2025-09-03 08:09:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2025-09-03 08:10:07 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2025-09-03 08:10:08 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: IRS2 , connections status Online
+2025-09-03 08:10:15 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 294, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 358, in receive_message
+    WrapperBasics.check_create_objects_queue()
+  File "/remotelib_qxi/__init__.py", line 282, in check_create_objects_queue
+    dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
+  File "/remotelib_qxi/ui/Button.py", line 40, in __init__
+    print('allow make object is false:{}:{}'.format(self.alias),self.args[1])
+IndexError: Replacement index 1 out of range for positional args tuple
+2025-09-03 08:10:38 ERROR root Debug Server restarted:Listening

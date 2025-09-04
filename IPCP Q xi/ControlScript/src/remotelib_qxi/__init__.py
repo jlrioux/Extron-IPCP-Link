@@ -13,7 +13,7 @@ Notes:
 
 
 
-_debug = True
+_debug = False
 
 
 
@@ -31,7 +31,6 @@ class RemoteServer():    #class code
         self.__remote_server = None
         self.__remote_server_password = 'p9oai23jr09p8fmvw98foweivmawthapw4t'
         self.__remote_minimum_client_version = '0.0.0.0'
-        self.__remote_server_logged_in = False
         self.__remote_server_logged_in = False
         self.__delim = '~!END!~\x0a'
         self.__remote_busy = False
@@ -63,6 +62,8 @@ class RemoteServer():    #class code
         self.__remote_server_listen_timer.Stop()
 
 
+
+
     def EnableRemoteServer(self):
         if self.interface == 'AVLAN':port = 11990
         elif self.interface == 'LAN':port = 11991
@@ -71,27 +72,26 @@ class RemoteServer():    #class code
             return
         if not self.__remote_server:
             self.__remote_server = EthernetServerInterfaceEx(port,'TCP',Interface=self.interface,MaxClients=5)
+            self.__remote_server_udp = EthernetServerInterfaceEx(port+2,'UDP',Interface=self.interface)
             __remote_res = self.__remote_server.StartListen()
+            __remote_res_udp = self.__remote_server_udp.StartListen()
             self.__remote_server_listen_timer.Restart()
             if __remote_res != 'Listening':
                 print('RemoteServer EnableRemoteServer: Failed : {}'.format(__remote_res))
             else:
                 print('RemoteServer EnableRemoteServer: Succeeded on port {}'.format(self.interface))
+            if __remote_res_udp != 'Listening':
+                print('RemoteServer EnableRemoteServer UDP: Failed : {}'.format(__remote_res))
+            else:
+                print('RemoteServer EnableRemoteServer UDP: Succeeded on port {}'.format(self.interface))
 
             @event(self.__remote_server, 'ReceiveData')
-            def HandheReceiveFromServer(client,data:'bytes'):
-                if _debug:print('recieved data:{}'.format(data.decode()))
-                self.__remote_server_buffer += data.decode()
-                while self.__delim in self.__remote_server_buffer:
-                    pos = self.__remote_server_buffer.index(self.__delim)
-                    temp = self.__remote_server_buffer[:pos]
-                    self.__remote_server_buffer = self.__remote_server_buffer[pos+len(self.__delim):]
-                    if temp == 'ping()':return
-                    if self.__remote_server_logged_in and len(temp) > 0:
-                        self.__wrapperbasics.process_message(temp,client.IPAddress)
-                    elif self.__remote_server_password in temp:
-                        self.__remote_server_logged_in = True
-                        print('RemoteServer HandheReceiveFromServer: Logged In')
+            def HandheReceiveFromServer_tcp(client,data:'bytes'):
+                self.HandheReceiveFromServer(client,data)
+
+            @event(self.__remote_server_udp, 'ReceiveData')
+            def HandheReceiveFromServer_udp(client,data:'bytes'):
+                self.HandheReceiveFromServer(client,data)
 
             @event(self.__remote_server, 'Connected')
             def HandleClientConnect(interface, state):
@@ -109,6 +109,23 @@ class RemoteServer():    #class code
                 #server offline page
                 self.__wrapperbasics.set_server_status(interface.IPAddress,'Offline')
 
+    def HandheReceiveFromServer(self,client,data:'bytes'):
+        if _debug:print('recieved data:{}'.format(data.decode()))
+        self.__remote_server_buffer += data.decode()
+        while self.__delim in self.__remote_server_buffer:
+            pos = self.__remote_server_buffer.index(self.__delim)
+            temp = self.__remote_server_buffer[:pos]
+            self.__remote_server_buffer = self.__remote_server_buffer[pos+len(self.__delim):]
+
+            if temp == 'ping()':
+                client.Send('pong(){}'.format(self.__delim))
+                print('sent pong')
+                return
+            if self.__remote_server_logged_in and len(temp) > 0:
+                self.__wrapperbasics.process_message(temp,client.IPAddress)
+            elif self.__remote_server_password in temp:
+                self.__remote_server_logged_in = True
+                print('RemoteServer HandheReceiveFromServer: Logged In')
     def DisableRemoteServer(self):
         if self.__remote_server:
             self.__remote_server_logged_in = False
@@ -127,6 +144,9 @@ class RemoteServer():    #class code
                     client.Send('{}{}'.format(message,self.__delim))
                 except:
                     pass
+
+    def SetPingBeforeECIConnect(self,value):
+        self.__wrapperbasics.SetPingBeforeECIConnect(value)
 
 
 
@@ -253,7 +273,6 @@ class WrapperBasics():
                     'Label':{},
                     'Level':{},
                     'Slider':{}}
-    pending_objects = []
 
 
 
@@ -268,11 +287,15 @@ class WrapperBasics():
             dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
             dev._server_ip = server_ip
             if dev.initialized:
-                WrapperBasics.register(data['device type'],alias,dev)
+                pass#WrapperBasics.register(data['device type'],alias,dev)
             else:
                 print(f'failed to create object:{alias}:{data}')
         WrapperBasics.objects_queue_busy = False
 
+    def SetPingBeforeECIConnect(self,value):
+        vals = {True:True,False:False,None:None,
+                'Enable':True,'Disable':False,'Auto':None}
+        self._ping_before_eci_connect = vals[value]
 
     def process_message(self,data,ipaddress):
         @Wait(0)
@@ -282,19 +305,19 @@ class WrapperBasics():
 
 
 
-    def register(type,alias,obj):
+    def register(self,type,alias,obj):
         if alias in WrapperBasics.wrapped_objects['aliases by type']:return
         if type in WrapperBasics.wrapped_objects:
             WrapperBasics.wrapped_objects[type][alias] = obj
             WrapperBasics.wrapped_objects['aliases by type'][alias] = type
-            if _debug:print('regestered {} "{}"'.format(type,alias))
+            if _debug:print('registered {} "{}"'.format(type,alias))
 
 
     def __init__(self,interface):
         WrapperBasics.__instances[interface] = self
         self.remote_server = RemoteServer(self,interface)
         WrapperBasics.__remote_servers[interface] = self.remote_server
-
+        self._ping_before_eci_connect = None
 
 
     '''
@@ -343,17 +366,9 @@ class WrapperBasics():
                 WrapperBasics.create_objects_queue.put([self,alias,data,server_ip])
                 WrapperBasics.check_create_objects_queue()
                 return
-            else:
-                if not alias in self.pending_objects:
-                    #print(f'device needs to be made, add to pending objects:{alias}')
-                    WrapperBasics.pending_objects.append(alias)
-                    #request from the server the details to create the object
-                    data = {'type':'init request','message':{}}
-                    self.send_message(alias,data)
-                    return
-
         if not type:
-            ProgramLog(f'Alias not associated with a type:{alias}',Severity='warning')
+            err_msg = {'property':'init','value':'device does not exist','qualifier':{'alias':alias,'code':'missing device'}}
+            self.send_message(alias,json.dumps({'type':'error','message':err_msg}))
 
     def send_message(self,alias,data):
         message = '{}~~{}'.format(alias,data)

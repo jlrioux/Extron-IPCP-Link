@@ -130,9 +130,21 @@ class Clock():
             return True
         return False
 
-
+    def __format_time(self,time:'str'):
+        parts = time.split(':')
+        result = []
+        for part in parts:
+            if len(part) == 1:
+                result.append('0{}'.format(part))
+            else:
+                result.append(part)
+        while len(result) < 3:
+            result.append('00')
+        time = ':'.join(result)
+        return time
     def __enable_jobs(self):
         for Time in self.Times:
+            Time = self.__format_time(Time)
             if 'Monday' in self.Days:
                 schedule.every().monday.at(Time).do(self.__jobqueue.put,self.__wrap_job_function(self.Function)).tag(self.__alias)
             if 'Tuesday' in self.Days:

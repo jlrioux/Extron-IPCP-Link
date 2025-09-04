@@ -3,6 +3,7 @@ _debug = False
 import traceback
 
 class SPDevice(ExtronNode):
+    def __str__(self):return(self.DeviceAlias)
     """ Defines common interface to Extron Control Secure Platform Devices
 
     Note:

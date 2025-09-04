@@ -36,7 +36,7 @@
         },{
       "name": "Bonus Room Tablet",
       "part_number": "79-559-01",
-      "alias": "panel0",
+      "alias": "BonusRoom0",
       "extron_control_web_id": "Bonus-Room-Tablet",
       "ui": {
           "layout_file": "Bonus Room.gdl",
@@ -48,7 +48,7 @@
     },{
       "name": "Bonus Room Phone",
       "part_number": "79-600-01",
-      "alias": "panel1",
+      "alias": "BonusRoom1",
       "extron_control_web_id": "Bonus-Room-Phone",
       "ui": {
         "layout_file": "Bonus Room - Phone.gdl",

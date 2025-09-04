@@ -4,6 +4,7 @@ import json
 import base64
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'RFile'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
@@ -48,6 +49,7 @@ class ObjectWrapper(ObjectClass):
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
 
 
     def create_event_handler(self,property):

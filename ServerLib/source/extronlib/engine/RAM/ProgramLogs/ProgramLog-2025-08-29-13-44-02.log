@@ -1,0 +1,25 @@
+2025-08-29 13:42:44 INFO root Start primary API version 1.8.21
+2025-08-29 13:42:44 INFO root loading script: main
+2025-08-29 13:42:46 INFO root successfully loaded script: main
+2025-08-29 13:42:53 WARNING root Bezel button info not found for: device 4-0
+2025-08-29 13:42:59 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 13:42:59 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 13:43:02 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 280, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 344, in receive_message
+    WrapperBasics.check_create_objects_queue()
+  File "/remotelib_qxi/__init__.py", line 268, in check_create_objects_queue
+    dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
+  File "/remotelib_qxi/device/UIDevice.py", line 66, in __init__
+    self.check_where_used()
+  File "/remotelib_qxi/device/UIDevice.py", line 82, in check_where_used
+    self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,id)
+TypeError: __init__() takes exactly 3 positional arguments (4 given)
+2025-08-29 13:43:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 13:43:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 13:43:14 INFO root Device 4-0 VTLP sync handling began
+2025-08-29 13:43:14 INFO root Device 4-0 VTLP sync handling ended
+2025-08-29 13:43:16 ERROR root Debug Server restarted:Listening
+2025-08-29 13:43:46 ERROR root Debug Server restarted:Listening

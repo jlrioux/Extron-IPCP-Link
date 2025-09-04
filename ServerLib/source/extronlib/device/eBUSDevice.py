@@ -6,6 +6,7 @@ _debug = False
 import traceback
 
 class eBUSDevice(ExtronNode):
+    def __str__(self):return(self.DeviceAlias)
     """ Defines common interface to Extron eBUS panels
 
     ---

@@ -47,8 +47,8 @@ class Slider(ExtronNode):
         self.UIHost = UIDevice
         self.ID = ID
         self._Name = ''
-        self._Visible = True
-        self._Enabled = True
+        self._Visible = None
+        self._Enabled = None
         self._Max = 100
         self._Min = 0
         self._Step = 1
@@ -67,15 +67,9 @@ class Slider(ExtronNode):
                                      'Released':None,
                                      'Changed':{'var':'_Fill','value index':1}}
         self._properties_to_reformat = []
-        self._query_properties_init = {'Name':[],
-                                    'Fill':[],
-                                    'Visible':[],
-                                    'Max':[],
-                                    'Min':[],
-                                    'Step':[],
-                                    'Enabled':[]}
+        self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self)
+        super().__init__(self,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -86,7 +80,13 @@ class Slider(ExtronNode):
     def _Parse_Update(self,msg_in):
         msg_type = msg_in['type']
         if _debug:print(f'got message type {msg_type} for alias {self._alias}')
-        if msg_type == 'init':return
+        if msg_type == 'init':
+            values = msg_in['value']
+            if values:
+                for key in values:
+                    if hasattr(self,'_{}'.format(key)):
+                        setattr(self,'_{}'.format(key),values[key])
+            return
         msg = msg_in['message']
         property = msg['property']
         value = msg['value']
@@ -161,6 +161,8 @@ class Slider(ExtronNode):
             self._query_properties_init_list.remove('Visible')
             self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
+            if self._Visible == None:
+                return True
             return self._Visible
         return self._Query('Visible',[])
     @property
@@ -185,6 +187,8 @@ class Slider(ExtronNode):
             self._query_properties_init_list.remove('Enabled')
             self._Enabled = self._Query('Enabled',[])
         if 'Enabled' not in self._query_properties_always:
+            if self._Enabled == None:
+                return True
             return self._Enabled
         return self._Query('Enabled',[])
 
@@ -196,7 +200,8 @@ class Slider(ExtronNode):
             self._Fill -= self._Step
         else:
             self._Fill = self._Min
-        self._Command('Dec',[])
+        #self._Command('Dec',[])
+        self._BatchCommand('Dec',[])
 
 
     def Inc(self) -> None:
@@ -205,7 +210,8 @@ class Slider(ExtronNode):
             self._Fill += self._Step
         else:
             self._Fill = self._Max
-        self._Command('Inc',[])
+        #self._Command('Inc',[])
+        self._BatchCommand('Inc',[])
 
     def SetFill(self, Fill: int) -> None:
         """ Set the current fill level
@@ -216,6 +222,7 @@ class Slider(ExtronNode):
         if self._Min <= Fill <= self._Max:
             self._Fill = Fill
             self._Command('SetFill',[Fill])
+            #self._BatchCommand('SetFill',[Fill])
         else:
             self.__OnError('SetFill: Value out of range')
 
@@ -248,7 +255,9 @@ class Slider(ExtronNode):
         """
         if visible not in [True,False]:
             self.__OnError('SetVisible: invalid enable state')
-        self._Command('SetVisible',[visible])
+        if visible != self._Visible:
+            #self._Command('SetVisible',[visible])
+            self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 
 
@@ -262,5 +271,7 @@ class Slider(ExtronNode):
         """
         if enable not in [True,False]:
             self.__OnError('SetEnable: invalid enable state')
-        self._Command('SetEnable',[enable])
+        if enable != self._Enabled:
+            #self._Command('SetEnable',[enable])
+            self._BatchCommand('SetEnable',[enable])
         self._Enabled = enable

@@ -61,9 +61,10 @@ class Button(ExtronNode):
         self.holdTime = holdTime
         self.repeatTime = repeatTime
         self._Name = ''
-        self._Visible = True
-        self._Enabled = True
-        self._State = 0
+        self._Visible = None
+        self._Enabled = None
+        self._State = None
+        self._Text = None
         self._PressedState = False
         self._BlinkState = 'Not blinking'
 
@@ -84,13 +85,10 @@ class Button(ExtronNode):
                                      'Tapped':None,
                                      'Held':None}
         self._properties_to_reformat = []
-        self._query_properties_init = {'Name':[],
-                                         'State':[],
-                                         'Enabled':[],
-                                         'Visible':[]}
+        self._query_properties_init = {}
         self._query_properties_always = {'BlinkState':[],
                                          'PressedState':[]}
-        super().__init__(self)
+        super().__init__(self,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -101,7 +99,13 @@ class Button(ExtronNode):
     def _Parse_Update(self,msg_in):
         msg_type = msg_in['type']
         if _debug:print(f'got message type {msg_type} for alias {self._alias}')
-        if msg_type == 'init':return
+        if msg_type == 'init':
+            values = msg_in['value']
+            if values:
+                for key in values:
+                    if hasattr(self,'_{}'.format(key)):
+                        setattr(self,'_{}'.format(key),values[key])
+            return
         msg = msg_in['message']
         property = msg['property']
         value = msg['value']
@@ -157,6 +161,8 @@ class Button(ExtronNode):
             self._query_properties_init_list.remove('Enabled')
             self._Enabled = self._Query('BlinkState',[])
         if 'Enabled' not in self._query_properties_always:
+            if self._Enabled == None:
+                return True
             return self._Enabled
         return self._Query('Enabled',[])
     @property
@@ -181,6 +187,8 @@ class Button(ExtronNode):
             self._query_properties_init_list.remove('State')
             self._State = self._Query('State',[])
         if 'State' not in self._query_properties_always:
+            if self._State == None:
+                return 0
             return self._State
         return self._Query('State',[])
     @property
@@ -189,6 +197,8 @@ class Button(ExtronNode):
             self._query_properties_init_list.remove('Visible')
             self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
+            if self._Visible == None:
+                return True
             return self._Visible
         return self._Query('Visible',[])
 
@@ -204,7 +214,8 @@ class Button(ExtronNode):
             - rate (float) - duration of time in seconds for one visual state to stay until replaced by the next visual state.
             - stateList (list of ints) - list of visual states that this button blinks among.
         """
-        self._Command('CustomBlink',[rate,stateList])
+        #self._Command('CustomBlink',[rate,stateList])
+        self._BatchCommand('CustomBlink',[rate,stateList])
 
 
     def SetBlinking(self, rate: str, stateList: list) -> None:
@@ -229,7 +240,8 @@ class Button(ExtronNode):
             - stateList (list of ints) - list of visual states that this button blinks among.
 
         """
-        self._Command('SetBlinking',[rate,stateList])
+        #self._Command('SetBlinking',[rate,stateList])
+        self._BatchCommand('SetBlinking',[rate,stateList])
 
     def SetEnable(self, enable: bool) -> None:
         """ Enable or disable an UI control object.
@@ -239,7 +251,9 @@ class Button(ExtronNode):
         """
         if enable not in [True,False]:
             self.__OnError('SetEnable: invalid enable state')
-        self._Command('SetEnable',[enable])
+        if enable != self._Enabled:
+            #self._Command('SetEnable',[enable])
+            self._BatchCommand('SetEnable',[enable])
         self._Enabled = enable
 
 
@@ -252,8 +266,11 @@ class Button(ExtronNode):
 
         Note: Setting the current state stops button from blinking, if it is running. (SetBlinking())
         """
-        self._Command('SetState',[State])
+        if State != self._State or self._BlinkState == 'Blinking':
+            #self._Command('SetState',[State])
+            self._BatchCommand('SetState',[State])
         self._State = State
+        self._BlinkState = 'Not Blinking'
 
 
     def SetText(self, text: str) -> None:
@@ -265,7 +282,10 @@ class Button(ExtronNode):
         Raises:
             - TypeError
         """
-        self._Command('SetText',[text])
+        if text != self._Text:
+            #self._Command('SetText',[text])
+            self._BatchCommand('SetText',[text])
+        self._Text = text
 
     def SetVisible(self, visible: bool) -> None:
         """ Change the visibility of an UI control object.
@@ -275,6 +295,8 @@ class Button(ExtronNode):
         """
         if visible not in [True,False]:
             self.__OnError('SetVisible: invalid visible state')
-        self._Command('SetVisible',[visible])
+        if visible != self._Visible:
+            #self._Command('SetVisible',[visible])
+            self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 

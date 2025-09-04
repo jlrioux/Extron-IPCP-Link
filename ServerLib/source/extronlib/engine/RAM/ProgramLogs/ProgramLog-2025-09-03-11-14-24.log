@@ -1,0 +1,2047 @@
+1999-12-31 18:17:19 INFO root Start primary API version 1.8.21
+1999-12-31 18:17:19 INFO root loading script: main
+1999-12-31 18:17:21 INFO root successfully loaded script: main
+1999-12-31 18:18:04 WARNING root Bezel button info not found for: device 4-0
+1999-12-31 18:18:18 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 18:18:18 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 18:18:18 ERROR root Control ID 0 not defined
+1999-12-31 18:18:20 WARNING root Bezel button info not found for: device 5-0
+1999-12-31 18:18:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:18:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:19:27 ERROR root SerialInterface SPD0:COM1 Unavailable Port: COM1
+1999-12-31 18:19:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+1999-12-31 18:19:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:19:36 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+1999-12-31 18:19:36 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: IRS2 , connections status Online
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - VTC Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - VTC Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Switch Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Switch Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - VTC Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Displays
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Switch Status
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Displays
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Displays
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Mics Control
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Mics Control
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Mics Control
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Schedule
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Schedule
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - VTC Maintenance
+1999-12-31 18:20:40 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - VTC Maintenance
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Schedule
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - VTC Maintenance
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - VTC Meetings
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - VTC Meetings
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - VTC Meetings
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Switch Routing
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Mics Modes
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Switch Routing
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Switch Routing
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Mics ULX Status
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Mics ULX Status
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Mics ULX Status
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Mics Modes
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=4 - Tech Page - Equip Details
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=4 - Tech Page - Equip Details
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Mics Modes
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 ShowPopup: popup=3 - VTC Dialing and Menu
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=4 - Tech Page - Equip Details
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_4 ShowPage: page=3 - VTC
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 ShowPopup: popup=3 - VTC Dialing and Menu
+1999-12-31 18:20:41 ERROR root Invalid Parameter Panel0_5 ShowPage: page=3 - VTC
+1999-12-31 18:20:46 ERROR root EthernetClient 172.16.1.31:2202 - Ethernet port not connected
+1999-12-31 18:20:46 ERROR root EthernetClient 172.16.1.32:2202 - Ethernet port not connected
+1999-12-31 18:20:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:47 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:20:53 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:20:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:58 ERROR root can't start new thread
+1999-12-31 18:20:58 ERROR root can't start new thread
+1999-12-31 18:20:58 ERROR root can't start new thread
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 294, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 344, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/system/System.py", line 57, in receive_message
+    attr = getattr(self,data['property'])
+AttributeError: 'ObjectWrapper' object has no attribute '4135924136
+ProgramLog'
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:20:59 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:20:59 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=3 - VTC Recent Calls
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=1 - Incoming Call
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root Debug Server restarted:Listening
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=1 - VTC Touch Tones
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=1 - VTC Touch Tones
+1999-12-31 18:21:00 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=1 - VTC Touch Tones
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root Debug Server restarted:Listening
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:01 ERROR root EthernetClient 172.16.1.62:22023 - Ethernet port not connected
+1999-12-31 18:21:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:02 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:21:02 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:21:02 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:03 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:05 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=7 - System Busy Please Wait
+1999-12-31 18:21:05 ERROR root Invalid Parameter Panel0_4 HidePopup: popup=7 - System Busy Please Wait
+1999-12-31 18:21:05 ERROR root Invalid Parameter Panel0_5 HidePopup: popup=7 - System Busy Please Wait
+1999-12-31 18:21:05 ERROR root Invalid Parameter Panel0_2 HidePopup: popup=7 - System Busy Please Wait
+1999-12-31 18:21:05 ERROR root Invalid Parameter Panel0_3 HidePopup: popup=7 - System Busy Please Wait
+1999-12-31 18:21:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:12 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:21:12 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:21:13 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:21:26 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:21:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:39 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:45 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:21:52 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:21:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:21:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:21:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:05 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:06 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:22:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:18 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:18 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:22:19 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:22:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:22:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:45 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:46 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:46 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:22:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:22:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:22:58 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:22:59 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:23:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:23:09 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:23:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:12 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:23:12 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:23:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:23:22 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:23:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:25 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:23:25 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:23:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:23:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:35 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:23:35 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:23:35 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:23:35 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:23:35 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:23:36 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:23:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:38 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:23:38 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:23:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:23:49 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:23:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:51 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:23:52 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:23:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:23:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:23:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:02 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:03 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:05 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:24:05 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:24:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:18 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:24:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:19 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:24:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:27 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:27 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:27 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:24:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:31 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:24:32 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:24:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:35 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:40 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:44 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:24:45 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:24:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:51 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:52 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:24:52 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:24:52 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:24:52 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:24:52 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:24:53 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:24:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:24:57 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:24:58 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:24:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:24:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:05 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:05 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:06 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:11 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:25:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:12 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:25:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:15 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:16 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:17 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:20 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:20 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:25:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:24 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:25:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:25 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:25:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:25:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:30 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:33 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:33 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:25:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:35 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:37 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:25:38 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:25:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:43 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:44 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:44 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:44 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:46 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:46 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:25:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:50 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:25:51 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:25:51 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:25:56 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:25:57 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:25:57 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:25:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:25:57 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:25:57 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:25:57 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:25:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:25:59 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:25:59 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:03 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:26:04 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:26:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:09 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:26:09 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:26:09 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:26:09 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:26:09 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:26:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:26:10 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:26:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:13 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:26:13 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:17 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:26:18 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:26:20 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:26:21 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:26:23 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:26:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:24 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:24 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:26:24 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:26:24 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:26:24 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:26:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:26:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:30 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:26:31 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:26:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:34 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:26:34 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:26:34 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:26:35 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:36 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:26:36 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:26:36 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:26:37 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:26:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:43 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:26:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:44 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:26:45 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:47 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:26:47 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:26:47 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:26:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:26:50 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:26:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:26:56 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:26:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:26:57 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:27:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:01 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:01 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:01 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:03 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:09 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:27:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:10 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:27:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:14 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:14 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:14 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:15 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:16 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:17 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:17 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:17 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:17 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:23 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:24 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:27 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:35 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:36 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:27:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:37 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:27:38 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:38 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:38 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:40 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:41 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:41 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:41 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:41 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:41 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:45 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:49 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:27:50 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:27:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:51 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:27:51 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:27:51 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:27:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:27:53 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:27:54 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:27:54 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:27:54 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:27:54 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:27:54 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:27:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:27:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:28:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:02 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:28:03 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:28:04 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:04 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:04 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:06 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:07 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:28:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:15 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:28:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:16 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:28:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:17 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:17 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:17 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:20 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:21 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:21 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:28:21 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:28:27 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:27 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:27 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:27 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:28 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:30 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:28:30 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:31 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:42 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:42 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:42 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:43 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:28:43 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:44 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:45 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:45 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:45 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:45 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:28:45 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:51 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:55 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:28:55 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:28:55 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:28:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:56 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:28:56 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:28:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:28:57 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:28:58 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:28:58 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:28:58 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:28:58 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:28:58 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:08 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:29:08 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:08 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:09 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:29:09 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:29:10 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:29:11 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:29:11 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:29:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:11 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:29:11 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:29:11 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:21 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:21 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:29:21 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:21 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:23 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:29:23 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:29:23 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:29:23 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:29:23 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:29:24 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:25 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:29:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:29:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:29:31 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:32 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:29:34 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:29:35 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:29:35 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:29:35 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:29:35 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:35 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:29:36 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:29:36 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:29:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:41 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:45 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:45 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:29:45 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:45 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:47 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:29:47 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:29:47 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:29:48 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:29:49 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:29:49 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:29:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:51 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:29:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:29:58 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:29:58 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:29:58 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:01 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:01 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:02 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:30:02 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:30:05 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:12 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:30:12 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:30:12 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:14 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:15 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:15 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:15 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:15 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:15 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:30:16 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:30:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:25 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:30:25 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:25 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:30:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:27 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:28 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:28 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:28 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:28 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:28 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:29 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:30:29 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:30:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:35 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:30:36 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:30:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:38 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:39 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:39 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:39 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:42 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:30:42 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:30:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:49 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:30:49 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:30:49 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:30:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:30:51 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:30:52 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:30:52 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:30:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:52 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:30:52 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:30:52 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:30:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:55 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:30:55 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:30:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:30:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:30:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:02 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:02 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:02 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:04 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:04 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:04 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:04 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:05 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:08 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:31:08 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:31:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:15 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:15 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:15 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:17 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:17 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:18 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:19 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:21 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:31:21 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:31:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:22 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:26 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:31:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:28 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:28 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:29 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:30 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:31 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:32 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:32 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:32 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:35 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:31:35 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:31:37 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:38 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:38 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:38 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:39 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:41 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:42 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:42 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:46 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:48 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:31:48 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:31:50 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:52 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:31:53 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:31:53 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:31:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:31:55 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:31:56 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:31:56 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:31:56 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:31:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:31:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:57 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:31:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:01 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:32:01 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:32:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:02 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:06 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:06 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:06 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:06 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:08 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:09 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:09 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:09 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:09 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:32:09 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:10 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:11 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 18:32:11 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 18:32:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:14 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 18:32:14 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 18:32:14 ERROR root Control ID 0 not defined
+1999-12-31 18:32:14 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:32:14 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:32:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:17 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:19 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:19 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:19 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:21 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:21 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:21 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:21 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:22 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:32:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:32:28 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:32:28 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:32:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:32 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:32 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:32 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:34 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:34 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:34 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:32:35 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:36 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:32:36 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:32:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:38 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:32:38 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:32:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:41 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:32:41 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:42 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:43 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:43 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:45 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:45 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:45 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:45 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:45 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:46 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:51 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:54 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:32:54 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:32:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:32:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:58 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:32:58 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:32:59 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:03 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:07 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:07 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:33:07 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:33:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:11 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:11 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:33:12 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:33:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:13 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:15 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:18 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:21 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:33:21 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:33:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:23 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:33:25 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:33:26 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:33:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:33:27 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:31 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:34 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:33:34 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:33:35 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:33:38 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:38 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:33:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:44 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:44 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:45 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:45 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:46 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:33:46 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:33:47 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:33:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:33:50 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:33:51 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:33:51 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:33:51 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:33:52 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:52 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:53 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:33:53 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:33:53 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+1999-12-31 18:33:53 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:53 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:53 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:55 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:55 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:55 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:56 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:56 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:58 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:58 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:58 ERROR root Debug Server restarted:Listening
+1999-12-31 18:33:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:58 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:33:59 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+1999-12-31 18:33:59 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:33:59 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:33:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:00 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:34:00 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:34:00 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:34:00 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:34:01 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:34:01 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:34:02 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:34:02 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:34:03 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:34:03 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:34:03 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:04 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:06 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:06 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:06 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:34:06 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:34:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:14 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:34:14 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:34:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:17 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:19 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:19 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:34:28 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:34:28 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:34:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:30 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:33 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:33 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:33 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:41 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:34:41 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:43 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:46 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:46 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:49 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:49 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:49 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:51 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:52 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:54 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:54 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+1999-12-31 18:34:56 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:34:56 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:34:56 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:56 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+1999-12-31 18:34:57 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+1999-12-31 18:34:57 ERROR root Debug Server restarted:Listening
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:34:59 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:00 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:04 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:08 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:09 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:35:09 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:35:09 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:35:12 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:35:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:14 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:16 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:19 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:20 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:22 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:35:22 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:35:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:24 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:35:25 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:35:26 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:35:26 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:35:26 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:35:27 ERROR root Debug Server restarted:Listening
+1999-12-31 18:35:28 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:29 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:31 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:35:31 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:35:32 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:34 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:35 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:35:35 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:35:36 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:38 ERROR root EthernetClient 172.16.1.79:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.73:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.83:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.82:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.80:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.78:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.76:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.74:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.71:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.81:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.84:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.77:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.75:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root EthernetClient 172.16.1.72:7142 - Fail to connect ethernet port
+1999-12-31 18:35:39 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:40 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:44 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open
+1999-12-31 18:35:45 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Phone
+1999-12-31 18:35:45 ERROR root Invalid Parameter Panel0_1 HidePopup: popup=4 - Tech Page - Cable TV
+1999-12-31 18:35:48 ERROR root EthernetClient 172.16.1.32:2202 - Fail to connect ethernet port
+1999-12-31 18:35:48 ERROR root EthernetClient 172.16.1.31:2202 - Fail to connect ethernet port
+1999-12-31 18:35:48 ERROR root SerialInterface SPD0:COM1Device 3-0 (None) Send:  Port COM1 not open

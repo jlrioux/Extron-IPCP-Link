@@ -46,8 +46,8 @@ class IRInterface(ExtronNode):
         self.Host = Host
         self.Port = Port
         self.File = File
-        self.Offline = False
-        self.Online = True
+        self.Offline = None
+        self.Online = None
 
 
         self._args = [Host.DeviceAlias,Port,File]

@@ -45,7 +45,7 @@ class Knob(ExtronNode):
         self._properties_to_reformat = []
         self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self)
+        super().__init__(self,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -56,7 +56,13 @@ class Knob(ExtronNode):
     def _Parse_Update(self,msg_in):
         msg_type = msg_in['type']
         if _debug:print(f'got message type {msg_type} for alias {self._alias}')
-        if msg_type == 'init':return
+        if msg_type == 'init':
+            values = msg_in['value']
+            if values:
+                for key in values:
+                    if hasattr(self,'_{}'.format(key)):
+                        setattr(self,'_{}'.format(key),values[key])
+            return
         msg = msg_in['message']
         property = msg['property']
         value = msg['value']

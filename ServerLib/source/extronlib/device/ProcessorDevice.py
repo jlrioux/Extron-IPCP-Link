@@ -3,6 +3,7 @@ _debug = False
 import traceback
 
 class ProcessorDevice(ExtronNode):
+    def __str__(self):return(self.DeviceAlias)
     """ Defines common interface to Extron Control Processors
 
     Note:

@@ -1,23 +1,34 @@
 
 from extronlib.interface import EthernetClientInterface as ObjectClass
-from extronlib.system import Timer
+from extronlib.system import Timer,Wait,Ping
 import json
 import base64
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'EthernetClientInterface'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
+        self._server_ip = ''
+        self._device_on_network = True
+        self._test_ping_timer = Timer(5,self.__test_ping_loop())
+        self._test_ping_timer.Stop()
+        if self.WrapperBasics._ping_before_eci_connect in [None,True]:
+            @Wait(1)
+            def w():
+                self.__test_ping()
         self.alias = alias
         self.args = []
         for arg in data['args']:
+            if type(arg) is list:
+                arg = tuple(arg)
             self.args.append(arg)
-        self.args = data['args']
         self.initialized = False
+        self.__is_connected = False
 
         if self.args:
             try:
-                ObjectClass.__init__(self,*data['args']) #type:ObjectClass
+                ObjectClass.__init__(self,*self.args) #type:ObjectClass
             except Exception as e:
                 print('failed to create {} "{}" with args "{}" with exception: {}'.format(ObjectWrapper.type,self.alias,self.args,str(e)))
                 msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
@@ -32,7 +43,8 @@ class ObjectWrapper(ObjectClass):
         event_attrs = ['Connected','Disconnected','ReceiveData']
         self.overloaded_attrs = {'SendAndWait':'_SendAndWait',
                                  'Send':'_Send',
-                                 'StartKeepAlive':'_StartKeepAlive'}
+                                 'StartKeepAlive':'_StartKeepAlive',
+                                 'Connect':'_Connect'}
 
 
         """
@@ -44,6 +56,23 @@ class ObjectWrapper(ObjectClass):
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
+
+
+    def __test_ping(self):
+        if self._server_ip:
+            res = Ping(self._server_ip,1)
+            print('TestPing:{} result:{}'.format(self._server_ip,res))
+            enable = res[0] > 0
+            if enable:
+                self._test_ping_timer.Restart()
+    def __test_ping_loop(self):
+        def t(timer,count):
+            res = Ping(self.Hostname,1)
+            print('Ping:{} result:{}'.format(self.Hostname,res))
+            self._device_on_network = res[0] > 0
+        return t
+
 
 
     def create_event_handler(self,property):
@@ -54,6 +83,10 @@ class ObjectWrapper(ObjectClass):
                     args[0] = args[0].encode()
                 args[0] = base64.b64encode(args[0]).decode('utf-8')
                 args = tuple(args)
+            if property == 'Connected':
+                self.__is_connected = True
+            elif property == 'Disconnected':
+                self.__is_connected = False
             update = {'property':property,'value':args,'qualifier':None}
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'update','message':update}))
         return e
@@ -64,6 +97,9 @@ class ObjectWrapper(ObjectClass):
         update = None
         if data['type'] == 'init':
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
+            if self.__is_connected:
+                self.StopKeepAlive()
+                self.Disconnect()
         elif data['type'] == 'command':
             if hasattr(self,data['property']):
                 attr = getattr(self,data['property'])
@@ -114,18 +150,24 @@ class ObjectWrapper(ObjectClass):
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
 
-
+    def _Connect(self,timeout=None):
+        if not self._device_on_network:
+            return 'No route to host'
+        return self.Connect(timeout)
     def _SendAndWait(self,data:'str', timeout:'float'=3, deliTag:'bytes'=None, deliRex:'str'=None,deliLen:'int'=None):
-        data = base64.b64decode(data)
-        print('send and wait with data{}:{}'.format(type(data),data))
-        val = ''
-        if deliTag:
-            deliTag = base64.b64decode(deliTag)
-            val = self.SendAndWait(data, timeout, deliTag=deliTag)
-        elif deliRex:
-            val = self.SendAndWait(data, timeout, deliRex=deliRex)
-        elif deliLen:
-            val = self.SendAndWait(data, timeout, deliLen=deliLen)
+        if not self._device_on_network:
+            val = b''
+        else:
+            data = base64.b64decode(data)
+            print('send and wait with data{}:{}'.format(type(data),data))
+            val = ''
+            if deliTag:
+                deliTag = base64.b64decode(deliTag)
+                val = self.SendAndWait(data, timeout, deliTag=deliTag)
+            elif deliRex:
+                val = self.SendAndWait(data, timeout, deliRex=deliRex)
+            elif deliLen:
+                val = self.SendAndWait(data, timeout, deliLen=deliLen)
         return base64.b64encode(val).decode('utf-8')
 
     def _Send(self,data:'str'):

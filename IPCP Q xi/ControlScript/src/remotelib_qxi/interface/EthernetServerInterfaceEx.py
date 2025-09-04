@@ -5,6 +5,7 @@ import json
 import base64
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'EthernetServerInterfaceEx'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
@@ -14,6 +15,7 @@ class ObjectWrapper(ObjectClass):
             self.args.append(arg)
         self.args = data['args']
         self.initialized = False
+        self.__is_connected = False
 
         if self.args:
             try:
@@ -41,6 +43,7 @@ class ObjectWrapper(ObjectClass):
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
 
 
     def create_event_handler(self,property):
@@ -58,6 +61,10 @@ class ObjectWrapper(ObjectClass):
                             'IPAddress':client.IPAddress,
                             'ServicePort':client.ServicePort}
                 qualifier = client_data
+            if property == 'Connected':
+                self.__is_connected = True
+            elif property == 'Disconnected':
+                self.__is_connected = False
             update = {'property':property,'value':args,'qualifier':qualifier}
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'update','message':update}))
         return e
@@ -68,6 +75,9 @@ class ObjectWrapper(ObjectClass):
         update = None
         if data['type'] == 'init':
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
+            for c in self.Clients:
+                super().Disconect(self,c)
+            self.StopListen()
         elif data['type'] == 'command':
             if hasattr(self,data['property']):
                 attr = getattr(self,data['property'])

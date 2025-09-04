@@ -1,0 +1,39 @@
+1999-12-31 19:30:59 INFO root Start primary API version 1.8.21
+1999-12-31 19:31:00 INFO root loading script: main
+1999-12-31 19:31:01 INFO root successfully loaded script: main
+1999-12-31 19:31:25 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/interface/EthernetClientInterface.py", line 20, in w
+    self.__test_ping()
+  File "/remotelib_qxi/interface/EthernetClientInterface.py", line 68, in __test_ping
+    self._test_ping_timer.Start()
+AttributeError: 'Timer' object has no attribute 'Start'
+1999-12-31 19:31:25 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/interface/EthernetClientInterface.py", line 20, in w
+    self.__test_ping()
+  File "/remotelib_qxi/interface/EthernetClientInterface.py", line 68, in __test_ping
+    self._test_ping_timer.Start()
+AttributeError: 'Timer' object has no attribute 'Start'
+1999-12-31 19:31:31 WARNING root Bezel button info not found for: device 4-0
+1999-12-31 19:31:40 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:31:40 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:31:47 WARNING root Bezel button info not found for: device 5-0
+1999-12-31 19:31:48 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:31:48 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:31:48 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:31:48 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:31:54 ERROR root Debug Server restarted:Listening
+1999-12-31 19:31:55 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:31:55 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:03 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:32:03 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:03 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:32:03 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:10 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:32:10 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:18 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:32:18 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:18 INFO root Device 4-0 VTLP sync handling began
+1999-12-31 19:32:18 INFO root Device 4-0 VTLP sync handling ended
+1999-12-31 19:32:24 ERROR root Debug Server restarted:Listening

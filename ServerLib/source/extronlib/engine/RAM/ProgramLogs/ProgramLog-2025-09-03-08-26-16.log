@@ -1,0 +1,9 @@
+2025-09-03 08:24:42 INFO root Start primary API version 1.8.21
+2025-09-03 08:24:42 INFO root loading script: main
+2025-09-03 08:24:43 INFO root successfully loaded script: main
+2025-09-03 08:25:04 WARNING root Bezel button info not found for: device 4-0
+2025-09-03 08:25:11 INFO root Device 4-0 VTLP sync handling began
+2025-09-03 08:25:11 INFO root Device 4-0 VTLP sync handling ended
+2025-09-03 08:25:20 WARNING root Bezel button info not found for: device 5-0
+2025-09-03 08:25:27 ERROR root Debug Server restarted:Listening
+2025-09-03 08:25:57 ERROR root Debug Server restarted:Listening

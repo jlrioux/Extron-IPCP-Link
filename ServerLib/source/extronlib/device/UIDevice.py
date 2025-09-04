@@ -3,6 +3,7 @@ _debug = False
 import traceback
 
 class UIDevice(ExtronNode):
+    def __str__(self):return(self.DeviceAlias)
     """Entity to communicate with Extron Device featuring user interactive input.
 
     Note:
@@ -845,7 +846,7 @@ class UIDevice(ExtronNode):
 
     def HideAllPopups(self) -> None:
         """ Dismiss all popup pages """
-        self._Command('HideAllPopups',[])
+        self._BatchCommand('HideAllPopups',[])
 
     def HidePopup(self, popup) -> None:
         """ Hide popup page
@@ -853,7 +854,7 @@ class UIDevice(ExtronNode):
         Arguments:
             - popup (int, string) - popup page number or name
         """
-        self._Command('HidePopup',[popup])
+        self._BatchCommand('HidePopup',[popup])
 
     def HidePopupGroup(self, group: int) -> None:
         """ Hide all popup pages in a popup group
@@ -870,7 +871,7 @@ class UIDevice(ExtronNode):
             PodiumTLP.HidePopupGroup(1)
         ```
         """
-        self._Command('HidePopupGroup',[group])
+        self._BatchCommand('HidePopupGroup',[group])
 
     def PlaySound(self, filename: str) -> None:
         """ Play a sound file identified by the filename
@@ -1154,7 +1155,7 @@ class UIDevice(ExtronNode):
         Arguments:
             - page (int, string) - absolute page number or name
         """
-        self._Command('ShowPage',[page])
+        self._BatchCommand('ShowPage',[page])
 
     def ShowPopup(self, popup, duration: float=0) -> None:
         """ Display pop-up page for a period of time.
@@ -1166,11 +1167,11 @@ class UIDevice(ExtronNode):
         Note:
             - If a pop-up is already showing for a finite period of time, calling this method again with the same pop-up will replace the remaining period with the new period.
         """
-        self._Command('ShowPopup',[popup,duration])
+        self._BatchCommand('ShowPopup',[popup,duration])
 
     def Sleep(self):
         """ Force the device to sleep immediately """
-        self._Command('Sleep',[])
+        self._BatchCommand('Sleep',[])
 
     def StopSound(self):
         """ Stop playing sound file """
@@ -1178,4 +1179,4 @@ class UIDevice(ExtronNode):
 
     def Wake(self):
         """ Force the device to wake up immediately """
-        self._Command('Wake',[])
+        self._BatchCommand('Wake',[])

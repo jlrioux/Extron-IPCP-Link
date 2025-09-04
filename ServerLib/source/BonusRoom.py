@@ -32,8 +32,8 @@ Processor = ProcessorDeviceWrapper('processor0',friendly_name='Processor')
 ## End Device/Processor Definition ---------------------------------------------
 
 ## Begin User Interface Definition  --------------------------------------------=
-UIHost1 = UIDeviceWrapper('panel0',friendly_name='iPad')
-UIHost2 = UIDeviceWrapper('panel1',friendly_name='Phone')
+UIHost1 = UIDeviceWrapper('BonusRoom0',friendly_name='iPad')
+UIHost2 = UIDeviceWrapper('BonusRoom1',friendly_name='Phone')
 
 tp = VirtualUI(friendly_name='MainTP')
 tp.AddPanel([UIHost1.Device,UIHost2.Device])
@@ -192,7 +192,7 @@ tp.SetFunction(btn_controls,fn_btn_controls,'Pressed')
 lbl_projector = 100
 tp.AddLabel(lbl_projector)
 btn_projector_power = 101
-tp.AddButton(btn_projector_power,holdTime=5)
+tp.AddButton(btn_projector_power,holdTime=1)
 def fn_btn_projector_power_held(button,state):
     tp.SetText(lbl_projector,'Reconnecting')
     dev_projector.Disconnect()

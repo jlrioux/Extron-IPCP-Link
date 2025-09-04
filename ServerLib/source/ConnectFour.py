@@ -9,6 +9,7 @@ from extronlib.device import UIDevice
 from extronlib.ui import Slider,Button,Label
 
 ui = UIDevice('ConnectFourPanel')
+print('tp created')
 ui.ShowPage('Main')
 
 red_slider_ids = list(range(1,8))

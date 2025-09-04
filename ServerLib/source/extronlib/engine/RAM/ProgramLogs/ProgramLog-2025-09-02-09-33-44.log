@@ -1,0 +1,6 @@
+2025-09-02 09:35:08 INFO root Start primary API version 1.8.21
+2025-09-02 09:35:08 INFO root loading script: main
+2025-09-02 09:35:10 INFO root successfully loaded script: main
+2025-09-02 09:35:22 INFO root Device 2-0 VTLP sync handling began
+2025-09-02 09:35:22 INFO root Device 2-0 VTLP sync handling ended
+2025-09-02 09:35:26 ERROR root Debug Server restarted:Listening

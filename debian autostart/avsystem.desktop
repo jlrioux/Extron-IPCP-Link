@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=AVSystem
+Exec=bash -c 'cd /home/prg/Extron/ServerLib/source && ./run_in_terminal.sh'
+Terminal=true;

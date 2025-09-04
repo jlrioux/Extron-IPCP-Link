@@ -51,6 +51,8 @@ class ClientObject():
 
         >>> client.Send(b'Hello.\n')
         """
+        if type(data) == str:
+            data = data.encode()
         self.__server.send(data)
 
     def _set_client(self,server,data):
@@ -68,4 +70,7 @@ class ClientObject():
             self.ServicePort=data['ServicePort']
         else:
             self.ServicePort=None
+
+    def _recvfrom(self, bufsize):
+        return self.__server.recvfrom(bufsize)
 

@@ -1,0 +1,46 @@
+Controls
+"ID","Type","Name","Page","Description"
+"0","Date/Time","Date/Time1","Start Page",""
+"0","Label","Label1","Main Page",""
+"0","Button","Button1_ID17","Popup Controls",""
+"0","Button","Button1_ID12","Popup Controls",""
+"0","Button","Button1_ID14","Popup Controls",""
+"0","Button","Button1_ID18","Power Confirm",""
+"0","Popup Page Reference","ControlsReference","Main Page",""
+"0","Button","Button1","Start Page",""
+"0","Button","Button2","Start Page",""
+"1","Button","btn_start","Start Page",""
+"2","Button","btn_shutdown_confirm","Power Confirm",""
+"3","Button","btn_shutdown_cancel","Power Confirm",""
+"4","Button","btn_shutdown","Popup Controls",""
+"5","Button","btn_controls","Main Page",""
+"51","Button","btn_receiver_controls","Popup Controls",""
+"52","Button","btn_receiver_controls","Main Page",""
+"53","Button","btn_receiver_controls","Main Page",""
+"54","Button","btn_receiver_controls","Main Page",""
+"55","Button","btn_receiver_controls","Main Page",""
+"56","Button","btn_receiver_controls","Popup Controls",""
+"57","Button","btn_receiver_controls","Popup Controls",""
+"100","Label","lbl_projector","Main Page",""
+"101","Button","btn_projector","Main Page",""
+
+
+Popup Pages
+"ID","Name","Description"
+"2","Popup Controls",""
+"3","Power Confirm",""
+"65535","Offline Page",""
+
+
+Pages
+"ID","Name","Description"
+"0","Start Page",""
+"1","Main Page",""
+
+
+Popup Groups
+"Group ID","Group Name","Popup Page Name"
+"1","Main Popups","Popup Controls"
+
+
+

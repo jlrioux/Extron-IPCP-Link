@@ -1,10 +1,18 @@
 
 from extronlib.device import UIDevice as ObjectClass
-from extronlib.system import Timer
+from extronlib.system import Wait
 import json
 import base64
+#from extronlib.ui import Button,Label,Level,Slider,Knob
+from remotelib_qxi.ui.Button import ObjectWrapper as wButton
+from remotelib_qxi.ui.Label import ObjectWrapper as wLabel
+from remotelib_qxi.ui.Level import ObjectWrapper as wLevel
+from remotelib_qxi.ui.Slider import ObjectWrapper as wSlider
+from remotelib_qxi.ui.Knob import ObjectWrapper as wKnob
+
 
 class ObjectWrapper(ObjectClass):
+    def __str__(self):return(self.alias)
     type = 'UIDevice'
     def __init__(self,p,alias,data):
         self.WrapperBasics = p
@@ -41,6 +49,48 @@ class ObjectWrapper(ObjectClass):
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
         self.initialized = True
+        self.WrapperBasics.register(self.type,self.alias,self)
+        self.where_used_present = False
+        self.where_used_items = {
+            'Button':{},
+            'Label':{},
+            'Level':{},
+            'Slider':{},
+            'Knob':{}
+        }
+        self.item_constructors = {
+            'Button':wButton,
+            'Label':wLabel,
+            'Level':wLevel,
+            'Slider':wSlider,
+            'Knob':wKnob
+        }
+        @Wait(0.1)
+        def w():
+            self.check_where_used()
+    def check_where_used(self):
+        from extronlib.system import RFile
+        filename = '{}.csv'.format(self.DeviceAlias)
+        if RFile.Exists(filename):
+            self.where_used_present = True
+            print('WhereUsed for panel "{}" found'.format(self.DeviceAlias))
+            with RFile(filename) as f:
+                for line in f:
+                    parts = line.split(',')
+                    if len(parts) == 5:
+                        type = parts[1][1:-1]
+                        if type in self.where_used_items:
+                            id = int(parts[0][1:-1])
+                            if id > 0 and id not in self.where_used_items[type]:
+                                item_alias = '{}:{}'.format(self.alias,id)
+                                data = {'args':[self.alias,id]}
+                                self.where_used_items[type][id] = None
+                                self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+            print('done processing WhereUsed for panel "{}" buttons:{} labels:{} levels:{} sliders:{} knobs:{}'.format(self.DeviceAlias,len(self.where_used_items['Button']),
+                                                                                                                     len(self.where_used_items['Label']),
+                                                                                                                     len(self.where_used_items['Level']),
+                                                                                                                     len(self.where_used_items['Slider']),
+                                                                                                                     len(self.where_used_items['Knob'])))
 
 
     def create_event_handler(self,property):
