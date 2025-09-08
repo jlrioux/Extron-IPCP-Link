@@ -1,0 +1,17 @@
+2000-01-02 21:33:00 INFO root Start primary API version 1.8.21
+2000-01-02 21:33:00 INFO root loading script: main
+2000-01-02 21:33:02 INFO root successfully loaded script: main
+2000-01-02 21:33:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:34:03 ERROR root Debug Server restarted:Listening
+2000-01-02 21:34:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:03 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:55 ERROR root Receive failed, from client
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:57 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:35:57 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:36:27 ERROR root Debug Server restarted:Listening
+2000-01-02 21:36:57 ERROR root Debug Server restarted:Listening

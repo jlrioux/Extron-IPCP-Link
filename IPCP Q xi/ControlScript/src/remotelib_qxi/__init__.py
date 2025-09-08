@@ -9,12 +9,15 @@ Notes:
 
 """
 
-
+qxi_flag = True
+try:
+    import sys,traceback
+except:
+    qxi_flag = False
 
 
 
 _debug = False
-
 
 
 from extronlib.interface import EthernetServerInterfaceEx
@@ -54,9 +57,9 @@ class RemoteServer():    #class code
                 if 'Listening' not in res:
                     self.__remote_server_error = res
                     from extronlib.system import ProgramLog
-                    ProgramLog('Error Starting Debug Server:{}'.format(res))
+                    ProgramLog('Error Starting Debug Server:{}'.format(res),'info')
                 elif 'Already' not in res:
-                    ProgramLog('Debug Server restarted:{}'.format(res))
+                    ProgramLog('Debug Server restarted:{}'.format(res),'info')
             self.__remote_server_listen_busy = False
         self.__remote_server_listen_timer = Timer(30,__fn_debug_server_listen_timer)
         self.__remote_server_listen_timer.Stop()
@@ -72,26 +75,26 @@ class RemoteServer():    #class code
             return
         if not self.__remote_server:
             self.__remote_server = EthernetServerInterfaceEx(port,'TCP',Interface=self.interface,MaxClients=5)
-            self.__remote_server_udp = EthernetServerInterfaceEx(port+2,'UDP',Interface=self.interface)
+            #self.__remote_server_udp = EthernetServerInterfaceEx(port+2,'UDP',Interface=self.interface)
             __remote_res = self.__remote_server.StartListen()
-            __remote_res_udp = self.__remote_server_udp.StartListen()
+            #__remote_res_udp = self.__remote_server_udp.StartListen()
             self.__remote_server_listen_timer.Restart()
             if __remote_res != 'Listening':
                 print('RemoteServer EnableRemoteServer: Failed : {}'.format(__remote_res))
             else:
                 print('RemoteServer EnableRemoteServer: Succeeded on port {}'.format(self.interface))
-            if __remote_res_udp != 'Listening':
-                print('RemoteServer EnableRemoteServer UDP: Failed : {}'.format(__remote_res))
-            else:
-                print('RemoteServer EnableRemoteServer UDP: Succeeded on port {}'.format(self.interface))
+            #if __remote_res_udp != 'Listening':
+            #    print('RemoteServer EnableRemoteServer UDP: Failed : {}'.format(__remote_res))
+            #else:
+            #    print('RemoteServer EnableRemoteServer UDP: Succeeded on port {}'.format(self.interface))
 
             @event(self.__remote_server, 'ReceiveData')
             def HandheReceiveFromServer_tcp(client,data:'bytes'):
                 self.HandheReceiveFromServer(client,data)
 
-            @event(self.__remote_server_udp, 'ReceiveData')
-            def HandheReceiveFromServer_udp(client,data:'bytes'):
-                self.HandheReceiveFromServer(client,data)
+            #@event(self.__remote_server_udp, 'ReceiveData')
+            #def HandheReceiveFromServer_udp(client,data:'bytes'):
+            #    self.HandheReceiveFromServer(client,data)
 
             @event(self.__remote_server, 'Connected')
             def HandleClientConnect(interface, state):
@@ -191,6 +194,9 @@ from remotelib_qxi.ui.Slider import ObjectWrapper as SliderWrapper
 
 
 class WrapperBasics():
+    def log_error(msg):
+        ProgramLog(msg,'error')
+
     __instances = {'AVLAN':None,'LAN':None}
     __remote_servers = {'AVLAN':None,'LAN':None} #type:dict[str,RemoteServer]
 
@@ -283,13 +289,13 @@ class WrapperBasics():
         WrapperBasics.objects_queue_busy = True
         while not WrapperBasics.create_objects_queue.empty():
             instance,alias,data,server_ip = WrapperBasics.create_objects_queue.get()
-            if _debug:print(f'creating object:{alias}:{data}')
+            if _debug:print('creating object:{alias}:{data}'.format(alias=alias,data=data))
             dev = WrapperBasics.constructors[data['device type']](instance,alias,data)
             dev._server_ip = server_ip
             if dev.initialized:
                 pass#WrapperBasics.register(data['device type'],alias,dev)
             else:
-                print(f'failed to create object:{alias}:{data}')
+                print('failed to create object:{alias}:{data}'.format(alias=alias,data=data))
         WrapperBasics.objects_queue_busy = False
 
     def SetPingBeforeECIConnect(self,value):
@@ -336,7 +342,7 @@ class WrapperBasics():
         try:
             alias,message = message.split('~~')
         except:
-            print(f'~~~ error decoding message received on split:{message}')
+            print('~~~ error decoding message received on split:{message}'.format(message=message))
 
         type = None
         try:
@@ -345,7 +351,7 @@ class WrapperBasics():
             print('failed to decode json message from remote server:{}'.format(str(e)))
             return
         if alias not in self.remote_server.alias_list:
-            if _debug:print(f'~~~NEW ALIAS ADD TO LIST:{alias}')
+            if _debug:print('~~~NEW ALIAS ADD TO LIST:{alias}'.format(alias=alias))
             self.remote_server.alias_list.append(alias)
         if alias in WrapperBasics.wrapped_objects['aliases by type']:
             type = WrapperBasics.wrapped_objects['aliases by type'][alias]
@@ -353,15 +359,15 @@ class WrapperBasics():
                 WrapperBasics.wrapped_objects[type][alias].receive_message(data)
                 return
             else:
-                ProgramLog(f'Alias not associated with an object:{alias}',Severity='warning')
+                ProgramLog('Alias not associated with an object:{alias}'.format(alias=alias),Severity='warning')
         else:
-            if _debug:print(f'~~~NEW DEVICE:{alias}')
+            if _debug:print('~~~NEW DEVICE:{alias}'.format(alias=alias))
             """
             if this message isn't the details needed to create the object, send a request for the details, then return.
             if this is a create message, create the object and register it
             """
             if data['type'] == 'init':
-                #print(f'init device:{alias}')
+                #print('init device:{alias}'.format(alias=alias))
                 #create the device and register it
                 WrapperBasics.create_objects_queue.put([self,alias,data,server_ip])
                 WrapperBasics.check_create_objects_queue()
@@ -369,6 +375,7 @@ class WrapperBasics():
         if not type:
             err_msg = {'property':'init','value':'device does not exist','qualifier':{'alias':alias,'code':'missing device'}}
             self.send_message(alias,json.dumps({'type':'error','message':err_msg}))
+            WrapperBasics.log_error('remotelib error:{}:{}'.format(alias,json.dumps(err_msg)))
 
     def send_message(self,alias,data):
         message = '{}~~{}'.format(alias,data)

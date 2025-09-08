@@ -30,6 +30,7 @@ class ObjectWrapper(ObjectClass):
                 msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
                 err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
                 self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+                self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
                 return
 
 
@@ -111,4 +112,5 @@ class ObjectWrapper(ObjectClass):
         if err_msg:
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+            self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))

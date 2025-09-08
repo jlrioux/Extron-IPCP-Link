@@ -5,7 +5,7 @@ from datetime import datetime
 from extronlib.system import Timer
 import base64
 _debug = False
-import traceback
+import traceback,platform,os
 
 
 
@@ -199,6 +199,7 @@ class _IPCPEthernetClientInterface(ExtronNode):
         if deliTag:
             deliTag = base64.b64encode(deliTag).decode('utf-8')
         res = self._Query('SendAndWait',[data,timeout,deliTag,deliRex,deliLen])
+        if not res:return(b'')
         return base64.b64decode(res)
 
 
@@ -274,7 +275,16 @@ class _LocalEthernetClientInterface():
                 - The maximum amount of data per ReceiveData event that will be passed into the handler is 1024 bytes. For payloads greater than 1024 bytes, multiple events will be triggered.
                 - When UDP protocol is used, the data will be truncated to 1024 bytes.
     """
+    def __ping(self, host):
+        res = False
 
+        ping_param = "-n 1" if platform.system().lower() == "windows" else "-c 1"
+
+        resultado = os.popen("ping " + ping_param + " " + host).read()
+
+        if "TTL=" in resultado:
+            res = True
+        return res
     def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None):
         """ EthernetClientInterface class constructor.
 
@@ -560,7 +570,7 @@ class EthernetClientInterface():
         - (optional) Credentials  (tuple) - Username and password for SSH connection.
     """
     _type='EthernetClientInterface'
-    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=True,ipcp_index=0):
+    def __init__(self, Hostname, IPPort, Protocol='TCP', ServicePort=0, Credentials=None,thru_ipcp=False,ipcp_index=0):
         self.Connected = None
         self.Disconnected = None
         self.ReceiveData = None
@@ -573,6 +583,7 @@ class EthernetClientInterface():
             Credentials = ('','')
         self.Credentials = Credentials
         self.__ECI = None
+        self.device_on_network = True
         if thru_ipcp:
             self.__ECI = _IPCPEthernetClientInterface(Hostname,IPPort,Protocol,ServicePort,Credentials,ipcp_index)
             self._type = self.__ECI._type
@@ -590,6 +601,12 @@ class EthernetClientInterface():
             self._LinkStatusChanged = self.__ECI._LinkStatusChanged
         else:
             self.__ECI = _LocalEthernetClientInterface(Hostname,IPPort,Protocol,ServicePort,Credentials)
+            from extronlib.engine import IpcpLink
+            if IpcpLink.network_ping_enabled:
+                self.device_on_network = IpcpLink.ping(self.Hostname)
+                @Timer(10)
+                def t(timer,count):
+                    self.device_on_network = IpcpLink.ping(self.Hostname)
         self.__subscribe_events()
 
 
@@ -622,7 +639,9 @@ class EthernetClientInterface():
 
         Note: Does not apply to UDP connections.
         """
-        return self.__ECI.Connect(timeout)
+        if self.device_on_network:
+            return self.__ECI.Connect(timeout)
+        return 'No route to host'
 
 
     def Disconnect(self):
@@ -667,7 +686,10 @@ class EthernetClientInterface():
         Returns:
             - Response received data (may be empty) (bytes)
         """
-        return self.__ECI.SendAndWait(data,timeout,deliTag,deliRex,deliLen)
+        if self.device_on_network:
+            return self.__ECI.SendAndWait(data,timeout,deliTag,deliRex,deliLen)
+        else:
+            return b''
 
 
 

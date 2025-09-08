@@ -1,0 +1,124 @@
+2000-01-02 21:33:00 INFO root Start primary API version 1.8.21
+2000-01-02 21:33:00 INFO root loading script: main
+2000-01-02 21:33:02 INFO root successfully loaded script: main
+2000-01-02 21:33:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:34:03 ERROR root Debug Server restarted:Listening
+2000-01-02 21:34:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:03 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:33 ERROR root Debug Server restarted:Listening
+2000-01-02 21:35:55 ERROR root Receive failed, from client
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:55 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:35:57 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:35:57 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:36:27 ERROR root Debug Server restarted:Listening
+2000-01-02 21:36:57 ERROR root Debug Server restarted:Listening
+2000-01-02 21:37:27 ERROR root Debug Server restarted:Listening
+2000-01-02 21:37:57 ERROR root Debug Server restarted:Listening
+2000-01-02 21:37:57 ERROR root Receive failed, from client
+2000-01-02 21:37:57 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:37:57 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:37:57 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:37:57 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:37:58 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:37:58 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:38:21 ERROR root Receive failed, from client
+2000-01-02 21:38:21 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:38:21 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:38:21 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:38:21 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:38:23 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:38:23 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:38:53 ERROR root Debug Server restarted:Listening
+2000-01-02 21:39:23 ERROR root Debug Server restarted:Listening
+2000-01-02 21:39:53 ERROR root Debug Server restarted:Listening
+2000-01-02 21:40:18 ERROR root Receive failed, from client
+2000-01-02 21:40:18 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:18 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:18 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:18 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:19 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:40:19 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:40:27 ERROR root Receive failed, from client
+2000-01-02 21:40:27 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:27 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:27 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:27 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:40:52 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:40:52 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:07 ERROR root Receive failed, from client
+2000-01-02 21:41:07 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:07 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:07 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:07 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:09 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:09 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:36 ERROR root Receive failed, from client
+2000-01-02 21:41:36 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:36 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:36 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:36 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:37 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:37 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:53 ERROR root Receive failed, from client
+2000-01-02 21:41:53 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:53 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:53 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:53 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:41:54 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:41:54 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:10 ERROR root Receive failed, from client
+2000-01-02 21:42:10 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:10 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:10 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:10 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:11 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:11 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:18 ERROR root Receive failed, from client
+2000-01-02 21:42:18 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:18 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:18 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:18 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:20 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:20 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:33 ERROR root Receive failed, from client
+2000-01-02 21:42:33 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:33 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:33 ERROR root Invalid Parameter BonusRoom0 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:33 ERROR root Invalid Parameter BonusRoom1 ShowPopup: popup=Control Server is Offline
+2000-01-02 21:42:34 ERROR root Invalid Parameter BonusRoom0 HidePopup: popup=Control Server is Offline
+2000-01-02 21:42:34 ERROR root Invalid Parameter BonusRoom1 HidePopup: popup=Control Server is Offline
+2000-01-02 21:43:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:43:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:44:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:44:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:45:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:45:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:46:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:46:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:47:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:47:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:48:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:48:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:49:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:49:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:50:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:50:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:51:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:51:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:52:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:52:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:53:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:53:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:54:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:54:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:55:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:55:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:56:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:56:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:57:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:57:35 ERROR root Debug Server restarted:Listening
+2000-01-02 21:58:05 ERROR root Debug Server restarted:Listening
+2000-01-02 21:58:35 ERROR root Debug Server restarted:Listening

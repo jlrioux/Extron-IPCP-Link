@@ -3,8 +3,6 @@ from extronlib.system import SaveProgramLog,ProgramLog,SetManualTime,SetAutomati
 from extronlib.system import GetTimezoneList,GetCurrentTimezone,Ping,WakeOnLan,Email,RestartSystem
 import json
 import base64
-import pickle
-import base64
 
 class ObjectWrapper():
     type = 'System'
@@ -96,6 +94,7 @@ class ObjectWrapper():
         if err_msg:
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+            self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
 
 
@@ -103,14 +102,8 @@ class ObjectWrapper():
         SSL METHODS
     '''
     def GetUnverifiedContext(self):
-        #cannot be pickled
-        #context = GetUnverifiedContext()
-        #pickled = pickle.dumps(context)
         return None
     def GetSSLContext(self,alias):
-        #cannot be pickled
-        #context = GetSSLContext(alias)
-        #pickled = pickle.dumps(context)
         return None
 
     '''
@@ -119,11 +112,19 @@ class ObjectWrapper():
     def SetAutomaticTime(self,Server):
         SetAutomaticTime(Server)
     def SetManualTime(self,DateAndTime):
-        SetManualTime(pickle.loads(base64.b64decode((DateAndTime))))
+        from datetime import datetime
+        DateAndTime = datetime.strptime(DateAndTime,'%Y-%m-%d %H:%M:%S')
+        SetManualTime(DateAndTime)
     def GetCurrentTimezone(self):
-        return base64.b64encode(pickle.dumps(GetCurrentTimezone())).decode('utf-8')
+        val = GetCurrentTimezone()
+        d = {'id':val.id,'description':val.description,'MSid':val.MSid}
+        return d
     def GetTimezoneList(self):
-        return base64.b64encode(pickle.dumps(GetTimezoneList())).decode('utf-8')
+        vals = GetTimezoneList()
+        items = []
+        for val in vals:
+            items.append({'id':val.id,'description':val.description,'MSid':val.MSid})
+        return items
     def SetTimeZone(self,id):
         SetTimeZone(id)
 
@@ -131,8 +132,9 @@ class ObjectWrapper():
         NETWORK METHODS
     '''
     def Ping(self,hostname='localhost',count=5):
-        item = Ping(hostname,count)
-        return base64.b64encode(pickle.dumps(item)).decode('utf-8')
+        vals = Ping(hostname,count)
+        items = list(vals)
+        return items
     def WakeOnLan(self,macAddress, port=9):
         WakeOnLan(macAddress,port)
 
@@ -150,7 +152,7 @@ class ObjectWrapper():
         contents = None
         with File(path) as f:
             contents = f.read()
-        return contents#base64.b64encode(pickle.dumps(contents)).decode('utf-8')
+        return contents
     def RestartSystem(self):
         RestartSystem()
 

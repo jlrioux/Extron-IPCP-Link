@@ -429,7 +429,7 @@ class _LocalEthernetServerInterfaceEx():
     def __recv_func(self,client):
         def r():
             while True:
-                time.sleep(0.1)
+                time.sleep(0.01)
                 if self.__islistening and len(self.Clients):
                     try:
                         data,address = client._recvfrom(1024)
@@ -438,6 +438,12 @@ class _LocalEthernetServerInterfaceEx():
                         address = ''
                     if self.ReceiveData is not None and len(data):
                         self.ReceiveData(client,data)
+                    if len(data) < 1:
+                        while client in self.Clients:
+                            self.Clients.remove(client)
+                        if self.Disconnected is not None:
+                            self.Disconnected(client,'Disconnected')
+                        return
         return r
 
 

@@ -34,6 +34,7 @@ class ObjectWrapper(ObjectClass):
                 msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
                 err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
                 self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+                self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
                 return
 
 
@@ -62,14 +63,14 @@ class ObjectWrapper(ObjectClass):
     def __test_ping(self):
         if self._server_ip:
             res = Ping(self._server_ip,1)
-            print('TestPing:{} result:{}'.format(self._server_ip,res))
+            #print('TestPing:{} result:{}'.format(self._server_ip,res))
             enable = res[0] > 0
             if enable:
                 self._test_ping_timer.Restart()
     def __test_ping_loop(self):
         def t(timer,count):
             res = Ping(self.Hostname,1)
-            print('Ping:{} result:{}'.format(self.Hostname,res))
+            #print('Ping:{} result:{}'.format(self.Hostname,res))
             self._device_on_network = res[0] > 0
         return t
 
@@ -148,6 +149,7 @@ class ObjectWrapper(ObjectClass):
         if err_msg:
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+            self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
 
     def _Connect(self,timeout=None):
@@ -159,8 +161,7 @@ class ObjectWrapper(ObjectClass):
             val = b''
         else:
             data = base64.b64decode(data)
-            print('send and wait with data{}:{}'.format(type(data),data))
-            val = ''
+            val = b''
             if deliTag:
                 deliTag = base64.b64decode(deliTag)
                 val = self.SendAndWait(data, timeout, deliTag=deliTag)
@@ -168,6 +169,7 @@ class ObjectWrapper(ObjectClass):
                 val = self.SendAndWait(data, timeout, deliRex=deliRex)
             elif deliLen:
                 val = self.SendAndWait(data, timeout, deliLen=deliLen)
+            if val == None:val = b''
         return base64.b64encode(val).decode('utf-8')
 
     def _Send(self,data:'str'):

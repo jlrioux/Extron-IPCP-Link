@@ -215,8 +215,9 @@ class File():
         Arguments:
             - data (string, bytes) - data to be written to file
         """
-        if self.__handle:
-            self.__handle.write(data)
+        if data is not None:
+            if self.__handle:
+                self.__handle.write(data)
 
     def writelines(self, seq: list) -> None:
         """ Write iterable object such as a list of strings
@@ -227,5 +228,6 @@ class File():
         Raises:
             - FileNotOpenError
         """
-        if self.__handle:
-            self.__handle.writelines(seq)
+        if seq is not None:
+            if self.__handle:
+                self.__handle.writelines(seq)

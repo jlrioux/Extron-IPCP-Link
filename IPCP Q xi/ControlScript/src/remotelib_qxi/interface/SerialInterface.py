@@ -28,6 +28,7 @@ class ObjectWrapper(ObjectClass):
                 msg='failed to create {} "{}" with args "{}"\nwith exception: {}'.format(self.type,self.alias,self.args,str(e))
                 err_msg = {'property':'init','value':self.args,'qualifier':{'code':msg}}
                 self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+                self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
                 return
 
 
@@ -120,23 +121,21 @@ class ObjectWrapper(ObjectClass):
         if err_msg:
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
+            self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
 
 
     def _SendAndWait(self,data:'str', timeout:'float'=3, deliTag:'bytes'=None, deliRex:'str'=None,deliLen:'int'=None):
         data = base64.b64decode(data)
-        print('send and wait with data{}:{}'.format(type(data),data))
-        val = ''
+        val = b''
         if deliTag:
             deliTag = base64.b64decode(deliTag)
             val = self.SendAndWait(data, timeout, deliTag=deliTag)
         elif deliRex:
-            print('in deliRex')
-            print(deliRex)
             val = self.SendAndWait(data, timeout, deliRex=deliRex)
         elif deliLen:
-            print('in deliLen')
             val = self.SendAndWait(data, timeout, deliLen=deliLen)
+        if val == None:val = b''
         return base64.b64encode(val).decode('utf-8')
 
     def _Send(self,data:'str'):

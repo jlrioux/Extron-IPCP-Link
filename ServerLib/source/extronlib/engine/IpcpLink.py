@@ -111,6 +111,7 @@ class IpcpLink():
 
 
     __default_password = 'p9oai23jr09p8fmvw98foweivmawthapw4t'
+    network_ping_enabled = False
 
 
     def __get_alias_from_node(node):
@@ -121,6 +122,16 @@ class IpcpLink():
         alias = node._alias
         IpcpLink.nodes[alias] = value
         return alias
+
+    def ping(host):
+        import platform,os
+        res = False
+        ping_param = "-n 1" if platform.system().lower() == "windows" else "-c 1"
+        resultado = os.popen("ping " + ping_param + " " + host).read()
+        if "TTL=" in resultado:
+            res = True
+        if _debug:print('Local Ping Result:{}={}'.format(host,res))
+        return res
 
     def __init__(self,ip_address,port='LAN',password=None):
         self.index = len(IpcpLink.ipcp_links)
@@ -133,7 +144,7 @@ class IpcpLink():
 
         from extronlib.interface import EthernetClientInterface
         self.__client = EthernetClientInterface(self.ip_address,self.port,'TCP',thru_ipcp=False)
-        self.__client_udp = EthernetClientInterface(self.ip_address,self.port+2,'UDP',thru_ipcp=False)
+        #self.__client_udp = EthernetClientInterface(self.ip_address,self.port+2,'UDP',thru_ipcp=False)
         self.__client.ReceiveData = self.__HandleRecieveFromClient()
         self.__client.Connected = self.__OnConnected()
         self.__client.Disconnected = self.__OnDisconnected()
@@ -219,6 +230,7 @@ class IpcpLink():
                 if self.nodes[alias]['ipcp'] == self.index:
                     self.nodes[alias]['node']._LinkStatusChanged('Connected')
                     self.nodes[alias]['node']._Initialize()
+            IpcpLink.network_ping_enabled = IpcpLink.ping(self.ip_address)
         return e
     def __OnDisconnected(self):
         def e(interface,value):

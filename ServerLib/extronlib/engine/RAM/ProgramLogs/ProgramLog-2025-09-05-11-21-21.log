@@ -1,0 +1,13 @@
+2025-09-05 11:01:25 INFO root Start primary API version 3.13.39
+2025-09-05 11:01:25 INFO root loading script: main
+2025-09-05 11:01:30 ERROR root InterfaceUnavailable: AVLAN
+2025-09-05 11:01:30 ERROR root InterfaceUnavailable: AVLAN
+2025-09-05 11:01:30 INFO root successfully loaded script: main
+2025-09-05 11:02:01 ERROR root InterfaceUnavailable: AVLAN
+2025-09-05 11:02:01 ERROR root Error Starting Debug Server:InterfaceUnavailable: AVLAN
+2025-09-05 11:14:05 ERROR root Debug Server restarted:Listening
+2025-09-05 11:14:35 ERROR root Debug Server restarted:Listening
+2025-09-05 11:15:05 ERROR root Debug Server restarted:Listening
+2025-09-05 11:15:35 ERROR root Debug Server restarted:Listening
+2025-09-05 11:16:05 ERROR root Debug Server restarted:Listening
+2025-09-05 11:16:35 ERROR root Debug Server restarted:Listening

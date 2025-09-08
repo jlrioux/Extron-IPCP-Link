@@ -1,0 +1,650 @@
+Timestamp,Device Name,MessageType,Data
+2025-09-05 13:59:45.810036,Projector,API,To Device,'~00150 1\r'
+2025-09-05 13:59:46.198155,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 13:59:56.212341,Projector,Command,'UpdatePower,None'
+2025-09-05 13:59:56.212341,Projector,API,To Device,'~00150 1\r'
+2025-09-05 13:59:57.225771,Projector,API,From Device,b''
+2025-09-05 14:00:07.237851,Projector,Command,'UpdatePower,None'
+2025-09-05 14:00:07.237851,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:00:07.238877,Projector,API,From Device,b''
+2025-09-05 14:00:17.264416,Projector,Command,'UpdatePower,None'
+2025-09-05 14:00:17.264416,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:00:17.264416,Projector,API,From Device,b''
+2025-09-05 14:00:27.194150,Projector,Event,'ConnectionStatus,Disconnected,None'
+2025-09-05 14:00:27.195227,MainTP,Command,'SetText,Label,100,None,Disconnected'
+2025-09-05 14:00:33.453010,Projector,Command,'Connect'
+2025-09-05 14:00:43.456060,Projector,Command,'Connect'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:00:53.471625,Projector,Command,'Connect'
+2025-09-05 14:01:03.473130,Projector,Command,'Connect'
+2025-09-05 14:01:13.484979,Projector,Command,'Connect'
+2025-09-05 14:01:23.487605,Projector,Command,'Connect'
+2025-09-05 14:01:33.498211,Projector,Command,'Connect'
+2025-09-05 14:01:33.524257,Projector,Event,'ConnectionStatus,Connected,None'
+2025-09-05 14:01:33.525655,MainTP,Command,'SetText,Label,100,None,Projector\nStatus'
+2025-09-05 14:01:43.543652,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:27:31.389688,Processor,Option,'PrintToTrace,True'
+2025-09-05 14:27:46.530351,iPad,Option,'PrintToTrace,True'
+2025-09-05 14:28:01.658659,Phone,Option,'PrintToTrace,True'
+2025-09-05 14:28:01.661127,MainTP,Option,'PrintToTrace,True'
+2025-09-05 14:28:01.661127,MainTP,Command,'AddPanel,BonusRoom0'
+2025-09-05 14:28:01.661127,MainTP,Command,'AddPanel,BonusRoom1'
+2025-09-05 14:28:01.701934,AVR,Option,'PrintToTrace,True'
+2025-09-05 14:28:01.733884,AVR,Event,'OnlineStatus,Online'
+2025-09-05 14:28:01.826285,iPad,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:28:01.826922,iPad,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:28:01.826922,iPad,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:28:01.826922,iPad,Event,'InactivityTime,0'
+2025-09-05 14:28:01.826922,iPad,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:28:01.827922,iPad,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:28:01.827922,iPad,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:28:02.029146,Projector,Option,'PrintToTrace,True'
+2025-09-05 14:28:02.030163,Projector,Event,'ConnectionStatus,Disconnected,None'
+2025-09-05 14:28:02.033780,MainTP,Command,'HideAllPopups'
+2025-09-05 14:28:02.033780,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:28:12.050973,Projector,Command,'Connect'
+2025-09-05 14:28:12.318476,Projector,Event,'ConnectionStatus,Connected,None'
+2025-09-05 14:28:12.318711,MainTP,Command,'SetText,Label,100,None,Projector\nStatus'
+2025-09-05 14:28:15.105676,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:28:16.981786,Phone,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:28:16.982786,Phone,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:28:16.982786,Phone,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:28:16.982786,Phone,Event,'InactivityTime,0'
+2025-09-05 14:28:16.983786,Phone,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:28:16.983786,Phone,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:28:16.984785,Phone,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:28:22.328302,Projector,Command,'UpdatePower,None'
+2025-09-05 14:28:22.329292,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:28:22.682120,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:28:22.685121,Projector,Event,'Power,Off,None'
+2025-09-05 14:28:22.686118,MainTP,Command,'SetStateButton,101,None,0'
+2025-09-05 14:28:22.686118,MainTP,Command,'SetTextButton,101,None,Off'
+2025-09-05 14:28:22.686118,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:28:22.687122,MainTP,Command,'HideAllPopups'
+2025-09-05 14:28:22.687122,Projector,Event,'Input,None,None'
+2025-09-05 14:28:22.687122,Projector,Event,'DisplayMode,None,None'
+2025-09-05 14:28:25.773301,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:28:32.699770,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:28:32.699770,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:28:32.900236,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:28:36.840795,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:28:42.918989,Projector,Command,'UpdatePower,None'
+2025-09-05 14:28:42.918989,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:28:43.134929,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:28:47.225593,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:28:53.159861,Projector,Command,'UpdatePower,None'
+2025-09-05 14:28:53.159861,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:28:53.346395,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:28:57.628262,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:03.366424,Projector,Command,'UpdatePower,None'
+2025-09-05 14:29:03.366424,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:03.597697,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:29:07.788390,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:13.610623,Projector,Command,'UpdatePower,None'
+2025-09-05 14:29:13.610623,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:13.789773,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:29:18.371628,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:23.806794,Projector,Command,'UpdatePower,None'
+2025-09-05 14:29:23.806794,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:24.005869,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:29:29.375663,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:34.037279,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:29:34.038292,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:34.296098,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:29:34.640731,Processor,Event,'OnlineStatus,Online'
+2025-09-05 14:29:39.959251,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:44.313388,Projector,Command,'UpdatePower,None'
+2025-09-05 14:29:44.313388,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:44.636231,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:29:49.764946,iPad,Event,'OnlineStatus,Offline'
+2025-09-05 14:29:50.399569,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:29:54.653219,Projector,Command,'UpdatePower,None'
+2025-09-05 14:29:54.653219,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:29:54.974471,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:00.881031,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:30:04.868173,Phone,Event,'OnlineStatus,Offline'
+2025-09-05 14:30:04.974874,AVR,Event,'OnlineStatus,Online'
+2025-09-05 14:30:04.988763,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:04.988763,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:05.359385,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:11.220963,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:30:15.376523,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:15.376523,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:15.543421,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:21.594291,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:30:25.552024,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:25.552024,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:26.058269,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:32.712286,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:30:36.070160,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:36.070160,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:36.439978,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:43.442039,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:30:46.450178,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:46.451041,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:46.741513,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:30:53.622086,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:30:56.747406,Projector,Command,'UpdatePower,None'
+2025-09-05 14:30:56.747406,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:30:57.005643,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:31:04.185543,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:31:07.028221,Projector,Command,'UpdatePower,None'
+2025-09-05 14:31:07.030062,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:31:07.472068,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:31:14.579031,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:31:17.494031,Projector,Command,'UpdatePower,None'
+2025-09-05 14:31:17.494031,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:31:17.574029,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:31:25.039256,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:31:27.587109,Projector,Command,'UpdatePower,None'
+2025-09-05 14:31:27.587109,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:31:27.692540,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:31:35.730100,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:32:25.015515,Processor,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.047387,iPad,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.062816,Phone,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.064815,MainTP,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.065816,MainTP,Command,'AddPanel,BonusRoom0'
+2025-09-05 14:32:25.065816,MainTP,Command,'AddPanel,BonusRoom1'
+2025-09-05 14:32:25.093377,AVR,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.301865,Projector,Option,'PrintToTrace,True'
+2025-09-05 14:32:25.302866,Projector,Event,'ConnectionStatus,Disconnected,None'
+2025-09-05 14:32:25.305867,MainTP,Command,'HideAllPopups'
+2025-09-05 14:32:25.305867,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:32:35.327864,Projector,Command,'Connect'
+2025-09-05 14:32:35.498663,Projector,Event,'ConnectionStatus,Connected,None'
+2025-09-05 14:32:35.499662,MainTP,Command,'SetText,Label,100,lbl_projector,Projector\nStatus'
+2025-09-05 14:32:39.164926,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:32:40.390731,iPad,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:32:40.390731,iPad,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:32:40.391795,iPad,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:32:40.391795,iPad,Event,'InactivityTime,0'
+2025-09-05 14:32:40.392809,iPad,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:32:40.392809,iPad,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:32:40.392809,iPad,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'InactivityTime,0'
+2025-09-05 14:32:40.433967,Phone,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:32:40.433967,Phone,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:32:45.517432,Projector,Command,'UpdatePower,None'
+2025-09-05 14:32:45.517432,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:32:45.635882,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:32:45.637044,Projector,Event,'Power,Off,None'
+2025-09-05 14:32:45.638042,MainTP,Command,'SetStateButton,101,btn_projector,0'
+2025-09-05 14:32:45.638042,MainTP,Command,'SetTextButton,101,btn_projector,Off'
+2025-09-05 14:32:45.638042,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:32:45.638042,MainTP,Command,'HideAllPopups'
+2025-09-05 14:32:45.639042,Projector,Event,'Input,None,None'
+2025-09-05 14:32:45.639042,Projector,Event,'DisplayMode,None,None'
+2025-09-05 14:32:49.994467,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:32:55.653831,Projector,Command,'UpdatePower,None'
+2025-09-05 14:32:55.653831,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:32:56.073168,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:33:00.522817,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:33:06.084722,Projector,Command,'UpdatePower,None'
+2025-09-05 14:33:06.084722,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:33:06.315513,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:33:10.838352,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:33:16.319757,Projector,Command,'UpdatePower,None'
+2025-09-05 14:33:16.319757,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:33:16.552046,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:33:21.215460,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:33:26.563946,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:34:51.212264,Processor,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.243996,iPad,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.259809,Phone,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.261808,MainTP,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.262808,MainTP,Command,'AddPanel,BonusRoom0'
+2025-09-05 14:34:51.262808,MainTP,Command,'AddPanel,BonusRoom1'
+2025-09-05 14:34:51.288662,AVR,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.503012,Projector,Option,'PrintToTrace,True'
+2025-09-05 14:34:51.504010,Projector,Event,'ConnectionStatus,Disconnected,None'
+2025-09-05 14:34:51.507009,MainTP,Command,'HideAllPopups'
+2025-09-05 14:34:51.508010,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:35:01.517698,Projector,Command,'Connect'
+2025-09-05 14:35:01.517698,Projector,Command,'Connect'
+2025-09-05 14:35:01.525775,Projector,Event,'ConnectionStatus,Connected,None'
+2025-09-05 14:35:01.525775,MainTP,Command,'SetText,Label,100,lbl_projector,Projector\nStatus'
+2025-09-05 14:35:06.583794,iPad,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:35:06.584794,iPad,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:35:06.585795,iPad,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:35:06.586789,iPad,Event,'InactivityTime,0'
+2025-09-05 14:35:06.586789,iPad,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:35:06.587786,iPad,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:35:06.587786,iPad,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:35:06.676547,Phone,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:35:06.677544,Phone,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:35:06.677544,Phone,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:35:06.678535,Phone,Event,'InactivityTime,0'
+2025-09-05 14:35:06.678535,Phone,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:35:06.679534,Phone,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:35:06.679534,Phone,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:35:07.005970,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:35:11.544857,Projector,Command,'UpdatePower,None'
+2025-09-05 14:35:11.545851,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:35:11.682232,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:35:11.684228,Projector,Event,'Power,Off,None'
+2025-09-05 14:35:11.684228,MainTP,Command,'SetStateButton,101,btn_projector,0'
+2025-09-05 14:35:11.684228,MainTP,Command,'SetTextButton,101,btn_projector,Off'
+2025-09-05 14:35:11.684228,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:35:11.684228,MainTP,Command,'HideAllPopups'
+2025-09-05 14:35:11.685225,Projector,Event,'Input,None,None'
+2025-09-05 14:35:11.685225,Projector,Event,'DisplayMode,None,None'
+2025-09-05 14:35:17.349073,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:35:21.705817,Projector,Command,'UpdatePower,None'
+2025-09-05 14:35:21.705817,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:35:22.412587,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:35:27.644571,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:35:32.423204,Projector,Command,'UpdatePower,None'
+2025-09-05 14:35:32.423204,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:35:32.654377,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:35:38.089434,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:35:42.662915,Projector,Command,'UpdatePower,None'
+2025-09-05 14:35:42.662915,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:35:42.910082,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:35:49.065073,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:35:52.940794,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:39:02.874117,Processor,Option,'PrintToTrace,True'
+2025-09-05 14:39:02.890987,iPad,Option,'PrintToTrace,True'
+2025-09-05 14:39:02.921824,Phone,Option,'PrintToTrace,True'
+2025-09-05 14:39:02.925082,MainTP,Option,'PrintToTrace,True'
+2025-09-05 14:39:02.925082,MainTP,Command,'AddPanel,BonusRoom0'
+2025-09-05 14:39:02.925082,MainTP,Command,'AddPanel,BonusRoom1'
+2025-09-05 14:39:02.935581,AVR,Option,'PrintToTrace,True'
+2025-09-05 14:39:03.246893,Projector,Option,'PrintToTrace,True'
+2025-09-05 14:39:03.247893,Projector,Event,'ConnectionStatus,Disconnected,None'
+2025-09-05 14:39:03.251317,MainTP,Command,'HideAllPopups'
+2025-09-05 14:39:03.251317,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:39:13.270994,Projector,Command,'Connect'
+2025-09-05 14:39:13.508658,Projector,Event,'ConnectionStatus,Connected,None'
+2025-09-05 14:39:13.510239,MainTP,Command,'SetText,Label,100,lbl_projector,Projector\nStatus'
+2025-09-05 14:39:18.224621,iPad,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:39:18.224621,iPad,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:39:18.224621,iPad,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:39:18.224621,iPad,Event,'InactivityTime,0'
+2025-09-05 14:39:18.224621,iPad,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:39:18.224621,iPad,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:39:18.224621,iPad,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:39:18.288155,Phone,Event,'DisplayStateChanged,Unavailable'
+2025-09-05 14:39:18.289166,Phone,Event,'DisplayTimerChanged,Unavailable'
+2025-09-05 14:39:18.289166,Phone,Event,'DisplayTimerEnabledChanged,Unavailable'
+2025-09-05 14:39:18.290169,Phone,Event,'InactivityTime,0'
+2025-09-05 14:39:18.290169,Phone,Event,'LightDetectedStateChanged,Unavailable'
+2025-09-05 14:39:18.291047,Phone,Event,'SleepTimerChanged,Unavailable'
+2025-09-05 14:39:18.291316,Phone,Event,'SleepTimerEnabledChanged,Unavailable'
+2025-09-05 14:39:20.146532,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:39:23.532803,Projector,Command,'UpdatePower,None'
+2025-09-05 14:39:23.532803,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:39:23.673901,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:39:23.676132,Projector,Event,'Power,Off,None'
+2025-09-05 14:39:23.677131,MainTP,Command,'SetStateButton,101,btn_projector,0'
+2025-09-05 14:39:23.677131,MainTP,Command,'SetTextButton,101,btn_projector,Off'
+2025-09-05 14:39:23.678130,MainTP,Command,'ShowPage,Start Page'
+2025-09-05 14:39:23.678130,MainTP,Command,'HideAllPopups'
+2025-09-05 14:39:23.678130,Projector,Event,'Input,None,None'
+2025-09-05 14:39:23.679130,Projector,Event,'DisplayMode,None,None'
+2025-09-05 14:39:30.697995,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:39:33.691224,Projector,Command,'UpdatePower,None'
+2025-09-05 14:39:33.691224,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:39:33.842329,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:39:41.093147,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:39:43.860322,Projector,Command,'UpdatePower,None'
+2025-09-05 14:39:43.860322,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:39:44.183496,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:39:51.487575,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:39:54.205209,Projector,Command,'UpdatePower,None'
+2025-09-05 14:39:54.205209,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:39:54.467373,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:02.466797,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:04.487140,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:40:04.488142,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:04.737180,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:13.305001,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:14.759615,Projector,Command,'UpdatePower,None'
+2025-09-05 14:40:14.759615,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:14.958002,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:23.590438,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:24.968882,Projector,Command,'UpdatePower,None'
+2025-09-05 14:40:24.969337,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:25.568313,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:33.922070,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:35.590654,Projector,Command,'UpdatePower,None'
+2025-09-05 14:40:35.591550,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:36.048435,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:44.364564,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:46.069399,Projector,Command,'UpdatePower,None'
+2025-09-05 14:40:46.069399,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:46.306686,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:40:54.752663,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:40:56.319772,Projector,Command,'UpdatePower,None'
+2025-09-05 14:40:56.319772,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:40:56.645327,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:05.577893,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:41:06.668344,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:06.668344,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:07.021881,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:16.493284,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:41:17.044155,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:17.044155,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:17.335999,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:26.709632,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:41:27.359985,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:27.359985,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:27.591178,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:37.097510,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:41:37.605549,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:37.605549,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:37.714557,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:47.559885,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:41:47.733162,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:47.734171,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:47.963744,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:41:57.910642,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:41:57.975720,Projector,Command,'UpdatePower,None'
+2025-09-05 14:41:57.975720,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:41:58.275540,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:08.291782,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:42:08.291782,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:08.352431,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:09.123073,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:42:18.383314,Projector,Command,'UpdatePower,None'
+2025-09-05 14:42:18.383314,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:18.644455,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:19.552095,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:42:28.660861,Projector,Command,'UpdatePower,None'
+2025-09-05 14:42:28.660861,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:29.088949,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:29.983430,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:42:39.106658,Projector,Command,'UpdatePower,None'
+2025-09-05 14:42:39.107905,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:39.460241,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:40.537769,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:42:49.471012,Projector,Command,'UpdatePower,None'
+2025-09-05 14:42:49.471012,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:49.625223,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:42:50.888330,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:42:59.649376,Projector,Command,'UpdatePower,None'
+2025-09-05 14:42:59.649376,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:42:59.787275,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:01.270634,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:43:09.791744,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:43:09.791744,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:43:10.006320,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:12.455477,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:43:20.022286,Projector,Command,'UpdatePower,None'
+2025-09-05 14:43:20.022286,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:43:20.177967,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:22.992574,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:43:30.200208,Projector,Command,'UpdatePower,None'
+2025-09-05 14:43:30.201206,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:43:30.507593,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:33.560862,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:43:40.516832,Projector,Command,'UpdatePower,None'
+2025-09-05 14:43:40.516832,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:43:40.808134,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:43.792223,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:43:50.837746,Projector,Command,'UpdatePower,None'
+2025-09-05 14:43:50.837746,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:43:51.135041,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:43:54.226224,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:44:01.163504,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:01.163504,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:01.487584,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:04.669510,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:44:11.516596,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:11.516596,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:11.683329,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:15.565100,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:44:21.705250,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:21.705250,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:22.172571,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:26.303170,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:44:32.195654,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:32.196662,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:32.323801,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:36.832135,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:44:42.343762,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:42.343762,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:42.670579,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:47.175688,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:44:52.692095,Projector,Command,'UpdatePower,None'
+2025-09-05 14:44:52.693180,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:44:52.999946,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:44:57.504649,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:03.021967,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:45:03.022885,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:03.406256,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:45:07.673082,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:13.429811,Projector,Command,'UpdatePower,None'
+2025-09-05 14:45:13.429811,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:13.598709,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:45:18.789808,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:23.605279,Projector,Command,'UpdatePower,None'
+2025-09-05 14:45:23.605279,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:23.730082,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:45:29.561027,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:33.752707,Projector,Command,'UpdatePower,None'
+2025-09-05 14:45:33.752707,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:33.922600,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:45:40.041555,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:43.949594,Projector,Command,'UpdatePower,None'
+2025-09-05 14:45:43.949594,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:44.306669,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:45:50.352305,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:45:54.312780,Projector,Command,'UpdatePower,None'
+2025-09-05 14:45:54.312780,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:45:54.642684,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:00.773850,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:04.659505,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:46:04.660603,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:04.920376,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:11.119484,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:14.929232,Projector,Command,'UpdatePower,None'
+2025-09-05 14:46:14.929232,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:15.268057,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:21.986471,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:25.289977,Projector,Command,'UpdatePower,None'
+2025-09-05 14:46:25.289977,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:25.699871,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:32.911066,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:35.720429,Projector,Command,'UpdatePower,None'
+2025-09-05 14:46:35.720429,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:35.996727,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:43.223323,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:46.024637,Projector,Command,'UpdatePower,None'
+2025-09-05 14:46:46.025508,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:46.424389,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:46:53.534875,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:46:56.445249,Projector,Command,'UpdatePower,None'
+2025-09-05 14:46:56.445249,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:46:56.660658,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:03.982179,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:47:06.673878,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:06.673878,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:07.059942,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:14.510191,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:47:17.090697,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:17.090697,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:17.333291,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:25.582552,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:47:27.345161,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:27.345161,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:27.545284,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:36.024015,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:47:37.563711,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:37.563711,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:37.730194,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:46.552047,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:47:47.752483,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:47.752483,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:48.043544,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:47:57.056934,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:47:58.059452,Projector,Command,'UpdatePower,None'
+2025-09-05 14:47:58.059452,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:47:58.133536,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:07.472748,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:48:08.151783,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:08.151783,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:08.351927,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:17.595916,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:48:18.374483,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:18.375643,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:18.728877,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:28.746471,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:28.746471,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:28.777570,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:29.024073,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:48:38.797527,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:38.797527,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:39.107109,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:40.366215,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:48:49.121823,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:49.121823,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:49.462288,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:48:50.794141,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:48:59.483742,Projector,Command,'UpdatePower,None'
+2025-09-05 14:48:59.483742,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:48:59.575239,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:01.100076,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:49:09.604297,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:49:09.604297,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:49:09.943177,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:11.549760,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:49:19.964366,Projector,Command,'UpdatePower,None'
+2025-09-05 14:49:19.964366,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:49:20.090355,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:21.885473,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:49:30.105031,Projector,Command,'UpdatePower,None'
+2025-09-05 14:49:30.105031,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:49:30.428592,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:33.319620,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:49:40.444157,Projector,Command,'UpdatePower,None'
+2025-09-05 14:49:40.444157,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:49:40.794549,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:43.612991,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:49:50.804075,Projector,Command,'UpdatePower,None'
+2025-09-05 14:49:50.804075,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:49:51.066484,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:49:54.293726,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:50:01.082413,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:01.082413,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:01.444500,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:04.610358,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:50:11.469756,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:11.469756,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:11.605169,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:15.037176,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:50:21.616062,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:21.616062,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:21.953923,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:25.412705,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:50:31.981787,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:31.981787,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:32.361227,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:36.163217,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:50:42.374977,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:42.374977,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:42.578601,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:47.222559,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:50:52.595749,Projector,Command,'UpdatePower,None'
+2025-09-05 14:50:52.595749,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:50:52.860280,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:50:57.572081,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:02.862900,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:02.863888,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:03.175841,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:51:07.840836,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:13.190349,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:13.190349,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:13.531774,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:51:18.356748,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:23.555304,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:23.555304,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:23.678446,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:51:28.738879,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:33.707859,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:33.707859,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:33.799705,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:51:39.558577,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:43.827391,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:43.827391,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:44.074625,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:51:50.406974,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:51:54.084000,Projector,Command,'UpdatePower,None'
+2025-09-05 14:51:54.085053,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:51:54.365548,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:01.002937,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:04.382383,Projector,Command,'UpdatePower,None'Timestamp,Device Name,MessageType,Data
+2025-09-05 14:52:04.382383,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:04.737987,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:11.389075,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:14.759780,Projector,Command,'UpdatePower,None'
+2025-09-05 14:52:14.759780,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:15.005162,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:21.558840,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:25.028897,Projector,Command,'UpdatePower,None'
+2025-09-05 14:52:25.028897,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:25.305405,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:32.147593,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:35.323803,Projector,Command,'UpdatePower,None'
+2025-09-05 14:52:35.323803,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:35.582637,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:43.308533,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:45.599451,Projector,Command,'UpdatePower,None'
+2025-09-05 14:52:45.599451,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:45.689918,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:52:53.851155,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:52:55.706973,Projector,Command,'UpdatePower,None'
+2025-09-05 14:52:55.706973,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:52:55.858603,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:04.399069,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:53:05.879758,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:05.879758,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:06.256025,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:14.793614,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:53:16.283660,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:16.283660,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:16.604475,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:25.178674,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:53:26.609500,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:26.609500,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:26.915161,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:35.592991,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:53:36.922003,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:36.922003,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:37.328948,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:46.688240,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:53:47.352312,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:47.352312,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:47.627761,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:53:57.336293,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:53:57.653921,Projector,Command,'UpdatePower,None'
+2025-09-05 14:53:57.653921,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:53:57.778601,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:07.557195,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"Timestamp,Device Name,MessageType,Data
+2025-09-05 14:54:07.798817,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:07.798817,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:08.026211,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:18.044873,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:18.044873,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:18.149451,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:18.180361,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:54:28.173206,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:28.173206,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:28.430034,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:28.654042,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:54:38.459518,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:38.459518,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:38.798144,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:38.937514,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:54:48.819627,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:48.819627,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:49.202917,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:54:50.005232,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:54:59.215744,Projector,Command,'UpdatePower,None'
+2025-09-05 14:54:59.215744,Projector,API,To Device,'~00150 1\r'
+2025-09-05 14:54:59.584412,Projector,API,From Device,b'Ok003V\xaf8000C1500\r'
+2025-09-05 14:55:00.720185,Projector,API,From Device,"b'Ok003V\\xaf8000C1500\\r'"
+2025-09-05 14:55:09.610781,Projector,Command,'UpdatePower,None'

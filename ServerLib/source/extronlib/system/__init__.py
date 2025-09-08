@@ -323,7 +323,7 @@ class System(ExtronNode):
         Arguments:
             - Server (string) – the NTP server to synchronize with
         """
-        self._Command('SetManualTime',[base64.b64encode(pickle.dumps(DateAndTime)).decode('utf-8')])
+        self._Command('SetManualTime',[datetime.datetime.strftime(DateAndTime,'%Y-%m-%d %H:%M:%S')])
 
 
     def GetCurrentTimezone(self) -> tuple:
@@ -332,10 +332,9 @@ class System(ExtronNode):
         Returns:
             - namedtuple (tuple) – the current time zone of the primary controller
         """
-        try:
-            val = pickle.loads(base64.b64decode(self._Query('GetCurrentTimezone',[])))
-        except:
-            val = None
+        val = self._Query('GetCurrentTimezone',[])
+        if val:
+            val = (val['id'],val['description'],val['MSid'])
         return val
 
 
@@ -345,11 +344,15 @@ class System(ExtronNode):
         Returns:
             - listof namedtuples (list) – all time zones supported by the system
         """
-        try:
-            val = pickle.loads(base64.b64decode(self._Query('GetTimezoneList',[])))
-        except:
-            val = None
-        return val
+        vals = self._Query('GetTimezoneList',[])
+        l = []
+        if vals:
+            from collections import namedtuple
+            for val in vals:
+                TimeZone = namedtuple('TimeZone',val.keys())
+                l.append(TimeZone(*val.values()))
+        vals = l
+        return vals
 
 
 
@@ -386,10 +389,9 @@ class System(ExtronNode):
         Returns
             - tuple (# of success, # of fail, avg time ) (int, int, float)
         """
-        try:
-            val = pickle.loads(base64.b64decode(self._Query('Ping',[hostname,count])))
-        except:
-            val = None
+        val = self._Query('Ping',[hostname,count])
+        if val:
+            val = tuple(val)
         return val
 
 
