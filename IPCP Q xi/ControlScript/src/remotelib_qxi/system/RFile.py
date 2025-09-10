@@ -31,21 +31,32 @@ class ObjectWrapper(ObjectClass):
             WRAPPER CONFIGURATION
         """
         event_attrs = []
-        self.overloaded_attrs = {'ChangeDir':'_ChangeDir',
-                                 'DeleteDir':'_DeleteDir',
-                                 'DeleteFile':'_DeleteFile',
-                                 'Exists':'_Exists',
-                                 'GetCurrentDir':'_GetCurrentDir',
-                                 'ListDir':'_ListDir',
-                                 'MakeDir':'_MakeDir',
-                                 'RenameFile':'_RenameFile'}
-
+        self.set_get_attrs = ['Filename']
+        self.callable_attrs = {'ChangeDir':None,
+                                 'DeleteDir':None,
+                                 'DeleteFile':None,
+                                 'Exists':None,
+                                 'GetCurrentDir':None,
+                                 'ListDir':None,
+                                 'MakeDir':None,
+                                 'RenameFile':None,
+                                 'close':None,
+                                 'read':self._read,
+                                 'readline':self._readline,
+                                 'readlines':self._readlines,
+                                 'seek':None,
+                                 'tell':None,
+                                 'write':self._write,
+                                 'writelines':self._writelines}
 
         """
             Each event should be defined here and send an update to the remote server with the new value
         """
         for item in event_attrs:
             setattr(self,item,self.create_event_handler(item))
+        for attr in self.callable_attrs:
+            if not self.callable_attrs[attr]:
+                self.callable_attrs[attr] = getattr(self,attr)
 
         #once init is complete, send dump of current values to remote server
         self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
@@ -72,48 +83,35 @@ class ObjectWrapper(ObjectClass):
         if data['type'] == 'init':
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
         elif data['type'] == 'command':
-            if hasattr(self,data['property']):
-                attr = getattr(self,data['property'])
-                if data['property'] in self.overloaded_attrs:
-                    attr = getattr(self,self.overloaded_attrs[data['property']])
-                if callable(attr):
-                    try:
-                        attr(*data['args'])
-                    except Exception as e:
-                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
-                else:
-                    try:
-                        attr = data['args'][0]
-                    except Exception as e:
-                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            if data['property'] in self.callable_attrs:
+                try:
+                    self.callable_attrs[data['property']](*data['args'])
+                except Exception as e:
+                    msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            elif data['property'] in self.set_get_attrs:
+                try:
+                    setattr(self,data['property'],data['args'][0])
+                except Exception as e:
+                    msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             else:
-                err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
+                err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
         elif data['type'] == 'query':
-            if hasattr(self,data['property']):
-                attr = getattr(self,data['property'])
-                if data['property'] in self.overloaded_attrs:
-                    attr = getattr(self,self.overloaded_attrs[data['property']])
-                value = None
-                if callable(attr):
-                    try:
-                        value = attr(*data['args'])
-                        update = {'property':data['property'],'value':value,'qualifier':None}
-                    except Exception as e:
-
-                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':None,'qualifier':{'code':msg}}
-                else:
-                    try:
-                        value = attr
-                        update = {'property':data['property'],'value':value,'qualifier':None}
-                    except Exception as e:
-                        msg='failed to get property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            if data['property'] in self.callable_attrs:
+                try:
+                    value = self.callable_attrs[data['property']](*data['args'])
+                    update = {'property':data['property'],'value':value,'qualifier':None}
+                except Exception as e:
+                    msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            elif data['property'] in self.set_get_attrs:
+                try:
+                    value = getattr(self,data['property'],data['args'][0])
+                    update = {'property':data['property'],'value':value,'qualifier':None}
+                except Exception as e:
+                    msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             else:
                 err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
         if err_msg:
@@ -122,23 +120,19 @@ class ObjectWrapper(ObjectClass):
             self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
 
-    def _ChangeDir(self,path):
-        ObjectClass.ChangeDir(path)
-    def _DeleteDir(self,path):
-        ObjectClass.DeleteDir(path)
-    def _DeleteFile(self,filename):
-        ObjectClass.DeleteFile(filename)
-    def _Exists(self,path):
-        return(ObjectClass.Exists(path))
-    def _GetCurrentDir(self):
-        return(ObjectClass.GetCurrentDir())
-    def _ListDir(self,path):
-        return(ObjectClass.ListDir(path))
-    def _MakeDir(self,path):
-        ObjectClass.MakeDir(path)
-    def _RenameFile(self,oldname,newname):
-        ObjectClass.RenameFile(oldname,newname)
-    def readlines(self):
+    def _read(self,args):
+        data = self.read(*args[0])
+        if type(data) is str:
+            data = data.encode('utf-8')
+        data = base64.b64encode(data).decode('utf-8')
+        return(data)
+    def _readline(self):
+        data = self.readline()
+        if type(data) is str:
+            data = data.encode('utf-8')
+        data = base64.b64encode(data).decode('utf-8')
+        return(data)
+    def _readlines(self):
         lines = []
         with ObjectClass(*self.args) as f:
             for line in f:
@@ -147,3 +141,12 @@ class ObjectWrapper(ObjectClass):
                 line = base64.b64encode(line).decode('utf-8')
                 lines.append(line)
         return(lines)
+
+    def _write(self,data):
+        data = base64.b64decode(data)
+        self.write(data)
+    def _writelines(self,seq):
+        datas = []
+        for item in seq:
+            datas.append(base64.b64decode(item))
+        self.writelines(datas)

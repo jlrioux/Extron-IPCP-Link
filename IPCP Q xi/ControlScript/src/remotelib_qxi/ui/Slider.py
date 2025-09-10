@@ -1,6 +1,6 @@
 
 from extronlib.ui import Slider as ObjectClass
-from extronlib.system import Timer
+from extronlib.system import Timer,Wait
 import json
 import base64
 from typing import TYPE_CHECKING
@@ -19,6 +19,19 @@ class ObjectWrapper():
         self.args = data['args']
         self.initialized = False
         self.host_alias = data['args'][0]
+
+
+        """
+            WRAPPER CONFIGURATION
+        """
+        self.event_attrs = ['Pressed','Released','Changed']
+        self.set_get_attrs = ['Enabled','Fill','Host','ID','Max','Min','Name','Step','Visible']
+        self.callable_attrs = {'SetEnable':None,
+                               'SetFill':None,
+                               'SetRange':None,
+                               'SetVisible':None}
+
+
         if self.host_alias not in self.WrapperBasics.wrapped_objects['aliases by type']:
             self.host = None #type:UIDevice
             host_type = 'UIDevice'
@@ -26,12 +39,9 @@ class ObjectWrapper():
             host_type = self.WrapperBasics.wrapped_objects['aliases by type'][self.host_alias]
             self.host = self.WrapperBasics.wrapped_objects[host_type][self.host_alias]
         data['args'][0] = self.host
+
         self.obj = None
-        self.allow_make_obj = True
-        if self.host.where_used_present:
-            if not self.args[1] in self.host.where_used_items['Slider']:
-                self.allow_make_obj = False
-        if self.allow_make_obj and self.args:
+        if self.determine_object_presence() and self.args:
             try:
                 self.obj = ObjectClass(*data['args']) #type:ObjectClass
             except Exception as e:
@@ -49,11 +59,6 @@ class ObjectWrapper():
             return
 
 
-        """
-            WRAPPER CONFIGURATION
-        """
-        self.event_attrs = ['Pressed','Released','Changed']
-
 
         """
             Each event should be defined here and send an update to the remote server with the new value
@@ -67,9 +72,15 @@ class ObjectWrapper():
         self.initialized = True
         self.WrapperBasics.register(self.type,self.alias,self)
 
+    def determine_object_presence(self):
+        if self.host.where_used_present:
+            if not int(self.args[1]) in self.host.where_used_items['Slider']:
+                return False
+        return True
+
     def send_init_values(self):
         data = {}
-        if self.allow_make_obj:
+        if self.determine_object_presence():
             data['Name'] = self.obj.Name
             data['Visible'] = self.obj.Visible
             data['Enabled'] = self.obj.Enabled
@@ -77,14 +88,12 @@ class ObjectWrapper():
             data['Max'] = self.obj.Max
             data['Min'] = self.obj.Min
             data['Step'] = self.obj.Step
+            for attr in self.callable_attrs:
+                self.callable_attrs[attr] = getattr(self.obj,attr)
         self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':data}))
 
     def create_event_handler(self,property):
         def e(interface,*args):
-            if property == 'ReceiveData':
-                if type(args[0]) is str:
-                    args[0] = args[0].encode()
-                args[0] = base64.b64encode(args[0]).decode('utf-8')
             update = {'property':property,'value':args,'qualifier':None}
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'update','message':update}))
         return e
@@ -93,7 +102,7 @@ class ObjectWrapper():
         err_msg = None
         update = None
         if data['type'] == 'init':
-            if self.obj:
+            if self.determine_object_presence():
                 needs_redefined = False
                 cur_arg = 0
                 for arg in self.args:
@@ -101,7 +110,7 @@ class ObjectWrapper():
                         needs_redefined=True
                         self.args[cur_arg] = data['args'][cur_arg]
                     cur_arg+=1
-                if needs_redefined:
+                if needs_redefined or not self.obj:
                     data['args'][0] = self.host
                     self.obj = ObjectClass(*data['args'])
                     for item in self.event_attrs:
@@ -112,42 +121,38 @@ class ObjectWrapper():
             err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'object does not exist'}}
         elif data['type'] == 'command':
             if self.obj:
-                if hasattr(self.obj,data['property']):
-                    attr = getattr(self.obj,data['property'])
-                    if callable(attr):
-                        try:
-                            attr(*data['args'])
-                        except Exception as e:
-                            msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            print(msg)
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
-                    else:
-                        try:
-                            attr = data['args'][0]
-                        except Exception as e:
-                            msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            print(msg)
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                if data['property'] in self.callable_attrs:
+                    try:
+                        self.callable_attrs[data['property']](*data['args'])
+                    except Exception as e:
+                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                elif data['property'] in self.set_get_attrs:
+                    try:
+                        setattr(self.obj,data['property'],data['args'][0])
+                    except Exception as e:
+                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
                 else:
-                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
+                    err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
+            else:
+                err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
         elif data['type'] == 'query':
             if self.obj:
-                if hasattr(self.obj,data['property']):
-                    attr = getattr(self.obj,data['property'])
-                    value = None
-                    if callable(attr):
-                        try:
-                            value = attr(*data['args'])
-                            update = {'property':data['property'],'value':value,'qualifier':None}
-                        except Exception as e:
-                            print('failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e)))
-                    else:
-                        try:
-                            value = attr
-                            update = {'property':data['property'],'value':value,'qualifier':None}
-                        except Exception as e:
-                            print('failed to get property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e)))
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'failed to set property'}}
+                if data['property'] in self.callable_attrs:
+                    try:
+                        value = self.callable_attrs[data['property']](*data['args'])
+                        update = {'property':data['property'],'value':value,'qualifier':None}
+                    except Exception as e:
+                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                elif data['property'] in self.set_get_attrs:
+                    try:
+                        value = getattr(self.obj,data['property'],data['args'][0])
+                        update = {'property':data['property'],'value':value,'qualifier':None}
+                    except Exception as e:
+                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
                 else:
                     err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
             else:
@@ -157,3 +162,5 @@ class ObjectWrapper():
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
             self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))
+
+

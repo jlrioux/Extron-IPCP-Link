@@ -194,7 +194,7 @@ from remotelib_qxi.ui.Slider import ObjectWrapper as SliderWrapper
 
 
 class WrapperBasics():
-    def log_error(msg):
+    def log_error(self,msg):
         ProgramLog(msg,'error')
 
     __instances = {'AVLAN':None,'LAN':None}
@@ -375,7 +375,7 @@ class WrapperBasics():
         if not type:
             err_msg = {'property':'init','value':'device does not exist','qualifier':{'alias':alias,'code':'missing device'}}
             self.send_message(alias,json.dumps({'type':'error','message':err_msg}))
-            WrapperBasics.log_error('remotelib error:{}:{}'.format(alias,json.dumps(err_msg)))
+            self.log_error('remotelib error:{}:{}'.format(alias,json.dumps(err_msg)))
 
     def send_message(self,alias,data):
         message = '{}~~{}'.format(alias,data)

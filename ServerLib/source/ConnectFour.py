@@ -8,6 +8,10 @@ from extronlib import event
 from extronlib.device import UIDevice
 from extronlib.ui import Slider,Button,Label
 
+
+allow_ui = False
+player1turn = True
+
 ui = UIDevice('ConnectFourPanel')
 print('tp created')
 ui.ShowPage('Main')
@@ -30,7 +34,9 @@ row_positions.reverse()
 
 def create_drop_button_event(id):
     def e(button,state):
-        global slider_values
+        global allow_ui
+        if not allow_ui:return
+        allow_ui = False
         drop_piece(id)
     return e
 for id in range(7):
@@ -42,7 +48,10 @@ for id in range(7):
 btn_reset = Button(ui,41)
 @event(btn_reset,'Pressed')
 def e(button,state):
+    global allow_ui
+    allow_ui = False
     reset_board()
+    allow_ui = True
 
 
 cur = 0
@@ -57,7 +66,7 @@ for row in range(num_rows):
         board[row].append(None)
         position_buttons[row].append(Button(ui,position_button_ids[cur]))
         cur += 1
-player1turn = True
+
 def set_drop_buttons():
     for col in range(num_cols):
         red_sliders[col].SetFill(0)
@@ -80,12 +89,15 @@ def reset_board():
 
 
 def drop_piece(col_to_drop):
+    global allow_ui
     global board
     global player1turn
     import time
     start = 95
     stop_position = determine_bottom_row(col_to_drop)
-    if stop_position < 0:return
+    if stop_position < 0:
+        allow_ui = True
+        return
     for col in range(num_cols):
         btn_drops[col].SetState(0)
     if player1turn:sliders = red_sliders
@@ -101,6 +113,7 @@ def drop_piece(col_to_drop):
     if check_for_winner() is None:
         player1turn = not player1turn
         set_drop_buttons()
+        allow_ui = True
 
 def determine_bottom_row(col):
     for row in range(num_rows):
@@ -179,4 +192,4 @@ def check_node_up_left(row,col,depth):
 reset_board()
 
 print('ready')
-
+allow_ui = True

@@ -30,8 +30,13 @@ class ObjectWrapper(ObjectClass):
         """
             WRAPPER CONFIGURATION
         """
-        event_attrs = ['Online','Offline','CurrentLoadChanged','CombinedCurrentChanged','CombinedWattageChanged','CombinedLoadStateChanged']
-
+        event_attrs = ['Online','Offline','CombinedCurrentChanged','CombinedLoadStateChanged','CombinedWattageChanged']
+        self.set_get_attrs = ['DeviceAlias','ModelName','Hostname','IPAddress','LinkLicenses','MACAddress','FirmwareVersion','PartNumber','SerialNumber','SystemSettings',
+                              'CombinedCurrent','CombinedLoadState','CombinedWattage']
+        self.callable_attrs = {'Reboot':None}
+        for attr in self.callable_attrs:
+            if not self.callable_attrs[attr]:
+                self.callable_attrs[attr] = getattr(self,attr)
 
         """
             Each event should be defined here and send an update to the remote server with the new value
@@ -62,44 +67,35 @@ class ObjectWrapper(ObjectClass):
         if data['type'] == 'init':
             self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
         elif data['type'] == 'command':
-            if hasattr(self,data['property']):
-                attr = getattr(self,data['property'])
-                if callable(attr):
-                    try:
-                        attr(*data['args'])
-                    except Exception as e:
-                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
-                else:
-                    try:
-                        attr = data['args'][0]
-                    except Exception as e:
-                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            if data['property'] in self.callable_attrs:
+                try:
+                    self.callable_attrs[data['property']](*data['args'])
+                except Exception as e:
+                    msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            elif data['property'] in self.set_get_attrs:
+                try:
+                    setattr(self,data['property'],data['args'][0])
+                except Exception as e:
+                    msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             else:
-                err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
+                err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
         elif data['type'] == 'query':
-            if hasattr(self,data['property']):
-                attr = getattr(self,data['property'])
-                value = None
-                if callable(attr):
-                    try:
-                        value = getattr(self,data['property'])(*data['args'])
-                        update = {'property':data['property'],'value':value,'qualifier':None}
-                    except Exception as e:
-
-                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        print(msg)
-                        err_msg = {'property':data['property'],'value':None,'qualifier':{'code':msg}}
-                else:
-                    try:
-                        value = getattr(self,data['property'])
-                        update = {'property':data['property'],'value':value,'qualifier':None}
-                    except Exception as e:
-                        msg='failed to get property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            if data['property'] in self.callable_attrs:
+                try:
+                    value = self.callable_attrs[data['property']](*data['args'])
+                    update = {'property':data['property'],'value':value,'qualifier':None}
+                except Exception as e:
+                    msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+            elif data['property'] in self.set_get_attrs:
+                try:
+                    value = getattr(self,data['property'],data['args'][0])
+                    update = {'property':data['property'],'value':value,'qualifier':None}
+                except Exception as e:
+                    msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             else:
                 err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
         if err_msg:

@@ -46,7 +46,11 @@ if qxi_flag:
                 WRAPPER CONFIGURATION
             """
             event_attrs = ['Connected','Disconnected','ReceiveData']
-            self.overloaded_attrs = {'Send':'_Send'}
+            self.set_get_attrs = ['DomainManager','DeviceName','Domain','Protocol']
+            self.callable_attrs = {'Connect':None,
+                                    'Disconnect':None,
+                                    'Send':self._Send,
+                                    'StartService':None}
 
 
             """
@@ -54,6 +58,9 @@ if qxi_flag:
             """
             for item in event_attrs:
                 setattr(self,item,self.create_event_handler(item))
+            for attr in self.callable_attrs:
+                if not self.callable_attrs[attr]:
+                    self.callable_attrs[attr] = getattr(self,attr)
 
             #once init is complete, send dump of current values to remote server
             self.WrapperBasics.send_message(alias,json.dumps({'type':'init','value':None}))
@@ -84,51 +91,36 @@ if qxi_flag:
             update = None
             if data['type'] == 'init':
                 self.WrapperBasics.send_message(self.alias,json.dumps({'type':'init','value':None}))
-                if self.__is_connected:
-                    self.Disconnect()
             elif data['type'] == 'command':
-                if hasattr(self,data['property']):
-                    attr = getattr(self,data['property'])
-                    if data['property'] in self.overloaded_attrs:
-                        attr = getattr(self,self.overloaded_attrs[data['property']])
-                    if callable(attr):
-                        try:
-                            attr(*data['args'])
-                        except Exception as e:
-                            msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            print(msg)
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
-                    else:
-                        try:
-                            attr = data['args'][0]
-                        except Exception as e:
-                            msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            print(msg)
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                if data['property'] in self.callable_attrs:
+                    try:
+                        self.callable_attrs[data['property']](*data['args'])
+                    except Exception as e:
+                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                elif data['property'] in self.set_get_attrs:
+                    try:
+                        setattr(self,data['property'],data['args'][0])
+                    except Exception as e:
+                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
                 else:
-                    err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
+                    err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
             elif data['type'] == 'query':
-                if hasattr(self,data['property']):
-                    attr = getattr(self,data['property'])
-                    if data['property'] in self.overloaded_attrs:
-                        attr = getattr(self,self.overloaded_attrs[data['property']])
-                    value = None
-                    if callable(attr):
-                        try:
-                            value = attr(*data['args'])
-                            update = {'property':data['property'],'value':value,'qualifier':None}
-                        except Exception as e:
-
-                            msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            print(msg)
-                            err_msg = {'property':data['property'],'value':None,'qualifier':{'code':msg}}
-                    else:
-                        try:
-                            value = attr
-                            update = {'property':data['property'],'value':value,'qualifier':None}
-                        except Exception as e:
-                            msg='failed to get property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
-                            err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                if data['property'] in self.callable_attrs:
+                    try:
+                        value = self.callable_attrs[data['property']](*data['args'])
+                        update = {'property':data['property'],'value':value,'qualifier':None}
+                    except Exception as e:
+                        msg='failed to run property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
+                elif data['property'] in self.set_get_attrs:
+                    try:
+                        value = getattr(self,data['property'],data['args'][0])
+                        update = {'property':data['property'],'value':value,'qualifier':None}
+                    except Exception as e:
+                        msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))
+                        err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
                 else:
                     err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
             if err_msg:
