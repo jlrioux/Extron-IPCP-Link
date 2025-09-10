@@ -92,7 +92,7 @@ class ObjectWrapper():
                     err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             elif data['property'] in self.set_get_attrs:
                 try:
-                    value = getattr(self,data['property'],data['args'][0])
+                    value = getattr(self,data['property'])
                     update = {'property':data['property'],'value':value,'qualifier':None}
                 except Exception as e:
                     msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))

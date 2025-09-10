@@ -1,0 +1,168 @@
+{
+    "room_data":{
+        "debug_server_port":"AVLAN",
+        "room_name":"Classroom 1B",
+        "master_ip_address":"172.16.2.10",
+        "use_dynamic_presentation_ids":true,
+        "is_combinable":true,
+        "is_master_when_combined":false,
+        "combine_multi_processor":true,
+        "combined_panels_follow":false
+    },
+    "dsp_data":{
+        "model":"Tesira",
+        "control_method":"IP",
+        "ip_address":"172.16.2.21",
+        "credentials":["admin","4135924136"],
+        "has_voice_lift":false,
+        "voice_lift_tag":"VoiceLift",
+        "has_phone":false,
+        "main_level_tags":["Pgm","VCRx"],
+        "main_level_channels":[1,1],
+        "main_level_info":{
+                "Pgm:1":{
+                    "max":10,
+                    "min":-40,
+                    "step size":1,
+                    "channel":1
+                },
+                "VCRx:1":{
+                    "max":10,
+                    "min":-40,
+                    "step size":1,
+                    "channel":1
+                }
+            },
+        "main_mute_tags":["Pgm","VCRx"],
+        "main_mute_channels":[1,1],
+        "mic_level_tags":["Mic1","Mic2","Mic3","Mic4"],
+        "mic_level_channels":[1,1,1,1],
+        "mic_level_info":{
+            "Mic1:1":{
+                "max":10,
+                "min":-10,
+                "step size":1,
+                "channel":1
+            },
+            "Mic2:1":{
+                "max":10,
+                "min":-10,
+                "step size":1,
+                "channel":1
+            },
+            "Mic3:1":{
+                "max":10,
+                "min":-10,
+                "step size":1,
+                "channel":1
+            },
+            "Mic4:1":{
+                "max":10,
+                "min":-10,
+                "step size":1,
+                "channel":1
+            }
+        },
+        "mic_mute_tags":["Mic1","Mic2","Mic3","Mic4"],
+        "mic_mute_channels":[1,1,1,1],
+        "mic_selector_tags":["Mic1Selector","Mic2Selector","Mic3Selector","Mic4Selector"],
+        "privacy_tag":"Privacy",
+        "phone_tags":["U1Dialer","TIControlStatus1"],
+        "dsp_controls_mic_leds":true,
+        "dsp_mic_leds_brightness_selector_tag":"BRIGHTNESS",
+        "dsp_mic_leds_brightness_selector_type":"Logic",
+        "vtc_call_in_progress_tag":"InCall"
+    },
+    "switch_data":{
+        "model":"IN1608 xi MA 70",
+        "control_method":"IP",
+        "ip_address":"172.16.2.11",
+        "src_names":["None","Credenza VGA","Input 2","Credenza HDMI","Input 4",
+                                        "Input 5","Input 6","Left Floorbox","Right Floorbox",
+                                        "Input 9","Input 10","Input 11","Input 12",
+                                        "Input 13","Input 14","Input 15","Input 16",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused"],
+        "used_inputs":[1,3,7,8],
+        "presentation_inputs":[1,3,7,8],
+        "sharable_inputs":[1,3,7,8],
+        "audio_follow_sources":[1,3,7,8],
+        "vtc_inputs":[],
+        "vtc_camera_inputs":[null,null,null],
+        "catv_input":-1,
+        "extended_inputs":[7,8],
+
+        "dest_names":["Content","Output 2","Output 3","Output 4",
+                                        "Output 5","Output 6","Output 7","Output 8",
+                                        "Classroom B Projector","Classroom B Front Display","Classroom B Rear Display","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused",
+                                        "Unused","Unused","Unused","Unused"],
+        "used_outputs":[],
+        "disp_outputs":[9,10,11],
+        "audio_output":1,
+        "vtc_content_output":1,
+        "vtc_camera_outputs":[null,null,null],
+
+        "default_vtc_routing":[],
+        "makeroute_on_source_select":true,
+        "video_mute_with_sync_enable":true
+    },
+    "display_data":{
+        "model":["NEC VP NP-P","NEC MExx1","NEC MExx1"],
+        "control_method":["Serial","Serial","Serial"],
+        "serial_host":[0,0,0],
+        "serial_port":["COM5","COM3","COM2"],
+        "baud_rate":[38400,9600,9600],
+        "has_screen":[true,false,false],
+        "screen_relays":[["RLY1","RLY2"],[],[]]
+    },
+    "annotation_data":{
+        "model":["Extron Annotator 300","Extron Annotator 300"],
+        "control_method":["SerialOverIP","SerialOverIP"],
+        "ip_address":["172.16.2.11","172.16.2.11"],
+        "ip_port":[2001,2002]
+    },
+    "ceiling_mic_data":{
+        "model":["MXA910","MXA910","MXA910","MXA910"],
+        "control_method":["IP","IP","IP","IP"],
+        "ip_address":["172.16.2.31","172.16.2.32","172.16.2.33","172.16.2.34"],
+        "ip_port":[2202,2202,2202,2202]
+    },
+    "ulx_mic_data":{
+        "model":["ULXD"],
+        "control_method":["IP"],
+        "ip_address":["172.16.2.23"],
+        "ip_port":[2202]
+    },
+    "camera_data":{
+        "model":["Polycom G7500","Polycom G7500","Polycom G7500"],
+        "control_method":["Serial","Serial","Serial"],
+        "ip_address":[],
+        "ip_port":[],
+        "host":[0,0,0],
+        "serial_port":["COM1","COM1","COM1"],
+        "pan_speed":12,
+        "tilt_speed":10,
+        "zoom_speed":4,
+        "camera_names":["View\nof\nRear","Room\nView","View\nof\nFront"]
+    },
+    "vtc_data":{
+        "model":"G7500",
+        "control_method":"Serial",
+        "serial_port":"COM1",
+        "camera_inputs":[1,3,4],
+        "content_input":2,
+        "auto_dtmf_enable":false
+    },
+    "catv_data":{
+        "model":"NYC",
+        "ir_port":"IRS1",
+        "has_catv":false,
+        "presets_use_icons":false
+    }
+}

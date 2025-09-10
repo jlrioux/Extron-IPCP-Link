@@ -1,0 +1,123 @@
+2000-01-07 18:26:06 INFO root Start primary API version 1.8.21
+2000-01-07 18:26:06 INFO root loading script: main
+2000-01-07 18:26:08 INFO root successfully loaded script: main
+2000-01-07 18:29:08 ERROR root Receive failed, from client
+2000-01-07 18:34:24 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2000-01-07 18:35:25 ERROR root SerialInterface NavConfMonitorA:COM1 Unavailable Port: COM1
+2000-01-07 18:35:25 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2000-01-07 18:35:37 ERROR root SerialInterface NavConfMonitorB:COM1 Unavailable Port: COM1
+2000-01-07 18:35:37 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None)  Unavailable Port: COM1 , connections status Offline
+2000-01-07 18:35:40 ERROR root SerialInterface NavSignageA:COM1 Unavailable Port: COM1
+2000-01-07 18:35:40 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None)  Unavailable Port: COM1 , connections status Offline
+2000-01-07 18:35:43 ERROR root SerialInterface NavSignageB:COM1 Unavailable Port: COM1
+2000-01-07 18:35:43 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None)  Unavailable Port: COM1 , connections status Offline
+2000-01-07 18:35:43 ERROR root remotelib error:ProcessorAlias:RLY1:{"property": "State", "value": [], "qualifier": {"code": "failed to set property \"State\" on \"ProcessorAlias:RLY1\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:35:43 ERROR root remotelib error:ProcessorAlias:RLY2:{"property": "State", "value": [], "qualifier": {"code": "failed to set property \"State\" on \"ProcessorAlias:RLY2\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:35:43 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: RLY3 , connections status: Online
+2000-01-07 18:35:44 ERROR root remotelib error:ProcessorAlias:RLY3:{"property": "State", "value": [], "qualifier": {"code": "failed to set property \"State\" on \"ProcessorAlias:RLY3\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:35:44 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: RLY4 , connections status: Online
+2000-01-07 18:35:44 ERROR root remotelib error:ProcessorAlias:RLY4:{"property": "State", "value": [], "qualifier": {"code": "failed to set property \"State\" on \"ProcessorAlias:RLY4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:35:44 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: IRS2 , connections status Online
+2000-01-07 18:36:11 ERROR root Device 1-0 (IPCP-Pro-255Q-xi-24-84-7D)  Unavailable Port: FIO4 , connections status: Online
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "State", "value": [], "qualifier": {"code": "failed to set property \"State\" on \"ProcessorAlias:FIO4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "AnalogVoltage", "value": null, "qualifier": {"code": "property does not exist"}}
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "Mode", "value": [], "qualifier": {"code": "failed to set property \"Mode\" on \"ProcessorAlias:FIO4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "Pullup", "value": [], "qualifier": {"code": "failed to set property \"Pullup\" on \"ProcessorAlias:FIO4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "Upper", "value": [], "qualifier": {"code": "failed to set property \"Upper\" on \"ProcessorAlias:FIO4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:36:11 ERROR root remotelib error:ProcessorAlias:FIO4:{"property": "Lower", "value": [], "qualifier": {"code": "failed to set property \"Lower\" on \"ProcessorAlias:FIO4\" with args \"[]\"\nwith exception: list index out of range"}}
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:16 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:24 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:24 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:24 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:24 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:34 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:34 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:34 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:34 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:44 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:44 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:44 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:44 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:54 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:54 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:54 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:37:54 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:04 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:04 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:04 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:04 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:14 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:14 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:14 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:14 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:24 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:24 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:24 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:24 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:34 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:34 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:34 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:34 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:44 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:44 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:44 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:44 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:54 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:54 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:54 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:38:54 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:04 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:04 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:04 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:04 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:14 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:14 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:14 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:14 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:24 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:24 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:24 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:24 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:34 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:34 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:34 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:34 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:44 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:44 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:44 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:44 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:54 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:54 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:54 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:39:54 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:04 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:04 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:04 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:04 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:14 ERROR root SerialInterface NavConfMonitorA:COM1Device 3-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:14 ERROR root SerialInterface NavSignageA:COM1Device 5-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:14 ERROR root SerialInterface NavSignageB:COM1Device 6-0 (None) Send:  Port COM1 not open
+2000-01-07 18:40:14 ERROR root SerialInterface NavConfMonitorB:COM1Device 4-0 (None) Send:  Port COM1 not open

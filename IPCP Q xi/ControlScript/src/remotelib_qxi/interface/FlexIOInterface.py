@@ -37,8 +37,8 @@ class ObjectWrapper(ObjectClass):
         """
             WRAPPER CONFIGURATION
         """
-        event_attrs = ['Online','Offline','StateChanged']
-        self.set_get_attrs = ['Host','Lower','Mode','Port','Pullup','State','Upper']
+        event_attrs = ['Online','Offline','StateChanged','AnalogVoltageChanged']
+        self.set_get_attrs = ['Host','Lower','Mode','Port','Pullup','AnalogVoltage','State','Upper']
         self.callable_attrs = {'Initialize':None,
                                  'Pulse':None,
                                  'SetState':None,
@@ -101,7 +101,7 @@ class ObjectWrapper(ObjectClass):
                     err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':msg}}
             elif data['property'] in self.set_get_attrs:
                 try:
-                    value = getattr(self,data['property'],data['args'][0])
+                    value = getattr(self,data['property'])
                     update = {'property':data['property'],'value':value,'qualifier':None}
                 except Exception as e:
                     msg='failed to set property "{}" on "{}" with args "{}"\nwith exception: {}'.format(data['property'],self.alias,data['args'],str(e))

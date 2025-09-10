@@ -49,7 +49,7 @@ class RemoteServer():    #class code
 
 
 
-        def __fn_debug_server_listen_timer(timer,count):
+        def __fn_remote_server_listen_timer(timer,count):
             if self.__remote_server_listen_busy:return
             self.__remote_server_listen_busy = True
             if self.__remote_server and self.__remote_server_error == None:
@@ -57,11 +57,11 @@ class RemoteServer():    #class code
                 if 'Listening' not in res:
                     self.__remote_server_error = res
                     from extronlib.system import ProgramLog
-                    ProgramLog('Error Starting Debug Server:{}'.format(res),'info')
+                    ProgramLog('Error Starting Remote Server:{}'.format(res),'info')
                 elif 'Already' not in res:
-                    ProgramLog('Debug Server restarted:{}'.format(res),'info')
+                    ProgramLog('Remote Server restarted:{}'.format(res),'info')
             self.__remote_server_listen_busy = False
-        self.__remote_server_listen_timer = Timer(30,__fn_debug_server_listen_timer)
+        self.__remote_server_listen_timer = Timer(30,__fn_remote_server_listen_timer)
         self.__remote_server_listen_timer.Stop()
 
 
