@@ -1,6 +1,0 @@
-python versions : 3.10 - 3.13 supported
-
-additional packages required: paramiko, schedule
-
-
-
