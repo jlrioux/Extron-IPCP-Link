@@ -1,5 +1,4 @@
 # Server-Side Extronlib Package
-
 ## Abstract
 The goal of this package is to allow for as much processing for Extron control systems to occur on a networked server as possible, freeing up the IPCP Pro control processor to handle port communications and Extron specific hardware communications.  It is also designed to function for both Qxi and non-Qxi controllers.
 The Server can be either Windows or Linux.
@@ -14,7 +13,7 @@ link = IpcpLink('172.16.1.10','AVLAN')
 PARAMETERS
 ip_address- The ip address of the control processor.
 port- Optional. Either 'LAN' or 'AVLAN' depending on which port the server will communicate with that controller. The default value is 'LAN'
-password- Optional. The Passowrd to use for this communication purpose. The default value is 'p9oai23jr09p8fmvw98foweivmawthapw4t'
+password- Optional. The Passowrd to use for this communication purpose. The default password is 'p9oai23jr09p8fmvw98foweivmawthapw4t'
 
 
 ## Requires
@@ -25,11 +24,6 @@ To execute, run your mainfile with the cwd as the directory of your mainfile.
 
 
 ## Operational Notes
-### Touch Panel Considerations
-The "Where Used" list within GUI Designer should be exported in CSV format with the same name as your panel's alias.  This CSV file should be loaded to the IPCP controller in the RFILE directory.
-Failure to do this will result in much slower boot times when large touch panel GUIs are used.
-This also prevents the annoying non-error of id's not being valid from filling up the Program Log.
-
 ### File Access
 Files read and written by the File implementation are stored in /extronlib/engine/RAM/
 RFile reaches over the network to the IPCP controller to access its RFILE storage.
@@ -67,6 +61,31 @@ SWPowerInterface
 -While the architecture was designed to allow for multiple Servers to access the IPCP and its objects at once, more testing is required to ensure full reliability.
 -Server-side SSL wrapping of EthernetServerInterfaceEx needs to be implemented, use thru_ipcp option if needed for now.
 
+
+# IPCP-Side Extronlib Package
+## Implementation
+Set up the JSON configuration file to load with CSDU like normal with the TP file in the layout folder and IR files in the IR file as normal.
+The main.py file in SRC can be modified to disable either the LAN or AVLAN connection as needed and an optional parameter of the WrapperBasics class can supply a custom password.
+The default password is 'p9oai23jr09p8fmvw98foweivmawthapw4t'
+
+
+## Operational Notes
+### Touch Panel Considerations
+The "Where Used" list within GUI Designer should be exported in CSV format with the same name as your panel's alias.  This CSV file should be loaded to the IPCP controller in the RFILE directory.
+Failure to do this will result in much slower boot times when large touch panel GUIs are used.
+This also prevents the annoying non-error of id's not being valid from filling up the Program Log.
+When the user interface has elements added or removed from it, the CSV should be remade.
+
+
+## Known Issues
+### Further testing is needed
+-I have yet to test through some object types to which do not have access.
+SummitConnect
+DanteInterface
+SWACRecepticalInterface
+SWPowerInterface
+
+-While the architecture was designed to allow for multiple Servers to access the IPCP and its objects at once, more testing is required to ensure full reliability.
 
 ## Credits
 Author - Jean-Luc Rioux

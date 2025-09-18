@@ -28,11 +28,14 @@ import json,queue
 
 class RemoteServer():    #class code
 
-    def __init__(self,wrapper:'WrapperBasics',interface):
+    def __init__(self,wrapper:'WrapperBasics',interface,password=None):
         self.__remote_server = None #type:EthernetServerInterfaceEx
         self.__remote_server_buffer = ''
         self.__remote_server = None
-        self.__remote_server_password = 'p9oai23jr09p8fmvw98foweivmawthapw4t'
+        if not password:
+            self.__remote_server_password = 'p9oai23jr09p8fmvw98foweivmawthapw4t'
+        else:
+            self.__remote_server_password = password
         self.__remote_minimum_client_version = '0.0.0.0'
         self.__remote_server_logged_in = False
         self.__delim = '~!END!~\x0a'
@@ -319,9 +322,9 @@ class WrapperBasics():
             if _debug:print('registered {} "{}"'.format(type,alias))
 
 
-    def __init__(self,interface):
+    def __init__(self,interface,password=None):
         WrapperBasics.__instances[interface] = self
-        self.remote_server = RemoteServer(self,interface)
+        self.remote_server = RemoteServer(self,interface,password)
         WrapperBasics.__remote_servers[interface] = self.remote_server
         self._ping_before_eci_connect = None
 
