@@ -1,5 +1,5 @@
 installation requirements
-Python3.10
+Python3.10 to 3.13
 python packages : schedule,paramiko
 
 
