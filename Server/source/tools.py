@@ -214,6 +214,9 @@ Changelog:
         - added 'DisableProgramLogSaver' to ProgramLogSaver class
     v 1.8.0.7 - tools.py modification
         - at Extron's suggestion, replaced file object syntax to use 'with _File() as f:'
+    v 1.9.0.0 - tools.py modification
+        - fixed a bit of error handling when using 'with _File() as f:' and write operations
+        - corrected a object.Settings read issue for UIDevice and ProcessorDevice
 """
 
 
@@ -379,22 +382,31 @@ class NonvolatileValues():
 
     def ReadValues(self):
         f = None #type:_File
-        err_msg = None
         values = {}
-        with _File(self.__filename,'r') as f:
-            if f:
-                try:
-                    values = _json.load(f)
-                except Exception as e:
-                    if sys_allowed_flag:
-                        err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                    else:
-                        err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-        if err_msg:
+        try:
+            with _File(self.__filename,'r') as f:
+                if f:
+                    try:
+                        values = _json.load(f)
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
+                        _File.DeleteFile(self.__filename)
+                    f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
             print(err_msg)
             DebugPrint.Print(err_msg)
-            #_ProgramLog(err_msg)
-            _File.DeleteFile(self.__filename)
+            _ProgramLog(err_msg)
+            values = {}
         self.values = values
         if self.__syncvaluesfunctions:
             for f in self.__syncvaluesfunctions:
@@ -413,19 +425,28 @@ class NonvolatileValues():
 
     def SaveValues(self):
         f = None #type:_File
-        with _File(self.__filename,'w') as f:
-            if f:
-                try:
-                    _json.dump(self.values,f)
-                except Exception as e:
-                    if sys_allowed_flag:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                    else:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
-                    print(err_msg)
-                    DebugPrint.Print(err_msg)
-                    _ProgramLog(err_msg)
-                f.close()
+        try:
+            with _File(self.__filename,'w') as f:
+                if f:
+                    try:
+                        _json.dump(self.values,f)
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
+                    f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def AddSyncValuesFunction(self,func):
@@ -535,31 +556,58 @@ class ProgramLogSaver():
     def __readdummyprogramlog():
         f = None #type:_File
         log = None
-        with _File('/ProgramLogs/temp.log','r') as f:
-            if f:
-                try:
-                    log = f.read()
-                except Exception as e:
-                    if sys_allowed_flag:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                    else:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__readdummyprogramlog',e)
-                    print(err_msg)
-                    DebugPrint.Print(err_msg)
-                    _ProgramLog(err_msg)
-                f.close()
+        try:
+            with _File('/ProgramLogs/temp.log','r') as f:
+                if f:
+                    try:
+                        log = f.read()
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__readdummyprogramlog',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
+                    f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
         return log
 
 
     def __saveprogramlog():
-        with _File(ProgramLogSaver.__filename, 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File(ProgramLogSaver.__filename, 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
     def __savedummyprogramlog():
-        with _File('/ProgramLogs/temp.log', 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File('/ProgramLogs/temp.log', 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def __checkprogramlog(timer,count):
@@ -673,19 +721,28 @@ class DebugFileLogSaver():
                 if len(DebugFileLogSaver.__cur_logs) > 1:
                     filename = DebugFileLogSaver.__getfilename()
                     f = None #type:_File
-                    with _File(filename, 'a') as f:
-                        if f:
-                            try:
-                                f.write('\n'.join(DebugFileLogSaver.__cur_logs))
-                            except Exception as e:
-                                if sys_allowed_flag:
-                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                                else:
-                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
-                                print(err_msg)
-                                DebugPrint.Print(err_msg)
-                                _ProgramLog(err_msg)
-                            f.close()
+                    try:
+                        with _File(filename, 'a') as f:
+                            if f:
+                                try:
+                                    f.write('\n'.join(DebugFileLogSaver.__cur_logs))
+                                except Exception as e:
+                                    if sys_allowed_flag:
+                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                                    else:
+                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
+                                    print(err_msg)
+                                    DebugPrint.Print(err_msg)
+                                    _ProgramLog(err_msg)
+                                f.close()
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
                     print('DebugFileLogSaver:added {} logs to file:{}'.format(len(DebugFileLogSaver.__cur_logs),filename))
                     DebugFileLogSaver.__cur_logs = [DebugFileLogSaver.__init_log]
     __save_wait = _Wait(1,__checklogloop)
@@ -785,9 +842,9 @@ class DebugServer():    #class code
             if 'Listening' not in res:
                 DebugServer.__debug_server_error = res
                 from extronlib.system import ProgramLog
-                _ProgramLog('Error Starting Debug Server:{}'.format(res))
+                ProgramLog('Error Starting Debug Server:{}'.format(res))
             elif 'Already' not in res:
-                _ProgramLog('Debug Server restarted:{}'.format(res))
+                ProgramLog('Debug Server restarted:{}'.format(res))
         DebugServer.__debug_server_listen_busy = False
     __debug_server_listen_timer = _Timer(30,__fn_debug_server_listen_timer)
     __debug_server_listen_timer.Stop()
@@ -5135,7 +5192,7 @@ class ProcessorDeviceWrapper(DebugServer):
         @_Timer(1)
         def t(timer,count):
             somethingchanged = False
-            if self.Commands['ExecutiveMode']['Status']['Live'] != 'Online':
+            if self.Commands['OnlineStatus']['Status']['Live'] == 'Online':
                 if self.__userusage != self.__interface.UserUsage:
                     somethingchanged = True
                     self.__userusage = self.__interface.UserUsage
@@ -5196,9 +5253,18 @@ class ProcessorDeviceWrapper(DebugServer):
         self.__printToLog(self.__friendly_name,'Command','SaveProgramLog')
         dt = _datetime.now()
         filename = 'ProgramLog {}.txt'.format(dt.strftime('%Y-%m-%d %H%M%S'))
-        with _File(filename, 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File(filename, 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def __printToLog(self,device,message_type,data):
@@ -6607,7 +6673,7 @@ class UIDeviceWrapper(DebugServer):
             self.Commands['FirmwareVersion']['Status'] = {'Live':self.__interface.FirmwareVersion}
             update = {'command':'FirmwareVersion','value':str(self.Commands['FirmwareVersion']['Status']['Live']),'qualifier':None}
             self._DebugServer__send_interface_status(self.__listening_port,update)
-            self.Commands['LidState']['Status'] = {'Live':'Open'}#self.__interface.LidState}
+            self.Commands['LidState']['Status'] = {'Live':self.__interface.LidState}
             update = {'command':'LidState','value':str(self.Commands['LidState']['Status']['Live']),'qualifier':None}
             self._DebugServer__send_interface_status(self.__listening_port,update)
             self.Commands['LightDetectedState']['Status'] = {'Live':lightdetectedstate}
