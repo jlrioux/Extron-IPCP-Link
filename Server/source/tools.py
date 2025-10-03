@@ -65,7 +65,7 @@ import copy
 Author: Jean-Luc Rioux
 Company: Valley Communications
 Last Modified Date: 2025-03-06
-Version: 1.8.0.6
+Version: 1.8.0.11
 Minimum Pro Controller FW: 3.10
 
 Changelog:
@@ -214,9 +214,17 @@ Changelog:
         - added 'DisableProgramLogSaver' to ProgramLogSaver class
     v 1.8.0.7 - tools.py modification
         - at Extron's suggestion, replaced file object syntax to use 'with _File() as f:'
+    v 1.8.0.8 - tools.py modification
+        - corrected an issue preventing registering an ebus controller as a host for DIO'
+    v 1.8.0.9 - tools.py modification
+        - fixed intellisense recognition of non-list parameters for VirtualUI class
+    v 1.8.0.10 - tools.py modification
+        - fixed issue on knob motion event producing an error in the log. the callback still executed anyway, though.
+    v 1.8.0.11 - tools.py modification
+        - changed file operations to avoid processor hang. extron qxi firmware 1.11.0000-b0006 broke extronlib.system.File
+            - when attempting to open a nonexistent file, the processor hangs indefinitely.
     v 1.9.0.0 - tools.py modification
-        - fixed a bit of error handling when using 'with _File() as f:' and write operations
-        - corrected a object.Settings read issue for UIDevice and ProcessorDevice
+        - fixed an error when polling systemsettings from processordevice and uidevice
 """
 
 
@@ -383,7 +391,7 @@ class NonvolatileValues():
     def ReadValues(self):
         f = None #type:_File
         values = {}
-        try:
+        if _File.Exists(self.__filename):
             with _File(self.__filename,'r') as f:
                 if f:
                     try:
@@ -398,15 +406,6 @@ class NonvolatileValues():
                         _ProgramLog(err_msg)
                         _File.DeleteFile(self.__filename)
                     f.close()
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
-            values = {}
         self.values = values
         if self.__syncvaluesfunctions:
             for f in self.__syncvaluesfunctions:
@@ -425,28 +424,19 @@ class NonvolatileValues():
 
     def SaveValues(self):
         f = None #type:_File
-        try:
-            with _File(self.__filename,'w') as f:
-                if f:
-                    try:
-                        _json.dump(self.values,f)
-                    except Exception as e:
-                        if sys_allowed_flag:
-                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                        else:
-                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
-                        print(err_msg)
-                        DebugPrint.Print(err_msg)
-                        _ProgramLog(err_msg)
-                    f.close()
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
+        with _File(self.__filename,'w') as f:
+            if f:
+                try:
+                    _json.dump(self.values,f)
+                except Exception as e:
+                    if sys_allowed_flag:
+                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                    else:
+                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
+                    print(err_msg)
+                    DebugPrint.Print(err_msg)
+                    _ProgramLog(err_msg)
+                f.close()
 
 
     def AddSyncValuesFunction(self,func):
@@ -500,7 +490,7 @@ class PasswordManager():
         return self.__nvram.GetValue(password_id)
 
     def SetPassword(self,password_id:str,value:'int|str'):
-        if self.__password_numeric:
+        if self.__password_numeric and value != '':
             new_password = str(int(value))
         else:
             new_password = value
@@ -556,7 +546,7 @@ class ProgramLogSaver():
     def __readdummyprogramlog():
         f = None #type:_File
         log = None
-        try:
+        if _File.Exists('/ProgramLogs/temp.log'):
             with _File('/ProgramLogs/temp.log','r') as f:
                 if f:
                     try:
@@ -570,44 +560,18 @@ class ProgramLogSaver():
                         DebugPrint.Print(err_msg)
                         _ProgramLog(err_msg)
                     f.close()
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
         return log
 
 
     def __saveprogramlog():
-        try:
-            with _File(ProgramLogSaver.__filename, 'w') as f:
-                if f:
-                    _SaveProgramLog(f)
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
+        with _File(ProgramLogSaver.__filename, 'w') as f:
+            if f:
+                _SaveProgramLog(f)
 
     def __savedummyprogramlog():
-        try:
-            with _File('/ProgramLogs/temp.log', 'w') as f:
-                if f:
-                    _SaveProgramLog(f)
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
+        with _File('/ProgramLogs/temp.log', 'w') as f:
+            if f:
+                _SaveProgramLog(f)
 
 
     def __checkprogramlog(timer,count):
@@ -721,28 +685,19 @@ class DebugFileLogSaver():
                 if len(DebugFileLogSaver.__cur_logs) > 1:
                     filename = DebugFileLogSaver.__getfilename()
                     f = None #type:_File
-                    try:
-                        with _File(filename, 'a') as f:
-                            if f:
-                                try:
-                                    f.write('\n'.join(DebugFileLogSaver.__cur_logs))
-                                except Exception as e:
-                                    if sys_allowed_flag:
-                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                                    else:
-                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
-                                    print(err_msg)
-                                    DebugPrint.Print(err_msg)
-                                    _ProgramLog(err_msg)
-                                f.close()
-                    except Exception as e:
-                        if sys_allowed_flag:
-                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                        else:
-                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-                        print(err_msg)
-                        DebugPrint.Print(err_msg)
-                        _ProgramLog(err_msg)
+                    with _File(filename, 'a') as f:
+                        if f:
+                            try:
+                                f.write('\n'.join(DebugFileLogSaver.__cur_logs))
+                            except Exception as e:
+                                if sys_allowed_flag:
+                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                                else:
+                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
+                                print(err_msg)
+                                DebugPrint.Print(err_msg)
+                                _ProgramLog(err_msg)
+                            f.close()
                     print('DebugFileLogSaver:added {} logs to file:{}'.format(len(DebugFileLogSaver.__cur_logs),filename))
                     DebugFileLogSaver.__cur_logs = [DebugFileLogSaver.__init_log]
     __save_wait = _Wait(1,__checklogloop)
@@ -1174,7 +1129,7 @@ class DebugServer():    #class code
         if type(device) == _SPDevice:#isinstance(device,_SPDevice):
             return SPDeviceWrapper(device.DeviceAlias)
         if type(device) == _eBUSDevice:#isinstance(device,_eBUSDevice):
-            return eBUSDeviceWrapper(device.DeviceAlias)
+            return eBUSDeviceWrapper(device.Host,device.DeviceAlias)
         if type(device) == _UIDevice:#isinstance(device,_UIDevice):
             return UIDeviceWrapper(device.DeviceAlias)
 
@@ -5192,7 +5147,7 @@ class ProcessorDeviceWrapper(DebugServer):
         @_Timer(1)
         def t(timer,count):
             somethingchanged = False
-            if self.Commands['OnlineStatus']['Status']['Live'] == 'Online':
+            if self.Commands['OnlineStatus']['Status']['Live'] != 'Online':
                 if self.__userusage != self.__interface.UserUsage:
                     somethingchanged = True
                     self.__userusage = self.__interface.UserUsage
@@ -5253,18 +5208,9 @@ class ProcessorDeviceWrapper(DebugServer):
         self.__printToLog(self.__friendly_name,'Command','SaveProgramLog')
         dt = _datetime.now()
         filename = 'ProgramLog {}.txt'.format(dt.strftime('%Y-%m-%d %H%M%S'))
-        try:
-            with _File(filename, 'w') as f:
-                if f:
-                    _SaveProgramLog(f)
-        except Exception as e:
-            if sys_allowed_flag:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-            else:
-                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
-            print(err_msg)
-            DebugPrint.Print(err_msg)
-            _ProgramLog(err_msg)
+        with _File(filename, 'w') as f:
+            if f:
+                _SaveProgramLog(f)
 
 
     def __printToLog(self,device,message_type,data):
@@ -7814,7 +7760,7 @@ class VirtualUI(DebugServer):
         self.__SyncFunctions.append(function)
 
     # this function adds a panel or list of panels to the virtual panel, then defines the buttons actions for the newly added panel
-    def AddPanel(self,tps:'_UIDevice|list[_UIDevice]|str'):
+    def AddPanel(self,tps:'_UIDevice|list[_UIDevice]|VirtualUI|list[VirtualUI]|str|list[str]'):
         tpList = self.__get_tp_aliases(tps)
 
         for tp in tpList:
@@ -8005,12 +7951,12 @@ class VirtualUI(DebugServer):
         return btnlist
     def __create_default_knob_event_handler(self):
         def e(knob:'_Knob',direction:'int'):
-            str_to_send = 'event: VirtualUI({}:{}) ~ Knob({},{}) ~ Turned({})'.format(self.__friendly_name,knob.Host,knob.ID,knob.Name,direction)
+            str_to_send = 'event: VirtualUI({}:{}) ~ Knob({},{}) ~ Turned({})'.format(self.__friendly_name,knob.Host,knob.ID,"Knob1",direction)
             self.__print_to_trace(str_to_send)
             self.__printToServer(str_to_send)
         return e
     # this function adds knobs to the data for the virtual panel
-    def AddKnob(self,itemIDs:'list[int]'):
+    def AddKnob(self,itemIDs:'list[int]|int'):
         idList = []
         if type(itemIDs) is type([]):
             idList.extend(itemIDs)
@@ -8035,7 +7981,7 @@ class VirtualUI(DebugServer):
                 knoblist.append(self.__devTPs[alias]['Knobs'][itemID]['Object'])
         return knoblist
     # this function adds knobs to the data for the virtual panel
-    def AddLevel(self,itemIDs:'list[int]'):
+    def AddLevel(self,itemIDs:'list[int]|int'):
         idList = []
         if type(itemIDs) is type([]):
             idList.extend(itemIDs)
@@ -8065,7 +8011,7 @@ class VirtualUI(DebugServer):
             self.__printToServer(str_to_send)
         return e
     # this function adds sliders to the date for the virtual panel
-    def AddSlider(self,itemIDs:'list[int]'):
+    def AddSlider(self,itemIDs:'list[int]|int'):
         idList = []
         if type(itemIDs) is type([]):
             idList.extend(itemIDs)
@@ -8093,7 +8039,7 @@ class VirtualUI(DebugServer):
         return sliderlist
 
     # this function adds knobs to the data for the virtual panel
-    def AddLabel(self,itemIDs:'list[int]'):
+    def AddLabel(self,itemIDs:'list[int]|int'):
         idList = []
         if type(itemIDs) is type([]):
             idList.extend(itemIDs)
@@ -8117,7 +8063,7 @@ class VirtualUI(DebugServer):
                 labellist.append(self.__devTPs[alias]['Labels'][itemID]['Object'])
         return labellist
     # associates a button with given ID with a function for pressed action for each TP in virtual panel
-    def SetFunction(self,itemIDs:'list[int]',function,trigger:str):
+    def SetFunction(self,itemIDs:'list[int]|int',function,trigger:str):
         idList = []
         if type(itemIDs) is type([]):
             idList.extend(itemIDs)
@@ -8265,7 +8211,7 @@ class VirtualUI(DebugServer):
 
 
     # modify values of items for each panel by ID number or name
-    def SetState(self,itemIDs:'list[int]',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetState(self,itemIDs:'list[int]|int',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8292,7 +8238,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetState')
                 self.__set_object_value(key,[value])
                 print('SetState Failed : invalid ID ',str(itemID))
-    def SetText(self,itemIDs:'list[int]',value:str,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetText(self,itemIDs:'list[int]|int',value:str,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8334,7 +8280,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetText')
                 self.__set_object_value(key,[value])
                 print('SetText Failed : invalid ID ',str(itemID))
-    def SetBlinking(self,itemIDs:'list[int]',rate:str,value:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetBlinking(self,itemIDs:'list[int]|int',rate:str,value:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8361,7 +8307,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetBlinking')
                 self.__set_object_value(key,[rate,value])
                 print('SetBlinking Failed : invalid ID ',str(itemID))
-    def CustomBlink(self,itemIDs:'list[int]',rate:float,value:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def CustomBlink(self,itemIDs:'list[int]|int',rate:float,value:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8388,7 +8334,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'CustomBlink')
                 self.__set_object_value(key,[rate,value])
                 print('CustomBlink Failed : invalid ID ',str(itemID))
-    def SetLevel(self,itemIDs:'list[int]',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetLevel(self,itemIDs:'list[int]|int',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8415,7 +8361,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetLevel')
                 self.__set_object_value(key,[value])
                 print('SetLevel Failed : invalid ID ',str(itemID))
-    def SetFill(self,itemIDs:'list[int]',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetFill(self,itemIDs:'list[int]|int',value:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8443,7 +8389,7 @@ class VirtualUI(DebugServer):
                 self.__set_object_value(key,[value])
                 print('SetFill Failed : invalid ID ',str(itemID))
 
-    def SetEnable(self,itemIDs:'list[int]',value:bool,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetEnable(self,itemIDs:'list[int]|int',value:bool,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8485,7 +8431,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetEnable')
                 self.__set_object_value(key,[value])
                 print('SetEnable Failed : invalid ID ',str(itemID))
-    def SetVisible(self,itemIDs:'list[int]',value:bool,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetVisible(self,itemIDs:'list[int]|int',value:bool,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8557,7 +8503,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetVisible')
                 self.__set_object_value(key,[value])
                 print('SetVisible Failed : invalid ID ',str(itemID))
-    def SetRange(self,itemIDs:'list[int]',minimum:int,maximum:int,step:int = 1,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetRange(self,itemIDs:'list[int]|int',minimum:int,maximum:int,step:int = 1,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8599,7 +8545,7 @@ class VirtualUI(DebugServer):
                 key = self.__get_object_value_key('Unknown',itemID,'SetRange')
                 self.__set_object_value(key,[minimum,maximum,step])
                 print('SetRange Failed : invalid ID ',str(itemID))
-    def Dec(self,itemIDs:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def Dec(self,itemIDs:'list[int]|int',tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8622,7 +8568,7 @@ class VirtualUI(DebugServer):
                     self.__printToLog(self.__friendly_name,'Command','Dec,{},{},{}'.format(type(item).__name__,item.ID,item.Name))
             else:
                 print('Dec Failed : invalid ID ',str(itemID))
-    def Inc(self,itemIDs:'list[int]',tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def Inc(self,itemIDs:'list[int]|int',tps:'_UIDevice|list[_UIDevice]|str'='All'):
         panel_aliases = self.__get_tp_aliases(tps)
         idList = []
         if type(itemIDs) is type([]):
@@ -8701,7 +8647,7 @@ class VirtualUI(DebugServer):
         self.__printToServer(str_to_send)
         self.__printToLog(self.__friendly_name,'Command','SimulateAction,{},{},{}'.format(itemtype,itemID,action))
 
-    def SetCurrent(self,btnIDs:'list[int]',item:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
+    def SetCurrent(self,btnIDs:'list[int]|int',item:int,tps:'_UIDevice|list[_UIDevice]|str'='All'):
         for btnID in btnIDs:
             if btnID == item:
                 self.SetState(btnID,1,tps)
