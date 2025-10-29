@@ -65,7 +65,7 @@ import copy
 Author: Jean-Luc Rioux
 Company: Valley Communications
 Last Modified Date: 2025-03-06
-Version: 1.8.0.11
+Version: 1.9.0.0
 Minimum Pro Controller FW: 3.10
 
 Changelog:
@@ -224,7 +224,11 @@ Changelog:
         - changed file operations to avoid processor hang. extron qxi firmware 1.11.0000-b0006 broke extronlib.system.File
             - when attempting to open a nonexistent file, the processor hangs indefinitely.
     v 1.9.0.0 - tools.py modification
-        - fixed an error when polling systemsettings from processordevice and uidevice
+        - fixed a bit of error handling when using 'with _File() as f:' and write operations
+        - corrected a object.Settings read issue for UIDevice and ProcessorDevice
+    v 1.9.0.1 - tools.py modification
+        - fixed a typo in the programlog save loop
+        - corrected an issue with onlinestatus refreshing for device wrappers
 """
 
 
@@ -391,7 +395,7 @@ class NonvolatileValues():
     def ReadValues(self):
         f = None #type:_File
         values = {}
-        if _File.Exists(self.__filename):
+        try:
             with _File(self.__filename,'r') as f:
                 if f:
                     try:
@@ -406,6 +410,15 @@ class NonvolatileValues():
                         _ProgramLog(err_msg)
                         _File.DeleteFile(self.__filename)
                     f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
+            values = {}
         self.values = values
         if self.__syncvaluesfunctions:
             for f in self.__syncvaluesfunctions:
@@ -424,19 +437,28 @@ class NonvolatileValues():
 
     def SaveValues(self):
         f = None #type:_File
-        with _File(self.__filename,'w') as f:
-            if f:
-                try:
-                    _json.dump(self.values,f)
-                except Exception as e:
-                    if sys_allowed_flag:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                    else:
-                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
-                    print(err_msg)
-                    DebugPrint.Print(err_msg)
-                    _ProgramLog(err_msg)
-                f.close()
+        try:
+            with _File(self.__filename,'w') as f:
+                if f:
+                    try:
+                        _json.dump(self.values,f)
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'SaveValues',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
+                    f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def AddSyncValuesFunction(self,func):
@@ -546,7 +568,7 @@ class ProgramLogSaver():
     def __readdummyprogramlog():
         f = None #type:_File
         log = None
-        if _File.Exists('/ProgramLogs/temp.log'):
+        try:
             with _File('/ProgramLogs/temp.log','r') as f:
                 if f:
                     try:
@@ -560,18 +582,44 @@ class ProgramLogSaver():
                         DebugPrint.Print(err_msg)
                         _ProgramLog(err_msg)
                     f.close()
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
         return log
 
 
     def __saveprogramlog():
-        with _File(ProgramLogSaver.__filename, 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File(ProgramLogSaver.__filename, 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
     def __savedummyprogramlog():
-        with _File('/ProgramLogs/temp.log', 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File('/ProgramLogs/temp.log', 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def __checkprogramlog(timer,count):
@@ -685,19 +733,28 @@ class DebugFileLogSaver():
                 if len(DebugFileLogSaver.__cur_logs) > 1:
                     filename = DebugFileLogSaver.__getfilename()
                     f = None #type:_File
-                    with _File(filename, 'a') as f:
-                        if f:
-                            try:
-                                f.write('\n'.join(DebugFileLogSaver.__cur_logs))
-                            except Exception as e:
-                                if sys_allowed_flag:
-                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
-                                else:
-                                    err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
-                                print(err_msg)
-                                DebugPrint.Print(err_msg)
-                                _ProgramLog(err_msg)
-                            f.close()
+                    try:
+                        with _File(filename, 'a') as f:
+                            if f:
+                                try:
+                                    f.write('\n'.join(DebugFileLogSaver.__cur_logs))
+                                except Exception as e:
+                                    if sys_allowed_flag:
+                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                                    else:
+                                        err_msg = 'EXCEPTION:{}:{}:{}'.format(__class__.__name__,'__checklogloop',e)
+                                    print(err_msg)
+                                    DebugPrint.Print(err_msg)
+                                    _ProgramLog(err_msg)
+                                f.close()
+                    except Exception as e:
+                        if sys_allowed_flag:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+                        else:
+                            err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+                        print(err_msg)
+                        DebugPrint.Print(err_msg)
+                        _ProgramLog(err_msg)
                     print('DebugFileLogSaver:added {} logs to file:{}'.format(len(DebugFileLogSaver.__cur_logs),filename))
                     DebugFileLogSaver.__cur_logs = [DebugFileLogSaver.__init_log]
     __save_wait = _Wait(1,__checklogloop)
@@ -797,9 +854,9 @@ class DebugServer():    #class code
             if 'Listening' not in res:
                 DebugServer.__debug_server_error = res
                 from extronlib.system import ProgramLog
-                ProgramLog('Error Starting Debug Server:{}'.format(res))
+                _ProgramLog('Error Starting Debug Server:{}'.format(res))
             elif 'Already' not in res:
-                ProgramLog('Debug Server restarted:{}'.format(res))
+                _ProgramLog('Debug Server restarted:{}'.format(res))
         DebugServer.__debug_server_listen_busy = False
     __debug_server_listen_timer = _Timer(30,__fn_debug_server_listen_timer)
     __debug_server_listen_timer.Stop()
@@ -1985,7 +2042,7 @@ class CircuitBreakerInterfaceWrapper(DebugServer):
         self.__interface = _CircuitBreakerInterface(Host,Port)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -2164,7 +2221,7 @@ class ContactInterfaceWrapper(DebugServer):
         self.__interface = _ContactInterface(Host,Port)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -2343,7 +2400,7 @@ class DigitalInputInterfaceWrapper(DebugServer):
         self.__interface = _DigitalInputInterface(Host,Port,Pullup)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -2556,7 +2613,7 @@ class DigitalIOInterfaceWrapper(DebugServer):
         self.__interface = _DigitalIOInterface(Host,Port,Mode,Pullup)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -2850,7 +2907,7 @@ class FlexIOInterfaceWrapper(DebugServer):
         self.__interface = _FlexIOInterface(Host,Port,Mode,Pullup,Upper,Lower)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}},
+            'OnlineStatus':{'Status':{'Live':'Offline'}},
             'AnalogVoltage':{'Status':{'Live':self.__interface.AnalogVoltage}}
             }
 
@@ -3174,8 +3231,8 @@ class IRInterfaceWrapper(DebugServer):
         self.__offline_event_callbacks = []
 
         self.Commands = {
-            'OnlineStatus':{'Status':{}},
-            'LastCommand':{'Status':{}},
+            'OnlineStatus':{'Status':{'Live':'Offline'}},
+            'LastCommand':{'Status':{'Live':None}},
             'File':{'Status':{'Live':File}}
             }
 
@@ -3490,7 +3547,7 @@ class PoEInterfaceWrapper(DebugServer):
             'State': {'Status': {'Live':self.__interface.State}},
             'PowerStatus':{'Status':{'Live':self.__interface.PowerStatus}},
             'CurrentLoad':{'Status':{'Live':self.__interface.CurrentLoad}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -3726,7 +3783,7 @@ class RelayInterfaceWrapper(DebugServer):
         self.__interface = _RelayInterface(Host,Port)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -3965,7 +4022,7 @@ class SWACReceptacleInterfaceWrapper(DebugServer):
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
             'Current': {'Status': {'Live':self.__interface.Current}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -4192,7 +4249,7 @@ class SWPowerInterfaceWrapper(DebugServer):
         self.__interface = _SWPowerInterface(Host,Port)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
         @_event(self.__interface,'Online')
@@ -4428,7 +4485,7 @@ class TallyInterfaceWrapper(DebugServer):
         self.__interface = _TallyInterface(Host,Port)
         self.Commands = {
             'State': {'Status': {'Live':self.__interface.State}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -4674,7 +4731,7 @@ class VolumeInterfaceWrapper(DebugServer):
             'Max':{'Status': {'Live':self.__interface.Max}},
             'Min':{'Status': {'Live':self.__interface.Min}},
             'SoftStart':{'Status': {'Live':self.__interface.SoftStart}},
-            'OnlineStatus':{'Status':{}}
+            'OnlineStatus':{'Status':{'Live':'Offline'}}
             }
 
 
@@ -5002,7 +5059,7 @@ class ProcessorDeviceWrapper(DebugServer):
             'CombinedWattage':{'Status': {'Live':combinedwattage}},
             'CombinedLoadState':{'Status': {'Live':combinedloadstate}},
             'SystemSettings':{'Status': {'Live':self.__interface.SystemSettings}},
-            'OnlineStatus':{'Status':{}},
+            'OnlineStatus':{'Status':{'Live':'Offline'}},
             'FirmwareVersion':{'Status':{'Live':self.__interface.FirmwareVersion}},
             'LinkLicenses':{'Status':{'Live':self.__interface.LinkLicenses}},
             'DeviceAlias':{'Status':{'Live':self.__interface.DeviceAlias}},
@@ -5147,7 +5204,7 @@ class ProcessorDeviceWrapper(DebugServer):
         @_Timer(1)
         def t(timer,count):
             somethingchanged = False
-            if self.Commands['OnlineStatus']['Status']['Live'] != 'Online':
+            if self.Commands['OnlineStatus']['Status']['Live'] == 'Online':
                 if self.__userusage != self.__interface.UserUsage:
                     somethingchanged = True
                     self.__userusage = self.__interface.UserUsage
@@ -5208,9 +5265,18 @@ class ProcessorDeviceWrapper(DebugServer):
         self.__printToLog(self.__friendly_name,'Command','SaveProgramLog')
         dt = _datetime.now()
         filename = 'ProgramLog {}.txt'.format(dt.strftime('%Y-%m-%d %H%M%S'))
-        with _File(filename, 'w') as f:
-            if f:
-                _SaveProgramLog(f)
+        try:
+            with _File(filename, 'w') as f:
+                if f:
+                    _SaveProgramLog(f)
+        except Exception as e:
+            if sys_allowed_flag:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,sys._getframe().f_code.co_name,traceback.format_exc())
+            else:
+                err_msg = 'EXCEPTION:{}:{}:{}:deleting corrupted file'.format(__class__.__name__,'ReadValues',e)
+            print(err_msg)
+            DebugPrint.Print(err_msg)
+            _ProgramLog(err_msg)
 
 
     def __printToLog(self,device,message_type,data):

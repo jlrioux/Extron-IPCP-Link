@@ -154,8 +154,14 @@ class ObjectWrapper():
     def ProgramLog(self,Entry, Severity='error'):
         ProgramLog(Entry, Severity)
     def SaveProgramLog(self,path=None):
-        SaveProgramLog(path)
+        print('saving program log with path:{}'.format(path))
+        if type(path) is list:
+            path = path[0]
         from extronlib.system import File
+        dirs = File.ListDir()
+        if 'ProgramLogs' not in dirs:
+            File.MakeDir('ProgramLogs')
+        SaveProgramLog(path)
         #open the file just written
         contents = None
         with File(path) as f:

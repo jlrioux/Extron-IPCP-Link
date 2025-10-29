@@ -422,7 +422,7 @@ class System(ExtronNode):
         """
         from extronlib.system import File
         if path == None:
-            path = 'ProgramLog {}.txt'.format(datetime.now().strftime('%Y-%m-%d %H%M%S'))
+            path = 'ProgramLog.txt'
         log = self._Query('SaveProgramLog',[path])
         #write log to file
         if File.Exists(path):
@@ -431,4 +431,4 @@ class System(ExtronNode):
             mode = 'x'
         f = File(path,mode)
         if f:
-            f.write(log)
+            f.write(str(log))

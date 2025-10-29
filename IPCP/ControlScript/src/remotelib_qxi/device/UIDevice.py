@@ -50,6 +50,7 @@ class ObjectWrapper(ObjectClass):
                                'GetVolume':None,
                                'HideAllPopups':None,
                                'HidePopupGroup':None,
+                               'HidePopup':None,
                                'PlaySound':None,
                                'Reboot':None,
                                'SetAutoBrightness':None,

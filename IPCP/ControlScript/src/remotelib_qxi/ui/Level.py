@@ -25,8 +25,7 @@ class ObjectWrapper():
         """
         self.event_attrs = []
         self.set_get_attrs = ['Host','ID','Name','Visible','Level','Max','Min']
-        self.callable_attrs = {'SetText':None,
-                               'SetVisible':None,
+        self.callable_attrs = {'SetVisible':None,
                                'SetLevel':None,
                                'Dec':None,
                                'Inc':None,
