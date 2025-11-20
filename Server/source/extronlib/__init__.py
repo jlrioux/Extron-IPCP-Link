@@ -12,5 +12,11 @@ def event(Object, EventName):
     The decorated function must have the exact signature as specified by the definition of EventName, which must appear in the Object class or one of its parent classes. Lists of objects and/or events can be passed in to apply the same handler to multiple events.
     """
     def decorator(func):
-        setattr(Object, EventName, func)
+        objects = Object if isinstance(Object, list) else [Object]
+        events = EventName if isinstance(EventName, list) else [EventName]
+
+        for obj in objects:
+            for event_name in events:
+                setattr(obj, event_name, func)
+        return func
     return decorator
