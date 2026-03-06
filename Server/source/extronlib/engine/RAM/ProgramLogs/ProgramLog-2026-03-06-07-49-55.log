@@ -1,0 +1,346 @@
+2026-03-06 07:50:16 ERROR root remotelib error:LobbyPanel:15113:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:LobbyPanel:4916:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BreakRmPanel:4766:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:HallPanel:4862:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:LobbyPanel:4616:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BWDPanel:15114:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:HallPanel:4912:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BreakRmPanel:4867:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:LobbyPanel:15115:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:IC142Panel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:HallPanel:4612:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BreakRmPanel:4917:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BWDPanel:14615:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:HallPanel:15111:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:LobbyPanel:14616:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:IC143Panel:4870:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:16 ERROR root remotelib error:BreakRmPanel:4617:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4867:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:14612:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:15116:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4866:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:14617:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4766:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4920:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4917:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4916:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4762:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4867:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4917:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4767:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4617:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4863:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:15116:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:15115:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4913:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:15116:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4868:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:14617:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:14620:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:14616:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:14617:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4918:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4613:{"property": "SetText", "value": ["none"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4767:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:15112:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4871:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4618:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4867:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4868:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:14613:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4921:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4873:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:15117:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4868:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4917:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:14618:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4923:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4918:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4763:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4918:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4618:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4768:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4864:{"property": "SetText", "value": ["BWD Feed 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:15116:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:15117:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:14617:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4869:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4914:{"property": "SetText", "value": ["BWD Feed 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:14618:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:14623:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:14618:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4919:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4614:{"property": "SetText", "value": ["BWD Feed 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4768:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4619:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:15113:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:14614:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4868:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4874:{"property": "SetText", "value": ["Aux HDMI 7"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:15118:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:4918:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:4924:{"property": "SetText", "value": ["Aux HDMI 7"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4869:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4869:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4764:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:14619:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4865:{"property": "SetText", "value": ["BWD Feed 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BWDPanel:14618:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC144Panel:4919:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4919:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4769:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4915:{"property": "SetText", "value": ["BWD Feed 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4873:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC142Panel:14624:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:4619:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:4615:{"property": "SetText", "value": ["BWD Feed 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:IC143Panel:4923:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:15118:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4870:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:LobbyPanel:14619:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:BreakRmPanel:4920:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:17 ERROR root remotelib error:HallPanel:15114:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4869:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:14619:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4919:{"property": "SetText", "value": ["Aux HDMI 2"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4620:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:14615:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4769:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:15119:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4870:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4765:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:14620:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4920:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:14623:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4620:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4870:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4770:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4920:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:14619:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4866:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:15119:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4874:{"property": "SetText", "value": ["Aux HDMI 7"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4871:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4921:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4924:{"property": "SetText", "value": ["Aux HDMI 7"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:14620:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4916:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4657:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4621:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:15120:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4616:{"property": "SetText", "value": ["BWD Feed 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4870:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4658:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:14620:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4920:{"property": "SetText", "value": ["Aux HDMI 3"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4770:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:15115:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:14624:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4871:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:14616:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4660:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4871:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4921:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4771:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4921:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4661:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4621:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:14620:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4766:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4662:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:15120:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4663:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4867:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4917:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4622:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4664:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:15121:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4617:{"property": "SetText", "value": ["BWD Feed 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4871:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4665:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4666:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4657:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4921:{"property": "SetText", "value": ["Aux HDMI 4"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:15116:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4771:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4667:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4658:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4772:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:14617:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4668:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4669:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4767:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4660:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:14621:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:4622:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4873:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4868:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4923:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4661:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:15121:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4662:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4918:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4872:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC144Panel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:4623:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:LobbyPanel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC142Panel:4670:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:HallPanel:4618:{"property": "SetText", "value": ["Aux HDMI 1"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BWDPanel:4922:{"property": "SetText", "value": ["Aux HDMI 5"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:IC143Panel:4663:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:18 ERROR root remotelib error:BreakRmPanel:15122:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:HallPanel:15117:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:BreakRmPanel:14623:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC142Panel:4671:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC143Panel:4664:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:LobbyPanel:4772:{"property": "SetText", "value": [""], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC142Panel:4672:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:HallPanel:14618:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC144Panel:4873:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC143Panel:4665:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC142Panel:4673:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:BWDPanel:14622:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:LobbyPanel:4873:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC144Panel:4923:{"property": "SetText", "value": ["Aux HDMI 6"], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:IC143Panel:4666:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:19 ERROR root remotelib error:BWDPanel:5446:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:BWDPanel:5447:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:BWDPanel:5448:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root remotelib error:BWDPanel:5449:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:19 ERROR root Debug Server restarted:Listening
+2026-03-06 07:50:23 ERROR root remotelib error:BWDPanel:4600:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:23 ERROR root remotelib error:BWDPanel:4629:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:23 ERROR root remotelib error:BWDPanel:4630:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:23 ERROR root remotelib error:BWDPanel:4631:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:23 ERROR root remotelib error:BWDPanel:4632:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 07:50:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:51:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:51:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:52:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:52:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:53:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:53:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:54:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:54:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:55:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:55:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:56:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:56:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:57:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:57:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:58:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:58:40 ERROR root Debug Server restarted:Listening
+2026-03-06 07:59:10 ERROR root Debug Server restarted:Listening
+2026-03-06 07:59:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:00:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:00:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:01:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:01:32 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:01:32 ERROR root remotelib error:IC142Panel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC142Panel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC142Panel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC142Panel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC143Panel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC143Panel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC143Panel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC143Panel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC144Panel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC144Panel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC144Panel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:IC144Panel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BreakRmPanel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BreakRmPanel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BreakRmPanel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BreakRmPanel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:LobbyPanel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:LobbyPanel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:LobbyPanel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:LobbyPanel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:HallPanel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:HallPanel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:HallPanel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:HallPanel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:8003:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:8004:{"property": "SetVisible", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:8003:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:8004:{"property": "SetEnable", "value": [true], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5000:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5015:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5013:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5016:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5014:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5025:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5026:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5027:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5028:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5029:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5030:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5031:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:5032:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4964:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4950:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4963:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4965:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4966:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4975:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4976:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4977:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4979:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4980:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4978:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4982:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:32 ERROR root remotelib error:BWDPanel:4981:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:01:40 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:01:40 ERROR root remotelib error:BWDPanel:89:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-06 08:01:46 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:01:53 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:02:03 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:02:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:02:11 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:02:18 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-6
+2026-03-06 08:02:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:03:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:03:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:04:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:04:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:05:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:05:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:06:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:06:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:07:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:07:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:08:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:08:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:09:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:09:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:10:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:10:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:11:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:11:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:12:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:12:40 ERROR root Debug Server restarted:Listening
+2026-03-06 08:13:10 ERROR root Debug Server restarted:Listening
+2026-03-06 08:13:40 ERROR root Debug Server restarted:Listening

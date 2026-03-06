@@ -33,6 +33,7 @@ class Label(ExtronNode):
             - ID (int,string) - ID or Name of the UIObject
         """
         self.UIHost = UIDevice
+        self.Host = UIDevice
         self.ID = ID
         self._Name = ''
         self._Visible = None
@@ -45,7 +46,8 @@ class Label(ExtronNode):
         self._properties_to_reformat = []
         self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self,needs_sync=False)
+        send_ipcp_create = len(self.Host._where_used_alias_list)==0
+        super().__init__(self,send_ipcp_create,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -102,25 +104,29 @@ class Label(ExtronNode):
     def __OnError(self,msg):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
+    def __allow_command_check(self):
+        if len(self.Host._where_used_alias_list)==0:
+            return True
+        return self._alias in self.Host._where_used_alias_list
 
     @property
     def Name(self):
         if 'Name' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Name')
-            self._Name = self._Query('Name',[])
+            if self.__allow_command_check():self._Name = self._Query('Name',[])
         if 'Name' not in self._query_properties_always:
             return self._Name
-        return self._Query('Name',[])
+        if self.__allow_command_check():return self._Query('Name',[])
     @property
     def Visible(self):
         if 'Visible' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Visible')
-            self._Visible = self._Query('Visible',[])
+            if self.__allow_command_check():self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
             if self._Visible == None:
                 return True
             return self._Visible
-        return self._Query('Visible',[])
+        if self.__allow_command_check():return self._Query('Visible',[])
 
 
 
@@ -136,7 +142,7 @@ class Label(ExtronNode):
         """
         if text != self._Text:
             #self._Command('SetText',[text])
-            self._BatchCommand('SetText',[text])
+            if self.__allow_command_check():self._BatchCommand('SetText',[text])
         self._Text = text
 
     def SetVisible(self, visible: bool) -> None:
@@ -149,6 +155,6 @@ class Label(ExtronNode):
             self.__OnError('SetVisible: invalid visible state')
         if visible != self._Visible:
             #self._Command('SetVisible',[visible])
-            self._BatchCommand('SetVisible',[visible])
+            if self.__allow_command_check():self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 

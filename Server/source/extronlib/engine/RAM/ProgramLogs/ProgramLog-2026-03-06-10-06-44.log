@@ -1,0 +1,53 @@
+2026-03-06 10:02:59 INFO root Start primary API version 1.10.0.11
+2026-03-06 10:02:59 INFO root loading script: main
+2026-03-06 10:03:01 INFO root successfully loaded script: main
+2026-03-06 10:03:59 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 10:04:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:04:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:05:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:05:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:06:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:06:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:07:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:07:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:08:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:08:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:09:02 INFO root Device 22-0 VTLP sync handling began
+2026-03-06 10:09:02 INFO root Device 22-0 VTLP sync handling ended
+2026-03-06 10:09:02 ERROR root Control ID 0 not defined
+2026-03-06 10:09:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:09:51 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2026-03-06 10:09:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:10:03 ERROR root SerialInterface spd1:COM1 Unavailable Port: COM1
+2026-03-06 10:10:03 ERROR root SerialInterface spd1:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:10:15 ERROR root SerialInterface spd2:COM1 Unavailable Port: COM1
+2026-03-06 10:10:15 ERROR root SerialInterface spd2:COM1Device 4-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:10:28 ERROR root SerialInterface spd3:COM1 Unavailable Port: COM1
+2026-03-06 10:10:28 ERROR root SerialInterface spd3:COM1Device 5-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:10:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:10:40 ERROR root SerialInterface spd4:COM1 Unavailable Port: COM1
+2026-03-06 10:10:40 ERROR root SerialInterface spd4:COM1Device 6-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:10:52 ERROR root SerialInterface spd5:COM1 Unavailable Port: COM1
+2026-03-06 10:10:52 ERROR root SerialInterface spd5:COM1Device 7-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:10:59 ERROR root Debug Server restarted:Listening
+2026-03-06 10:11:04 ERROR root SerialInterface spd6:COM1 Unavailable Port: COM1
+2026-03-06 10:11:04 ERROR root SerialInterface spd6:COM1Device 8-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:11:14 ERROR root Device 10-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:11:23 ERROR root Device 11-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:11:29 ERROR root Debug Server restarted:Listening
+2026-03-06 10:11:33 ERROR root Device 12-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:11:42 ERROR root Device 13-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:11:51 ERROR root Device 14-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:11:59 ERROR root Debug Server restarted:Listening

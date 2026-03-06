@@ -25,7 +25,6 @@ class ObjectWrapper():
         self.host_alias = data['args'][0]
 
 
-
         """
             WRAPPER CONFIGURATION
         """
@@ -141,7 +140,7 @@ class ObjectWrapper():
                 else:
                     err_msg = {'property':data['property'],'value':None,'qualifier':{'code':'property does not exist'}}
             else:
-                err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'property does not exist'}}
+                err_msg = {'property':data['property'],'value':data['args'],'qualifier':{'code':'object does not exist'}}
         elif data['type'] == 'query':
             if self.obj:
                 if data['property'] in self.callable_attrs:
@@ -165,5 +164,5 @@ class ObjectWrapper():
         if err_msg:
             if 'query id' in data:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','query id':data['query id'],'message':err_msg}))
             else:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'error','message':err_msg}))
-            self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
+            #self.WrapperBasics.log_error('remotelib error:{}:{}'.format(self.alias,json.dumps(err_msg)))
         if update:self.WrapperBasics.send_message(self.alias,json.dumps({'type':'query','query id':data['query id'],'message':update}))

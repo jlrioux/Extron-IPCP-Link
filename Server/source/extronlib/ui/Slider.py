@@ -45,6 +45,7 @@ class Slider(ExtronNode):
             - ID (int) - ID of the UIObject
         """
         self.UIHost = UIDevice
+        self.Host = UIDevice
         self.ID = ID
         self._Name = ''
         self._Visible = None
@@ -69,7 +70,8 @@ class Slider(ExtronNode):
         self._properties_to_reformat = []
         self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self,needs_sync=False)
+        send_ipcp_create = len(self.Host._where_used_alias_list)==0
+        super().__init__(self,send_ipcp_create,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -126,6 +128,10 @@ class Slider(ExtronNode):
     def __OnError(self,msg):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
+    def __allow_command_check(self):
+        if len(self.Host._where_used_alias_list)==0:
+            return True
+        return self._alias in self.Host._where_used_alias_list
 
 
 
@@ -135,62 +141,62 @@ class Slider(ExtronNode):
     def Name(self):
         if 'Name' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Name')
-            self._Name = self._Query('Name',[])
+            if self.__allow_command_check():self._Name = self._Query('Name',[])
         if 'Name' not in self._query_properties_always:
             return self._Name
-        return self._Query('Name',[])
+        if self.__allow_command_check():return self._Query('Name',[])
     @property
     def Max(self):
         if 'Max' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Max')
-            self._Max = self._Query('Max',[])
+            if self.__allow_command_check():self._Max = self._Query('Max',[])
         if 'Max' not in self._query_properties_always:
             return self._Max
-        return self._Query('Max',[])
+        if self.__allow_command_check():return self._Query('Max',[])
     @property
     def Min(self):
         if 'Min' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Min')
-            self._Min = self._Query('Min',[])
+            if self.__allow_command_check():self._Min = self._Query('Min',[])
         if 'Min' not in self._query_properties_always:
             return self._Min
-        return self._Query('Min',[])
+        if self.__allow_command_check():return self._Query('Min',[])
     @property
     def Visible(self):
         if 'Visible' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Visible')
-            self._Visible = self._Query('Visible',[])
+            if self.__allow_command_check():self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
             if self._Visible == None:
                 return True
             return self._Visible
-        return self._Query('Visible',[])
+        if self.__allow_command_check():return self._Query('Visible',[])
     @property
     def Step(self):
         if 'Step' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Step')
-            self._Step = self._Query('Step',[])
+            if self.__allow_command_check():self._Step = self._Query('Step',[])
         if 'Step' not in self._query_properties_always:
             return self._Step
-        return self._Query('Step',[])
+        if self.__allow_command_check():return self._Query('Step',[])
     @property
     def Fill(self):
         if 'Fill' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Fill')
-            self._Fill = self._Query('Fill',[])
+            if self.__allow_command_check():self._Fill = self._Query('Fill',[])
         if 'Fill' not in self._query_properties_always:
             return self._Fill
-        return self._Query('Fill',[])
+        if self.__allow_command_check():return self._Query('Fill',[])
     @property
     def Enabled(self):
         if 'Enabled' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Enabled')
-            self._Enabled = self._Query('Enabled',[])
+            if self.__allow_command_check():self._Enabled = self._Query('Enabled',[])
         if 'Enabled' not in self._query_properties_always:
             if self._Enabled == None:
                 return True
             return self._Enabled
-        return self._Query('Enabled',[])
+        if self.__allow_command_check():return self._Query('Enabled',[])
 
 
 
@@ -201,7 +207,7 @@ class Slider(ExtronNode):
         else:
             self._Fill = self._Min
         #self._Command('Dec',[])
-        self._BatchCommand('Dec',[])
+        if self.__allow_command_check():self._BatchCommand('Dec',[])
 
 
     def Inc(self) -> None:
@@ -211,7 +217,7 @@ class Slider(ExtronNode):
         else:
             self._Fill = self._Max
         #self._Command('Inc',[])
-        self._BatchCommand('Inc',[])
+        if self.__allow_command_check():self._BatchCommand('Inc',[])
 
     def SetFill(self, Fill: int) -> None:
         """ Set the current fill level
@@ -221,7 +227,7 @@ class Slider(ExtronNode):
         """
         if self._Min <= Fill <= self._Max:
             self._Fill = Fill
-            self._Command('SetFill',[Fill])
+            if self.__allow_command_check():self._Command('SetFill',[Fill])
             #self._BatchCommand('SetFill',[Fill])
         else:
             self.__OnError('SetFill: Value out of range')
@@ -240,7 +246,7 @@ class Slider(ExtronNode):
         self._Min = Min
         self._Max = Max
         self._Step = Step
-        self._Command('SetRange',[Min,Max,Step])
+        if self.__allow_command_check():self._Command('SetRange',[Min,Max,Step])
         self._Fill = self._Query('Fill',[])
 
 
@@ -257,7 +263,7 @@ class Slider(ExtronNode):
             self.__OnError('SetVisible: invalid enable state')
         if visible != self._Visible:
             #self._Command('SetVisible',[visible])
-            self._BatchCommand('SetVisible',[visible])
+            if self.__allow_command_check():self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 
 
@@ -273,5 +279,5 @@ class Slider(ExtronNode):
             self.__OnError('SetEnable: invalid enable state')
         if enable != self._Enabled:
             #self._Command('SetEnable',[enable])
-            self._BatchCommand('SetEnable',[enable])
+            if self.__allow_command_check():self._BatchCommand('SetEnable',[enable])
         self._Enabled = enable

@@ -1,0 +1,26 @@
+2026-03-06 11:18:32 INFO root Start primary API version 1.10.0.11
+2026-03-06 11:18:32 INFO root loading script: main
+2026-03-06 11:18:34 INFO root successfully loaded script: main
+2026-03-06 11:19:36 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:20:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:20:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:21:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:21:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:22:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:22:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:23:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:23:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:24:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:24:37 ERROR root Debug Server restarted:Listening

@@ -1,0 +1,740 @@
+{
+    "system": {
+        "master_alias": "processor0",
+        "master_ip_address": "172.16.1.10",
+        "debug_server_port": "LAN",
+        "show_boot_details": true,
+        "wall_configurations": [[0],[1],[2],[3],[4],[5],[6]]
+    },
+    "devices": {
+        "tps info": [
+            {
+                "alias": "IC142Panel",
+                "name": "IC Room 142 Touch Panel"
+            },
+            {
+                "alias": "IC143Panel",
+                "name": "IC Room 143 Touch Panel"
+            },
+            {
+                "alias": "IC144Panel",
+                "name": "IC Room 144 Touch Panel"
+            },
+            {
+                "alias": "BreakRmPanel",
+                "name": "Break Room Touch Panel"
+            },
+            {
+                "alias": "LobbyPanel",
+                "name": "Lobby Touch Panel"
+            },
+            {
+                "alias": "HallPanel",
+                "name": "Hall Touch Panel"
+            },
+            {
+                "alias": "BWDPanel",
+                "name": "BWD Touch Panel"
+            }
+
+        ],
+        "dsps info": [],
+        "vtcs info": [],
+        "switchs info": [
+            {
+                "plugin_name": "plugin_switch_extron_nav",
+                "model": "NAV",
+                "submodel": "NAVigator",
+                "spi_host": "spd0",
+                "control_method": "SPD",
+                "serial_host": "processor0",
+                "serial_port": "COM1",
+                "serial_baud": 57600,
+                "used_inputs": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23
+
+                ],
+                "src_uncombined_names": [
+                    "None",
+                    "CATV 1",
+                    "CATV 2",
+                    "CATV 3",
+                    "CATV 4",
+                    "CATV 5",
+                    "CATV 6",
+                    "None",
+                    "None",
+                    "Security Feed",
+                    "Signage",
+                    "none",
+                    "none",
+                    "BWD Feed 1",
+                    "BWD Feed 2",
+                    "BWD Feed 3",
+                    "BWD Feed 4",
+                    "Aux HDMI 1",
+                    "Aux HDMI 2",
+                    "Aux HDMI 3",
+                    "Aux HDMI 4",
+                    "Aux HDMI 5",
+                    "Aux HDMI 6",
+                    "Aux HDMI 7"
+                ],
+                "presentation_inputs": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23
+                ],
+                "vtc_camera_inputs": [
+                    null,
+                    null
+                ],
+                "vtc_inputs": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "used_outputs": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "video_dest_uncombined_names": [
+                    "Display",
+                    "Display",
+                    "Display",
+                    "Display",
+                    "Display",
+                    "Display"
+                ],
+                "audio_dest_uncombined_names": [],
+                "disp_outputs": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "vtc_camera_outputs": [
+                    null,
+                    null
+                ],
+                "audio_outputs": [],
+                "name": "Video Switcher",
+                "nav_input_ids": [
+                    0,
+                    1102,
+                    1103,
+                    1104,
+                    1105,
+                    1106,
+                    1107,
+                    0,
+                    0,
+                    1108,
+                    1101,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    201,
+                    202,
+                    203,
+                    204,
+                    205,
+                    206
+                ],
+                "nav_output_ids": [
+                    501,
+                    502,
+                    503,
+                    601,
+                    701,
+                    901,
+                    1101
+                ]
+            }
+        ],
+        "displays info": [
+            {
+                "plugin_name": "plugin_display_nec_mexx1",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd1",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            },
+            {
+                "plugin_name": "plugin_display_nec_mexx1",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd2",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            },
+            {
+                "plugin_name": "plugin_display_nec_mexx1",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd3",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            },
+            {
+                "plugin_name": "plugin_display_nec_mexx1",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd4",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            },
+            {
+                "plugin_name": "plugin_display_sharp_LC_xxLE_u",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd5",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            },
+            {
+                "plugin_name": "plugin_display_nec_mexx1",
+                "model": "NEC MExx1",
+                "submodel": "M651",
+                "control_method": "Serial",
+                "ip_address": "10.3.80.29",
+                "ip_port": 1024,
+                "serial_host": "spd6",
+                "serial_port": "COM1",
+                "serial_baud": 9600,
+                "up_screen_relay_host": "",
+                "up_screen_relay_port": "",
+                "down_screen_relay_host": "",
+                "down_screen_relay_port": "",
+                "automatic_power_on_uncombined": false,
+                "automatic_screen_control": false,
+                "name": "Display"
+
+            }
+        ],
+        "cameras info": [],
+        "ceiling mics info": [],
+        "wall sensors info": [],
+        "catvs info":[
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd8",
+                "ir_port":"IRS1",
+                "name":"CATV 1"
+            },
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd9",
+                "ir_port":"IRS1",
+                "name":"CATV 2"
+            },
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd10",
+                "ir_port":"IRS1",
+                "name":"CATV 3"
+            },
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd11",
+                "ir_port":"IRS1",
+                "name":"CATV 4"
+            },
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd12",
+                "ir_port":"IRS1",
+                "name":"CATV 5"
+            },
+            {
+                "plugin_name":"plugin_catv_moto_ir",
+                "ir_host":"spd13",
+                "ir_port":"IRS1",
+                "name":"CATV 6"
+            }
+
+        ]
+    },
+    "rooms": [
+        {
+            "room_names": [
+                "IC Room 142"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 0,
+            "tp_assignment": [
+                0
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                0
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                1
+            ],
+            "switch_audio_output": 1,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "IC Room 143"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 1,
+            "tp_assignment": [
+                1
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                1
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                2
+            ],
+            "switch_audio_output": 2,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "IC Room 144"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 2,
+            "tp_assignment": [
+                2
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                2
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                3
+            ],
+            "switch_audio_output": 3,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "Breakroom"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 3,
+            "tp_assignment": [
+                3
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                3
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                4
+            ],
+            "switch_audio_output": 4,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "Lobby"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 4,
+            "tp_assignment": [
+                4
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                4
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                5
+            ],
+            "switch_audio_output": 5,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "Hallway 200"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 5,
+            "tp_assignment": [
+                5
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "displays_assignment": [
+                5
+            ],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                6
+            ],
+            "switch_audio_output": 6,
+            "custom_startup_time": 5,
+            "custom_shutdown_time": 5,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        },
+        {
+            "room_names": [
+                "Building Wide Distribution"
+            ],
+            "combine_roles": [
+                "Uncombined"
+            ],
+            "combine_group": 6,
+            "tp_assignment": [
+                6
+            ],
+            "dsp_assignment": 0,
+            "switch_assignment": 0,
+            "catvs_assignment":[0,1,2,3,4,5],
+            "switch_used_inputs_assignment": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "switch_used_outputs_assignment": [
+                0
+            ],
+            "switch_audio_output": 0,
+            "custom_startup_time": 1,
+            "custom_shutdown_time": 1,
+            "switch_presentation_auto_route_default": [
+                true
+            ]
+
+        }
+    ]
+}

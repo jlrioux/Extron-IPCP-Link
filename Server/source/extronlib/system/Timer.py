@@ -68,10 +68,13 @@ class Timer():
         self.__process__ = None #type:Thread
         self.__process_active__ = -1
 
+        self.State = 'Stopped'
+        self.StateChanged = None
         self.Interval = Interval
         self.Function = Function
         if self.Function:
             self.__run_wait__()
+
 
     def Change(self, Interval: float) -> None:
         """ Set a new Interval value for future events in this instance.
@@ -92,12 +95,19 @@ class Timer():
         if self.__process_active__ > 0:
             self.__process_active__ = -1
             self.__process__.join()
+            self.State = 'Paused'
+            if self.StateChanged:
+                self.StateChanged(self,'Paused')
+
 
     def Resume(self) -> None:
         """ Resume the timer after being paused or stopped.
         """
         if self.__process__:
             self.__run_wait__()
+            self.State = 'Running'
+            if self.StateChanged:
+                self.StateChanged(self,'Running')
 
     def Restart(self) -> None:
         """Restarts the timer – resets the Count and executes the Function in Interval seconds."""
@@ -112,12 +122,18 @@ class Timer():
         """
         self.__process_active__ = -1
         self.Count = 0
+        self.State = 'Stopped'
+        if self.StateChanged:
+            self.StateChanged(self,'Stopped')
 
     def __run_wait__(self) -> None:
         self.__id = Timer.__get_next_id()
         self.__process_active__ = self.__id
         self.__process__ = Thread(target=self.__func__(self.__id,self.Interval,self.Function))
         self.__process__.start()
+        self.State = 'Running'
+        if self.StateChanged:
+            self.StateChanged(self,'Running')
 
 
     def __func__(self,id,Time:'float',func) -> None:

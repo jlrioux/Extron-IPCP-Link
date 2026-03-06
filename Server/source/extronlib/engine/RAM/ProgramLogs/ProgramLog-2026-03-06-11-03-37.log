@@ -1,0 +1,1047 @@
+2026-03-06 10:47:17 INFO root Start primary API version 1.10.0.11
+2026-03-06 10:47:17 INFO root loading script: main
+2026-03-06 10:47:19 INFO root successfully loaded script: main
+2026-03-06 10:47:46 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 10:48:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:48:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:49:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:49:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:50:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:50:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:51:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:51:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:52:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:52:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:52:47 INFO root Device 22-0 VTLP sync handling began
+2026-03-06 10:52:47 INFO root Device 22-0 VTLP sync handling ended
+2026-03-06 10:53:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:53:43 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2026-03-06 10:53:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:53:56 ERROR root SerialInterface spd1:COM1 Unavailable Port: COM1
+2026-03-06 10:53:56 ERROR root SerialInterface spd1:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:54:08 ERROR root SerialInterface spd2:COM1 Unavailable Port: COM1
+2026-03-06 10:54:08 ERROR root SerialInterface spd2:COM1Device 4-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:54:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:54:20 ERROR root SerialInterface spd3:COM1 Unavailable Port: COM1
+2026-03-06 10:54:20 ERROR root SerialInterface spd3:COM1Device 5-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:54:33 ERROR root SerialInterface spd4:COM1 Unavailable Port: COM1
+2026-03-06 10:54:33 ERROR root SerialInterface spd4:COM1Device 6-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:54:45 ERROR root SerialInterface spd5:COM1 Unavailable Port: COM1
+2026-03-06 10:54:45 ERROR root SerialInterface spd5:COM1Device 7-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:54:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:54:57 ERROR root SerialInterface spd6:COM1 Unavailable Port: COM1
+2026-03-06 10:54:57 ERROR root SerialInterface spd6:COM1Device 8-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 10:55:06 ERROR root Device 10-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:16 ERROR root Device 11-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:55:25 ERROR root Device 12-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:35 ERROR root Device 13-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:44 ERROR root Device 14-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:55:53 ERROR root Device 15-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 10:55:55 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:55:55 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:55:55 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:55:55 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:55:55 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:55:55 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:04 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 10:56:05 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:05 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:05 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:05 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:05 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:05 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:56:26 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:26 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:26 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:26 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:26 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:26 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:36 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:56:56 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:56 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:56 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:56 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:56 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:56:56 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:06 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:06 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:06 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:06 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:07 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:07 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:57:17 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:17 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:17 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:17 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:17 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:17 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:27 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:37 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:57:47 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:47 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:47 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:47 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:47 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:47 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:57 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:57 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:58 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:58 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:58 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:57:58 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:08 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:58:18 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:18 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:18 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:18 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:18 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:18 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:28 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:38 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:58:48 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:48 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:48 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:49 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:49 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:49 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:52 INFO root Device 22-0 VTLP sync handling began
+2026-03-06 10:58:52 INFO root Device 22-0 VTLP sync handling ended
+2026-03-06 10:58:52 ERROR root Control ID 0 not defined
+2026-03-06 10:58:59 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:59 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:59 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:59 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:59 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:58:59 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:09 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:16 ERROR root Debug Server restarted:Listening
+2026-03-06 10:59:19 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:19 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:19 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:19 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:19 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:19 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:21 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:21 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:22 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:22 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:23 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:25 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:28 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 10:59:29 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:29 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:29 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:29 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:30 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:30 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:39 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:39 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:39 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:39 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:40 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:40 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:46 ERROR root Debug Server restarted:Listening
+2026-03-06 10:59:49 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:50 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:50 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:50 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:50 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 10:59:50 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:00 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:10 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:16 ERROR root Debug Server restarted:Listening
+2026-03-06 11:00:20 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:20 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:20 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:20 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:20 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:20 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:30 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:30 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:30 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:30 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:31 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:31 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:40 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:40 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:41 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:41 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:41 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:41 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:46 ERROR root Receive failed, from client
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:46 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter IC142Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter IC143Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter IC144Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter BreakRmPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter LobbyPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter HallPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:50 ERROR root Invalid Parameter BWDPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:00:51 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:00:56 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:56 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:56 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:56 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:56 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:00:56 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:05 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:01:06 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:06 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:06 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:06 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:06 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:06 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:16 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:01:26 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:26 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:27 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:27 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:27 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:27 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:37 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:47 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:01:57 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:57 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:57 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:57 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:57 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:01:57 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:07 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:17 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:17 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:17 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:17 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:18 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:18 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:02:28 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:28 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:28 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:28 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:28 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:28 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:38 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:48 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:02:58 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:58 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:58 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:58 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:58 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:02:58 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:08 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:08 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:09 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:09 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:09 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:09 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:19 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:03:29 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:29 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:29 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:29 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:29 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:29 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:39 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:49 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:49 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:49 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:49 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:50 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:50 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:03:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:04:00 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:00 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:01 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:03 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:09 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:09 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:10 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:10 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:10 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:10 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:10 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:10 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:11 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:16 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-06 11:04:20 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:20 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:20 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:20 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:20 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:20 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:04:30 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:30 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:30 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:30 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:30 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:30 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:40 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:50 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:04:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:05:00 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:00 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:00 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:01 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:01 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:01 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:11 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:05:21 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:21 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:31 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:41 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:05:51 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:05:51 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:01 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:11 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:11 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:11 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:11 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:11 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:12 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:06:21 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:21 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:21 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:21 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:22 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:22 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:32 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:42 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:06:52 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:52 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:52 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:52 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:52 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:06:52 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:02 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:12 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:07:22 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:22 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:22 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:22 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:22 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:22 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:32 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:32 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:32 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:32 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:33 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:33 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:42 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:42 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:43 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:43 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:43 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:43 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:07:53 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:53 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:53 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:53 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:53 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:07:53 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:03 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:13 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:08:23 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:23 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:23 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:23 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:23 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:23 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:33 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:33 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:33 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:33 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:33 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:34 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:43 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:43 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:43 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:43 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:43 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:44 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:08:53 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:53 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:53 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:54 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:54 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:08:54 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:03 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:04 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:04 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:04 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:04 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:04 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:14 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:09:24 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:24 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:24 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:24 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:24 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:24 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:34 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:44 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:09:54 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:54 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:54 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:54 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:54 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:09:55 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:04 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:04 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:05 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:05 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:05 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:05 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:15 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:10:25 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:25 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:25 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:25 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:25 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:25 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:35 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:45 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:10:55 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:55 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:55 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:55 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:56 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:10:56 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:05 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:06 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:06 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:06 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:06 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:06 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:16 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:11:26 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:26 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:26 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:26 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:26 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:26 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:36 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:46 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:11:56 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:56 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:56 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:56 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:56 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:11:56 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:06 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:16 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:16 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:16 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:17 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:17 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:17 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:12:26 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:27 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:27 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:27 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:27 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:27 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:37 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:47 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:12:57 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:57 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:57 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:57 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:57 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:12:57 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:07 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:17 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:13:27 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:27 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:27 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:27 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:27 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:28 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:37 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:37 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:38 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:38 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:38 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:38 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:47 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:48 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:48 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:48 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:48 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:48 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:13:58 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:58 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:58 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:58 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:58 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:13:58 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:08 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:18 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:14:28 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:28 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:28 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:28 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:28 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:28 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:38 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:48 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:48 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:48 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:48 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:49 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:49 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:14:58 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:59 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:59 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:59 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:59 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:14:59 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:09 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:19 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:15:29 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:29 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:29 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:29 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:29 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:29 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:39 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:49 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:15:59 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:59 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:59 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:59 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:15:59 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:00 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:09 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:09 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:10 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:10 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:10 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:10 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:19 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:20 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:20 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:20 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:20 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:20 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:16:30 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:30 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:30 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:30 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:30 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:30 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:40 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:16:51 ERROR root Debug Server restarted:Listening
+2026-03-06 11:17:01 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:01 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:01 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:01 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:01 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:01 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:11 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root Debug Server restarted:Listening
+2026-03-06 11:17:21 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-06 11:17:21 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open

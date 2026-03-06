@@ -1,0 +1,429 @@
+2026-03-05 15:35:29 INFO root Start primary API version 1.10.0.11
+2026-03-05 15:35:29 INFO root loading script: main
+2026-03-05 15:35:31 INFO root successfully loaded script: main
+2026-03-05 15:36:24 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-05 15:36:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:37:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:37:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:38:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:38:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:39:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:39:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:40:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:40:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:41:24 INFO root Device 22-0 VTLP sync handling began
+2026-03-05 15:41:24 INFO root Device 22-0 VTLP sync handling ended
+2026-03-05 15:41:24 ERROR root Control ID 0 not defined
+2026-03-05 15:41:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:41:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:42:18 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2026-03-05 15:42:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:42:30 ERROR root SerialInterface spd1:COM1 Unavailable Port: COM1
+2026-03-05 15:42:30 ERROR root SerialInterface spd1:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:42:42 ERROR root SerialInterface spd2:COM1 Unavailable Port: COM1
+2026-03-05 15:42:42 ERROR root SerialInterface spd2:COM1Device 4-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:42:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:42:54 ERROR root SerialInterface spd3:COM1 Unavailable Port: COM1
+2026-03-05 15:42:54 ERROR root SerialInterface spd3:COM1Device 5-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:43:07 ERROR root SerialInterface spd4:COM1 Unavailable Port: COM1
+2026-03-05 15:43:07 ERROR root SerialInterface spd4:COM1Device 6-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:43:19 ERROR root SerialInterface spd5:COM1 Unavailable Port: COM1
+2026-03-05 15:43:19 ERROR root SerialInterface spd5:COM1Device 7-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:43:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:43:31 ERROR root SerialInterface spd6:COM1 Unavailable Port: COM1
+2026-03-05 15:43:31 ERROR root SerialInterface spd6:COM1Device 8-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-05 15:43:41 ERROR root Device 10-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:43:50 ERROR root Device 11-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:43:54 ERROR root Debug Server restarted:Listening
+2026-03-05 15:43:59 ERROR root Device 12-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:44:09 ERROR root Device 13-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:44:18 ERROR root Device 14-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:44:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:44:27 ERROR root Device 15-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-05 15:44:29 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:29 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:29 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:29 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:29 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:29 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:38 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-05 15:44:44 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:45 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:45 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:44:45 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:04 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-05 15:45:04 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1284:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1286:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1285:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1289:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1287:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1290:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2301:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:1288:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2302:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2303:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2304:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2305:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2306:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2307:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2308:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2309:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2310:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2311:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2312:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2313:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2314:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2316:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2315:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2317:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2318:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root remotelib error:BWDPanel:2319:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:45:05 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:05 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:05 ERROR root Debug Server restarted:Listening
+2026-03-05 15:45:05 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:05 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:05 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:05 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:15 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:24 ERROR root Debug Server restarted:Listening
+2026-03-05 15:45:25 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:25 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:25 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:25 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:25 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:25 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:35 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:45 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:45 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root Receive failed, from client
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:46 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:46 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter IC142Panel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter IC143Panel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter IC144Panel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter BreakRmPanel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter LobbyPanel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter HallPanel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root Invalid Parameter BWDPanel HidePopup: popup=Control Server is Offline
+2026-03-05 15:45:48 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-05 15:45:52 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:52 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:52 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:52 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:45:52 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:01 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-05 15:46:20 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-05 15:46:20 ERROR root Failed to run wait callback function: Wait.w
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 312, in w
+    self.receive_message(data,ipaddress)
+  File "/remotelib_qxi/__init__.py", line 362, in receive_message
+    WrapperBasics.wrapped_objects[type][alias].receive_message(data)
+  File "/remotelib_qxi/ui/Button.py", line 114, in receive_message
+    if str(arg) != str(data['args'][cur_arg]):
+IndexError: list index out of range
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1284:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1285:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1286:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1287:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1288:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1289:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:1290:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2302:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2301:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2303:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2304:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2305:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2306:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2307:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2308:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2309:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2310:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2311:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2312:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2313:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2314:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2315:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2316:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2317:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2318:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root remotelib error:BWDPanel:2319:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:20 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:20 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:20 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:20 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:20 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:20 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:21 ERROR root Debug Server restarted:Listening
+2026-03-05 15:46:21 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Header-Uncombined-0
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:8003:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:8004:{"property": "SetVisible", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:8003:{"property": "SetEnable", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:8004:{"property": "SetEnable", "value": [false], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4600:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4630:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4629:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4631:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4632:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5000:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5013:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5014:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5015:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5025:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5016:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5026:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5027:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5028:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5029:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5030:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5031:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:5032:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4950:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4963:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4964:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4965:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4975:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4977:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4966:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4976:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4978:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4979:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4980:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4981:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:21 ERROR root remotelib error:BWDPanel:4982:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:31 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:31 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:31 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:31 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:31 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:31 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:34 ERROR root Button event error
+Traceback (most recent call last):
+RuntimeError: Release without press first
+2026-03-05 15:46:40 ERROR root remotelib error:BWDPanel:5446:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:40 ERROR root remotelib error:BWDPanel:5447:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:40 ERROR root remotelib error:BWDPanel:5448:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:40 ERROR root remotelib error:BWDPanel:5449:{"property": "SetState", "value": [0], "qualifier": {"code": "property does not exist"}}
+2026-03-05 15:46:41 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:41 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:41 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:41 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:41 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:41 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:48 ERROR root Debug Server restarted:Listening
+2026-03-05 15:46:51 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:51 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:51 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:51 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:51 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:46:51 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:01 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:11 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:18 ERROR root Debug Server restarted:Listening
+2026-03-05 15:47:21 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:21 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:21 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:21 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:21 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:21 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:31 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:31 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:31 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:31 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:31 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:32 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:41 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:41 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:41 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:42 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:42 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:42 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:48 ERROR root Debug Server restarted:Listening
+2026-03-05 15:47:51 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:52 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:52 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:52 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:52 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:47:52 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:02 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:12 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:18 ERROR root Debug Server restarted:Listening
+2026-03-05 15:48:22 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:22 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:22 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:22 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:22 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:22 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:32 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:42 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:48 ERROR root Debug Server restarted:Listening
+2026-03-05 15:48:52 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:52 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:52 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:52 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:52 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:48:52 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:02 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:02 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:02 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:02 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:02 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:03 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:12 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:12 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:12 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:12 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:13 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:13 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:18 ERROR root Debug Server restarted:Listening
+2026-03-05 15:49:22 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:22 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:22 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:23 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:23 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:23 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:33 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd6:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd3:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd2:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd4:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd1:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:43 ERROR root SerialInterface spd5:COM1SendAndWait: Port COM1 not open
+2026-03-05 15:49:48 ERROR root Debug Server restarted:Listening

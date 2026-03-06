@@ -38,6 +38,7 @@ class Level(ExtronNode):
             - ID (int) - ID of the UIObject
         """
         self.UIHost = UIDevice
+        self.Host = UIDevice
         self.ID = ID
         self._Name = ''
         self._Visible = None
@@ -53,7 +54,8 @@ class Level(ExtronNode):
         self._properties_to_reformat = []
         self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self,needs_sync=False)
+        send_ipcp_create = len(self.Host._where_used_alias_list)==0
+        super().__init__(self,send_ipcp_create,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -110,58 +112,62 @@ class Level(ExtronNode):
     def __OnError(self,msg):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
+    def __allow_command_check(self):
+        if len(self.Host._where_used_alias_list)==0:
+            return True
+        return self._alias in self.Host._where_used_alias_list
 
 
     @property
     def Name(self):
         if 'Name' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Name')
-            self._Name = self._Query('Name',[])
+            if self.__allow_command_check():self._Name = self._Query('Name',[])
         if 'Name' not in self._query_properties_always:
             return self._Name
-        return self._Query('Name',[])
+        if self.__allow_command_check():return self._Query('Name',[])
     @property
     def Max(self):
         if 'Max' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Max')
-            self._Max = self._Query('Max',[])
+            if self.__allow_command_check():self._Max = self._Query('Max',[])
         if 'Max' not in self._query_properties_always:
             return self._Max
-        return self._Query('Max',[])
+        if self.__allow_command_check():return self._Query('Max',[])
     @property
     def Min(self):
         if 'Min' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Min')
-            self._Min = self._Query('Min',[])
+            if self.__allow_command_check():self._Min = self._Query('Min',[])
         if 'Min' not in self._query_properties_always:
             return self._Min
-        return self._Query('Min',[])
+        if self.__allow_command_check():return self._Query('Min',[])
     @property
     def Visible(self):
         if 'Visible' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Visible')
-            self._Visible = self._Query('Visible',[])
+            if self.__allow_command_check():self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
             if self._Visible == None:
                 return True
             return self._Visible
-        return self._Query('Visible',[])
+        if self.__allow_command_check():return self._Query('Visible',[])
     @property
     def Level(self):
         if 'Level' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Level')
-            self._Level = self._Query('Level',[])
+            if self.__allow_command_check():self._Level = self._Query('Level',[])
         if 'Level' not in self._query_properties_always:
             return self._Level
-        return self._Query('Level',[])
+        if self.__allow_command_check():return self._Query('Level',[])
     @property
     def Step(self):
         if 'Step' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Step')
-            self._Step = self._Query('Step',[])
+            if self.__allow_command_check():self._Step = self._Query('Step',[])
         if 'Step' not in self._query_properties_always:
             return self._Step
-        return self._Query('Step',[])
+        if self.__allow_command_check():return self._Query('Step',[])
 
 
 
@@ -173,7 +179,7 @@ class Level(ExtronNode):
         else:
             self._Level = self.Min
         #self._Command('Dec',[])
-        self._BatchCommand('Dec',[])
+        if self.__allow_command_check():self._BatchCommand('Dec',[])
 
     def Inc(self) -> None:
         """ Nudge the level up a step """
@@ -182,7 +188,7 @@ class Level(ExtronNode):
         else:
             self._Level = self._Max
         #self._Command('Inc',[])
-        self._BatchCommand('Inc',[])
+        if self.__allow_command_check():self._BatchCommand('Inc',[])
 
     def SetLevel(self, Level: int) -> None:
         """ Set the current level
@@ -192,7 +198,7 @@ class Level(ExtronNode):
         """
         if self._Min <= Level <= self._Max:
             self._Level = Level
-            self._Command('SetLevel',[Level])
+            if self.__allow_command_check():self._Command('SetLevel',[Level])
             #self._BatchCommand('SetLevel',[Level])
         else:
             self.__OnError('SetLevel: Value out of range')
@@ -208,7 +214,7 @@ class Level(ExtronNode):
         self._Min = Min
         self._Max = Max
         self._Step = Step
-        self._Command('SetRange',[Min,Max,Step])
+        if self.__allow_command_check():self._Command('SetRange',[Min,Max,Step])
         self._Level = self._Query('Level',[])
 
     def SetVisible(self, visible: bool) -> None:
@@ -221,5 +227,5 @@ class Level(ExtronNode):
             self.__OnError('SetVisible: invalid visible state')
         if visible != self._Visible:
             #self._Command('SetVisible',[visible])
-            self._BatchCommand('SetVisible',[visible])
+            if self.__allow_command_check():self._BatchCommand('SetVisible',[visible])
         self._Visible = visible

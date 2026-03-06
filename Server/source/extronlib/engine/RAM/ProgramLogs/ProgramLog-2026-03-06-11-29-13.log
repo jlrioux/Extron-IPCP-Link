@@ -1,0 +1,118 @@
+2026-03-06 11:18:32 INFO root Start primary API version 1.10.0.11
+2026-03-06 11:18:32 INFO root loading script: main
+2026-03-06 11:18:34 INFO root successfully loaded script: main
+2026-03-06 11:19:36 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:20:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:20:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:21:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:21:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:22:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:22:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:23:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:23:36 ERROR root Debug Server restarted:Listening
+2026-03-06 11:24:06 ERROR root Debug Server restarted:Listening
+2026-03-06 11:24:37 ERROR root Debug Server restarted:Listening
+2026-03-06 11:24:44 INFO root Device 22-0 VTLP sync handling began
+2026-03-06 11:24:44 INFO root Device 22-0 VTLP sync handling ended
+2026-03-06 11:25:01 ERROR root Receive failed, from client
+2026-03-06 11:25:01 ERROR root GenericEventDispatcher Event handler failed
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 116, in HandleClientDisconnect
+    self.__wrapperbasics.set_server_status(interface.IPAddress,'Offline')
+  File "/remotelib_qxi/__init__.py", line 398, in set_server_status
+    if dev._server_ip == ip:
+AttributeError: 'ObjectWrapper' object has no attribute '_server_ip'
+2026-03-06 11:25:01 ERROR root GenericEventDispatcher Event handler failed
+Traceback (most recent call last):
+  File "/remotelib_qxi/__init__.py", line 116, in HandleClientDisconnect
+    self.__wrapperbasics.set_server_status(interface.IPAddress,'Offline')
+  File "/remotelib_qxi/__init__.py", line 398, in set_server_status
+    if dev._server_ip == ip:
+AttributeError: 'ObjectWrapper' object has no attribute '_server_ip'
+2026-03-06 11:25:28 ERROR root Invalid Parameter IC142Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter IC143Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter IC144Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter BreakRmPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter LobbyPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter HallPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root Invalid Parameter BWDPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:25:28 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:26:11 ERROR root Receive failed, from client
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC142Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC143Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter IC144Panel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter BreakRmPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter LobbyPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter HallPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:11 ERROR root Invalid Parameter BWDPanel ShowPopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter IC142Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter IC143Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter IC144Panel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter BreakRmPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter LobbyPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter HallPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root Invalid Parameter BWDPanel HidePopup: popup=Control Server is Offline
+2026-03-06 11:26:27 ERROR root EXCEPTION:NonvolatileValues:ReadValues:Traceback (most recent call last):
+  File "c:\Users\manyr\OneDrive\Desktop\Chris system\Server\source\tools.py", line 403, in ReadValues
+    values = _json.load(f)
+  File "C:\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "C:\Python\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+:deleting corrupted file
+2026-03-06 11:26:39 ERROR root Device 2-0 (None)  SPInterface Operable Unavailable port :AVI1 , connections status: Offline
+2026-03-06 11:26:51 ERROR root SerialInterface spd1:COM1 Unavailable Port: COM1
+2026-03-06 11:26:51 ERROR root SerialInterface spd1:COM1Device 3-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:26:57 ERROR root Debug Server restarted:Listening
+2026-03-06 11:27:03 ERROR root SerialInterface spd2:COM1 Unavailable Port: COM1
+2026-03-06 11:27:03 ERROR root SerialInterface spd2:COM1Device 4-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:27:15 ERROR root SerialInterface spd3:COM1 Unavailable Port: COM1
+2026-03-06 11:27:15 ERROR root SerialInterface spd3:COM1Device 5-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:27:27 ERROR root Debug Server restarted:Listening
+2026-03-06 11:27:28 ERROR root SerialInterface spd4:COM1 Unavailable Port: COM1
+2026-03-06 11:27:28 ERROR root SerialInterface spd4:COM1Device 6-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:27:40 ERROR root SerialInterface spd5:COM1 Unavailable Port: COM1
+2026-03-06 11:27:40 ERROR root SerialInterface spd5:COM1Device 7-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:27:52 ERROR root SerialInterface spd6:COM1 Unavailable Port: COM1
+2026-03-06 11:27:52 ERROR root SerialInterface spd6:COM1Device 8-0 (None)  Unavailable Port: COM1 , connections status Offline
+2026-03-06 11:27:57 ERROR root Debug Server restarted:Listening
+2026-03-06 11:28:02 ERROR root Device 10-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 11:28:11 ERROR root Device 11-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 11:28:20 ERROR root Device 12-0 (None)  Unavailable Port: IRS1 , connections status Offline
+2026-03-06 11:28:27 ERROR root Debug Server restarted:Listening

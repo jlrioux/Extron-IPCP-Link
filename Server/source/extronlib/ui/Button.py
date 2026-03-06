@@ -56,6 +56,7 @@ class Button(ExtronNode):
 
         #locally stored properties
         self.UIHost = UIDevice
+        self.Host = UIDevice
         self.Host = UIDevice #type:UIDevice
         self.ID = ID
         self.holdTime = holdTime
@@ -88,7 +89,8 @@ class Button(ExtronNode):
         self._query_properties_init = {}
         self._query_properties_always = {'BlinkState':[],
                                          'PressedState':[]}
-        super().__init__(self,needs_sync=False)
+        send_ipcp_create = len(self.Host._where_used_alias_list)==0 or (holdTime != None or repeatTime != None)
+        super().__init__(self,send_ipcp_create,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -145,62 +147,65 @@ class Button(ExtronNode):
     def __OnError(self,msg):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
-
+    def __allow_command_check(self):
+        if len(self.Host._where_used_alias_list)==0:
+            return True
+        return self._alias in self.Host._where_used_alias_list
 
     @property
     def BlinkState(self):
         if 'BlinkState' in self._query_properties_init_list:
             self._query_properties_init_list.remove('BlinkState')
-            self._BlinkState = self._Query('BlinkState',[])
+            if self.__allow_command_check():self._BlinkState = self._Query('BlinkState',[])
         if 'BlinkState' not in self._query_properties_always:
             return self._BlinkState
-        return self._Query('BlinkState',[])
+        if self.__allow_command_check():return self._Query('BlinkState',[])
     @property
     def Enabled(self):
         if 'Enabled' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Enabled')
-            self._Enabled = self._Query('BlinkState',[])
+            if self.__allow_command_check():self._Enabled = self._Query('BlinkState',[])
         if 'Enabled' not in self._query_properties_always:
             if self._Enabled == None:
                 return True
             return self._Enabled
-        return self._Query('Enabled',[])
+        if self.__allow_command_check():return self._Query('Enabled',[])
     @property
     def Name(self):
         if 'Name' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Name')
-            self._Name = self._Query('Name',[])
+            if self.__allow_command_check():self._Name = self._Query('Name',[])
         if 'Name' not in self._query_properties_always:
             return self._Name
-        return self._Query('Name',[])
+        if self.__allow_command_check():return self._Query('Name',[])
     @property
     def PressedState(self):
         if 'PressedState' in self._query_properties_init_list:
             self._query_properties_init_list.remove('PressedState')
-            self._PressedState = self._Query('PressedState',[])
+            if self.__allow_command_check():self._PressedState = self._Query('PressedState',[])
         if 'PressedState' not in self._query_properties_always:
             return self._PressedState
-        return self._Query('PressedState',[])
+        if self.__allow_command_check():return self._Query('PressedState',[])
     @property
     def State(self):
         if 'State' in self._query_properties_init_list:
             self._query_properties_init_list.remove('State')
-            self._State = self._Query('State',[])
+            if self.__allow_command_check():self._State = self._Query('State',[])
         if 'State' not in self._query_properties_always:
             if self._State == None:
                 return 0
             return self._State
-        return self._Query('State',[])
+        if self.__allow_command_check():return self._Query('State',[])
     @property
     def Visible(self):
         if 'Visible' in self._query_properties_init_list:
             self._query_properties_init_list.remove('Visible')
-            self._Visible = self._Query('Visible',[])
+            if self.__allow_command_check():self._Visible = self._Query('Visible',[])
         if 'Visible' not in self._query_properties_always:
             if self._Visible == None:
                 return True
             return self._Visible
-        return self._Query('Visible',[])
+        if self.__allow_command_check():return self._Query('Visible',[])
 
 
 
@@ -215,7 +220,7 @@ class Button(ExtronNode):
             - stateList (list of ints) - list of visual states that this button blinks among.
         """
         #self._Command('CustomBlink',[rate,stateList])
-        self._BatchCommand('CustomBlink',[rate,stateList])
+        if self.__allow_command_check():self._BatchCommand('CustomBlink',[rate,stateList])
 
 
     def SetBlinking(self, rate: str, stateList: list) -> None:
@@ -241,7 +246,7 @@ class Button(ExtronNode):
 
         """
         #self._Command('SetBlinking',[rate,stateList])
-        self._BatchCommand('SetBlinking',[rate,stateList])
+        if self.__allow_command_check():self._BatchCommand('SetBlinking',[rate,stateList])
 
     def SetEnable(self, enable: bool) -> None:
         """ Enable or disable an UI control object.
@@ -253,7 +258,7 @@ class Button(ExtronNode):
             self.__OnError('SetEnable: invalid enable state')
         if enable != self._Enabled:
             #self._Command('SetEnable',[enable])
-            self._BatchCommand('SetEnable',[enable])
+            if self.__allow_command_check():self._BatchCommand('SetEnable',[enable])
         self._Enabled = enable
 
 
@@ -268,7 +273,7 @@ class Button(ExtronNode):
         """
         if State != self._State or self._BlinkState == 'Blinking':
             #self._Command('SetState',[State])
-            self._BatchCommand('SetState',[State])
+            if self.__allow_command_check():self._BatchCommand('SetState',[State])
         self._State = State
         self._BlinkState = 'Not Blinking'
 
@@ -284,7 +289,7 @@ class Button(ExtronNode):
         """
         if text != self._Text:
             #self._Command('SetText',[text])
-            self._BatchCommand('SetText',[text])
+            if self.__allow_command_check():self._BatchCommand('SetText',[text])
         self._Text = text
 
     def SetVisible(self, visible: bool) -> None:
@@ -297,6 +302,6 @@ class Button(ExtronNode):
             self.__OnError('SetVisible: invalid visible state')
         if visible != self._Visible:
             #self._Command('SetVisible',[visible])
-            self._BatchCommand('SetVisible',[visible])
+            if self.__allow_command_check():self._BatchCommand('SetVisible',[visible])
         self._Visible = visible
 

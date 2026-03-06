@@ -406,6 +406,7 @@ class UIDevice(ExtronNode):
         self._args = [DeviceAlias,PartNumber]
         self._ipcp_index = ipcp_index
         self._alias = f'{DeviceAlias}'
+        self._where_used_alias_list = []
         self._callback_properties = {'BrightnessChanged':{'var':'_Brightness','value index':1},
                                      'HDCPStatusChanged':{'var':'_HDCPStatus','value index':1},
                                      'InactivityChanged':{'var':'_InactivityTime','value index':1},
@@ -450,6 +451,7 @@ class UIDevice(ExtronNode):
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
+        self._where_used_alias_list = self._Query('_where_used_alias_list',[])
     def __format_parsed_update_value(self,property,value):
         if property in self._properties_to_reformat:
             if property == 'UserUsage':

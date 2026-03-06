@@ -42,7 +42,7 @@ class ObjectWrapper(ObjectClass):
         self.set_get_attrs = ['AmbientLightValue','AutoBrightness','Brightness','DeviceAlias','DisplayState','DisplayTimer','DisplayTimerEnabled',
                               'FirmwareVersion','Hostname','IPAddress','InactivityTime','LidState','LightDetectedState','LinkLicenses','MACAddress',
                               'ModelName','MotionDecayTime','MotionState','OverTemperature','OverTemperatureWarningState','PartNumber','SerialNumber',
-                              'SleepState','SleepTimer','SleepTimerEnabled','SystemSettings','UserUsage','WakeOnMotion']
+                              'SleepState','SleepTimer','SleepTimerEnabled','SystemSettings','UserUsage','WakeOnMotion','_where_used_alias_list']
         self.callable_attrs = {'Click':None,
                                'GetHDCPStatus':None,
                                'GetInputPresence':None,
@@ -91,6 +91,7 @@ class ObjectWrapper(ObjectClass):
             'Slider':{},
             'Knob':{}
         }
+        self._where_used_alias_list = []
         self.item_constructors = {
             'Button':wButton,
             'Label':wLabel,
@@ -120,6 +121,7 @@ class ObjectWrapper(ObjectClass):
                                 data = {'args':[self.alias,id]}
                                 self.where_used_items[type][id] = None
                                 self.where_used_items[type][id] = self.item_constructors[type](self.WrapperBasics,item_alias,data)
+                                self._where_used_alias_list.append(item_alias)
             print('done processing WhereUsed for panel "{}" buttons:{} labels:{} levels:{} sliders:{} knobs:{}'.format(self.DeviceAlias,len(self.where_used_items['Button']),
                                                                                                                      len(self.where_used_items['Label']),
                                                                                                                      len(self.where_used_items['Level']),

@@ -319,6 +319,9 @@ class WrapperBasics():
         if type in WrapperBasics.wrapped_objects:
             WrapperBasics.wrapped_objects[type][alias] = obj
             WrapperBasics.wrapped_objects['aliases by type'][alias] = type
+            if alias not in self.remote_server.alias_list:
+                if _debug:print('~~~NEW ALIAS ADD TO LIST:{alias}'.format(alias=alias))
+                self.remote_server.alias_list.append(alias)
             if _debug:print('registered {} "{}"'.format(type,alias))
 
 

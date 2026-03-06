@@ -35,6 +35,7 @@ class Knob(ExtronNode):
             - ID (int) - ID of the UIObject
         """
         self.UIHost = UIHost
+        self.Host = UIDevice
         self.ID = ID
         self.Turned = None
 
@@ -45,7 +46,8 @@ class Knob(ExtronNode):
         self._properties_to_reformat = []
         self._query_properties_init = {}
         self._query_properties_always = {}
-        super().__init__(self,needs_sync=False)
+        send_ipcp_create = len(self.Host._where_used_alias_list)==0
+        super().__init__(self,send_ipcp_create,needs_sync=False)
         self._initialize_values()
     def _initialize_values(self):
         self._query_properties_init_list = list(self._query_properties_init.keys())
@@ -102,4 +104,8 @@ class Knob(ExtronNode):
     def __OnError(self,msg):
         from datetime import datetime
         print(f'{datetime.now()}: {self._alias}: {msg}')
+    def __allow_command_check(self):
+        if len(self.Host._where_used_alias_list)==0:
+            return True
+        return self._alias in self.Host._where_used_alias_list
 
